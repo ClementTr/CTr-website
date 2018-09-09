@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114718272-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-114718272-1');
+    </script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <script src="js/loader.js"></script>
+
+    <!-- Favicons
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Clément Tailleur Personal Map</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+    <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="css/map.css">
+
+  </head>
+
+  <body>
+    <div class="se-pre-con"></div>
+
+    <div>
+      <div id="leaflet" style="float: left; width: 65%; height: 800px;"></div>
+      <div id="description" style="height: 500px;">
+          <h1 class="my_location_font" style="margin-top: 0px;">Londres</h1>
+        <center>
+          <img class="img_border" src='img/map/londres.jpg' width='300'/>
+          <div id=year class"year_border">2014</div>
+          <br>
+          <div class"my_location_font" id=travel_description>London, description coming soon</div>
+        </center>
+      </div>
+      <div>
+        <h3>Visited countries</h3>
+        <img src='img/map/flags/flag_france.jpg' width='50'/>
+        <img src='img/map/flags/flag_malte.png' width='50'/>
+        <img src='img/map/flags/flag_tunisie.png' width='50'/>
+        <img src='img/map/flags/flag_egypte.png' width='50'/>
+        <img src='img/map/flags/flag_espagne.png' width='50'/>
+        <img src='img/map/flags/flag_maroc.png' width='50'/>
+        <img src='img/map/flags/flag_senegal.png' width='50'/>
+        <img src='img/map/flags/flag_grece.png' width='50'/>
+        <img src='img/map/flags/flag_italie.png' width='50'/>
+        <img src='img/map/flags/flag_angleterre.png' width='50'/>
+        <img src='img/map/flags/flag_hongrie.png' width='50'/>
+        <img src='img/map/flags/flag_monaco.png' width='50'/>
+        <img src='img/map/flags/flag_vatican.png' width='50'/>
+        <img src='img/map/flags/flag_suisse.png' width='50'/>
+      </div>
+
+      <!-- ADD THIS TO XHTML -->
+      <div id="preloaded-images">
+        <img src="img/map/no.png" width="1" height="1"/>
+        <img src="img/map/malte.jpg" width="1" height="1"/>
+        <img src="img/map/tozeur.jpg" width="1" height="1"/>
+        <img src="img/map/londres.jpg" width="1" height="1"/>
+        <img src="img/map/budapest.png" width="1" height="1"/>
+        <img src="img/map/barcelone.jpg" width="1" height="1"/>
+        <img src="img/map/nice.jpg" width="1" height="1"/>
+        <img src="img/map/madrid.jpg" width="1" height="1"/>
+        <img src="img/map/suisse.jpeg" width="1" height="1"/>
+      </div>
+    </div>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="//cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+  </body>
+</html>
