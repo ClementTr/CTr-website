@@ -11,7 +11,7 @@
     </script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script> -->
     <script src="js/loader.js"></script>
 
     <!-- Favicons
@@ -25,6 +25,24 @@
 
     <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
     <link rel="stylesheet" type="text/css" href="css/map.css">
+
+    <style>
+    .info {
+        padding: 6px 8px;
+        font: 14px/16px Arial, Helvetica, sans-serif;
+        background: white;
+        background: rgba(255,255,255,0.8);
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        border-radius: 5px;
+    }
+    .info h4 {
+        margin: 0 0 5px;
+        color: #777;
+    }
+    .hide{
+      display: none;
+    }
+    </style>
 
   </head>
 
@@ -58,6 +76,7 @@
         <img src='img/map/flags/flag_monaco.png' width='50'/>
         <img src='img/map/flags/flag_vatican.png' width='50'/>
         <img src='img/map/flags/flag_suisse.png' width='50'/>
+        <img src='img/map/flags/flag_usa.png' width='50'/>
       </div>
 
       <!-- ADD THIS TO XHTML -->
@@ -66,7 +85,7 @@
         <img src="img/map/malte.jpg" width="1" height="1"/>
         <img src="img/map/tozeur.jpg" width="1" height="1"/>
         <img src="img/map/londres.jpg" width="1" height="1"/>
-        <img src="img/map/budapest.png" width="1" height="1"/>
+        <img src="img/map/budapest.jpg" width="1" height="1"/>
         <img src="img/map/barcelone.jpg" width="1" height="1"/>
         <img src="img/map/nice.jpg" width="1" height="1"/>
         <img src="img/map/madrid.jpg" width="1" height="1"/>
@@ -75,6 +94,7 @@
     </div>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="//cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+    <script src="js/countries_data.js"></script>
     <script type="text/javascript" src="js/map.js"></script>
   </body>
 </html>
