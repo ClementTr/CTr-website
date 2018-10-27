@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
+
+<!-- Favicons
+================================================== -->
+<link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
 <title>Poisoning Analysis</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
@@ -8451,15 +8459,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11233,7 +11241,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11676,7 +11684,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11732,14 +11740,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -11800,7 +11808,7 @@ div#notebook {
 <p><B>
 <br>
 <font size=4 color="#FCAC45" face = "Lano">
-PART I: 
+PART I:
 <font size=4 color ="#5A5A5A" face = "Lano">
 DATA INTRODUCTION
 </font>
@@ -11812,9 +11820,9 @@ DATA INTRODUCTION
 <br>
 <br>
 <font color="#5A5A5A" size="3.2" face = "Lano">
-We want to know what are the factors which cause an hospitalization after eating.<br> 
+We want to know what are the factors which cause an hospitalization after eating.<br>
 First we load our data and show the original length.<br>
-Then we display the 5 first lines of our dataframe in order to know the content of our base 
+Then we display the 5 first lines of our dataframe in order to know the content of our base
 </font></p>
 
 </div>
@@ -11983,8 +11991,8 @@ Furthermore, we will delete "Fatalities" and "Illnesses" columns which are direc
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">del</span> <span class="n">poisoning_df</span><span class="p">[</span><span class="s2">&quot;Fatalities&quot;</span><span class="p">]</span> 
-<span class="k">del</span> <span class="n">poisoning_df</span><span class="p">[</span><span class="s2">&quot;Illnesses&quot;</span><span class="p">]</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">del</span> <span class="n">poisoning_df</span><span class="p">[</span><span class="s2">&quot;Fatalities&quot;</span><span class="p">]</span>
+<span class="k">del</span> <span class="n">poisoning_df</span><span class="p">[</span><span class="s2">&quot;Illnesses&quot;</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -12147,7 +12155,7 @@ We will do exactly the same with fishing, repertoring states bordering the sea.
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">detect_producer</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
   <span class="n">state</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">State</span>
   <span class="c1">#results found on http://beef2live.com/story-states-produce-food-value-0-107252</span>
-  <span class="k">if</span> <span class="p">((</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;California&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Iwoa&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Nebraska&quot;</span><span class="p">)</span> 
+  <span class="k">if</span> <span class="p">((</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;California&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Iwoa&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Nebraska&quot;</span><span class="p">)</span>
       <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Texas&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Minnesota&quot;</span><span class="p">)):</span>
     <span class="k">return</span> <span class="mi">1</span>
   <span class="k">else</span><span class="p">:</span>
@@ -12156,11 +12164,11 @@ We will do exactly the same with fishing, repertoring states bordering the sea.
 <span class="k">def</span> <span class="nf">detect_fishing</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>
   <span class="n">state</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">State</span>
   <span class="c1">#results found on https://en.wikipedia.org/wiki/Fishing_industry_in_the_United_States</span>
-  <span class="k">if</span> <span class="p">((</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;California&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Oregon&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Washington&quot;</span><span class="p">)</span> 
-      <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Texas&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Louisiana&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Mississippi&quot;</span><span class="p">)</span><span class="o">|</span> 
-      <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;North Carolina&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;South Carolina&quot;</span><span class="p">)</span> <span class="o">|</span> 
-      <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Georgia&quot;</span><span class="p">)</span><span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Virgina&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Maine&quot;</span><span class="p">)</span> <span class="o">|</span> 
-      <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Maryland&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Michigan&quot;</span><span class="p">)</span><span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Wisconsin&quot;</span><span class="p">)</span> <span class="o">|</span> 
+  <span class="k">if</span> <span class="p">((</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;California&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Oregon&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Washington&quot;</span><span class="p">)</span>
+      <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Texas&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Louisiana&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Mississippi&quot;</span><span class="p">)</span><span class="o">|</span>
+      <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;North Carolina&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;South Carolina&quot;</span><span class="p">)</span> <span class="o">|</span>
+      <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Georgia&quot;</span><span class="p">)</span><span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Virgina&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Maine&quot;</span><span class="p">)</span> <span class="o">|</span>
+      <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Maryland&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Michigan&quot;</span><span class="p">)</span><span class="o">|</span> <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Wisconsin&quot;</span><span class="p">)</span> <span class="o">|</span>
       <span class="p">(</span><span class="n">state</span> <span class="o">==</span> <span class="s2">&quot;Alaska&quot;</span><span class="p">)):</span>
     <span class="k">return</span> <span class="mi">1</span>
   <span class="k">else</span><span class="p">:</span>
@@ -12218,154 +12226,154 @@ The first thing we will do is to display the 50 most used values in this columns
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Restaurant    8291
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Private Home/Residence    1457
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Catering Service    897
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Fast Food Restaurant    361
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Banquet Facility    345
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 School/College/University    272
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Unknown    266
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Grocery Store    237
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Restaurant; Private Home/Residence    180
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Prison/Jail    164
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Nursing Home/Assisted Living Facility    151
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Restaurant; Catering Service    131
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Camp    100
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Religious Facility    100
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Office/Indoor Workplace    84
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Private Home/Residence; Grocery Store    81
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Private Home/Residence; Catering Service    70
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Fair/Festival    67
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Restaurant; Grocery Store    49
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Restaurant; Banquet Facility    47
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Restaurant; Private Home/Residence; Grocery Store    44
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Private Home/Residence; Religious Facility    28
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Hospital    25
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Fast Food Restaurant; Restaurant    22
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Catering Service; Grocery Store    20
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Child Daycare    18
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Private Home/Residence; Banquet Facility    16
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Private Home/Residence; School/College/University    15
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Banquet Facility; Catering Service    15
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Fast Food Restaurant; Private Home/Residence    12
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Restaurant; Fair/Festival    11
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Private Home/Residence; Catering Service; Grocery Store    11
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Restaurant; Private Home/Residence; Catering Service    9
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Restaurant Buffet    8
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Fast Food Restaurant; Private Home/Residence; Grocery Store    8
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Private Home/Residence; Fair/Festival    7
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Farm/Dairy    7
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Catering Service; School/College/University    6
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Private Home/Residence; Grocery Store; Religious Facility    6
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Fast Food Restaurant; Catering Service    6
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Restaurant; Office/Indoor Workplace    6
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Private Home/Residence; Camp    6
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Restaurant; School/College/University    6
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Restaurant; Unknown    5
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Catering Service; Fair/Festival    5
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Restaurant; Religious Facility    4
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Office/Indoor Workplace; Hospital    4
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Restaurant; Catering Service; Grocery Store    4
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Restaurant; Private Home/Residence; Fair/Festival    4
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 Restaurant; Camp    4
-Name: Location, dtype: int64 
+Name: Location, dtype: int64
 
 </pre>
 </div>
@@ -12658,304 +12666,304 @@ Now we can do exactly the same work with Food column.
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Oysters, Raw    132
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Multiple Foods    129
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Salad, Unspecified    92
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Ground Beef, Hamburger    75
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Chicken, Unspecified    69
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Fish, Mahi Mahi    68
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Sandwich, Submarine    68
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Pork, Bbq    63
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Lettuce-Based Salads Unspecified    61
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Chicken, Other    60
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Chicken Salad    55
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Potato Salad    53
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Ice    50
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Tuna, Unspecified    50
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Chicken    50
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Fish, Ahi    50
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Sandwich, Deli    48
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Pizza, Meat    47
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Green Salad    47
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Milk, Whole Milk Unpasteurized    45
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Pizza, Unspecified    45
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Chicken, Fried    45
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Ground Beef, Unspecified    42
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Cake, Unspecified    42
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Fried Rice, Unspecified    41
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Pork, Roasted    40
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Coleslaw    38
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Ethnic Style, Unspecified    38
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Raw Milk    37
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Fruit Salad    37
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Refried Beans, Unspecified    37
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Sandwich, Chicken    35
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Sandwich, Unspecified    34
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Sushi, Unspecified    34
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Fish, Escolar    32
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Fish, Baracuda    32
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 House Salad    31
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Sandwich, Turkey    31
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Ground Beef, Cheeseburger    31
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Salads    30
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Caesar Salad    30
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Lettuce, Unspecified    28
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Salsa, Unspecified    28
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Eggs, Unspecified    27
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Pork    27
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Fish, Amberjack    26
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Pasta Salad    25
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Steak, Prime Rib    25
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Ground Beef    25
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Taco, Beef    24
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Turkey    24
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Oysters    24
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Turkey, Roasted    23
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Ground Beef, Other    23
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Whole Milk, Unpasteurized    23
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Roast Beef, Unspecified    23
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Pizza, Meat And Vegetable    23
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Ice Cream, Homemade    23
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Pizza    23
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Chicken, Buffalo Wings    23
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Pork, Other    22
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Tuna Burger    21
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Tuna Steak    21
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Roast Beef, Other    21
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Turkey, Unspecified    21
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Beef, Other    21
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Burrito, Unspecified    20
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Fish, Tuna    20
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Salad Bar    20
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Buffet    20
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Cake    20
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Fish, Grouper, Unspecified    19
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Beef, Unspecified    19
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Chicken, Baked    18
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Rice, Unspecified    18
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Chicken, Nuggets/Fingers    18
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Macaroni And Cheese    18
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Mixed Fruit    17
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Lettuce    17
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Yellowfin Tuna    17
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Tomato, Unspecified    17
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Ham, Unspecified    17
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Alfalfa Sprouts    17
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Turkey, Smoked    17
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Cantaloupe    17
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Lettuce Based Salads    17
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Guacamole    17
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Pork, Unspecified    16
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Tuna Salad    16
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Crab, Unspecified    16
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Fish, Roi    16
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Apple Cider, Unpasteurized    16
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Macaroni Salad    16
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Rice    15
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Unspecified Fish    15
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Queso Fresco, Unpasteurized    15
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Other Milk, Unpasteurized    15
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Mushrooms    15
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Salmon, Unspecified    15
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 Sandwich, Ham    15
-Name: Food, dtype: int64 
+Name: Food, dtype: int64
 
 </pre>
 </div>
@@ -12972,7 +12980,7 @@ Name: Food, dtype: int64
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><font color="#5A5A5A" size="3.2" face = "Lano">
 We will create our column according to the most used values in food.<br>
-And we can have an idea of what we did by displaying the 5 first rows of our dataframe. 
+And we can have an idea of what we did by displaying the 5 first rows of our dataframe.
 </font></p>
 
 </div>
@@ -12983,12 +12991,12 @@ And we can have an idea of what we did by displaying the 5 first rows of our dat
 <div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">newFoodColumn</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;isOysters&quot;</span><span class="p">,</span> <span class="s2">&quot;isSalad&quot;</span><span class="p">,</span> <span class="s2">&quot;isMultiple&quot;</span><span class="p">,</span> <span class="s2">&quot;isUnspecified&quot;</span><span class="p">,</span> <span class="s2">&quot;isSandwich&quot;</span><span class="p">,</span> <span class="s2">&quot;isFish&quot;</span><span class="p">,</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">newFoodColumn</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;isOysters&quot;</span><span class="p">,</span> <span class="s2">&quot;isSalad&quot;</span><span class="p">,</span> <span class="s2">&quot;isMultiple&quot;</span><span class="p">,</span> <span class="s2">&quot;isUnspecified&quot;</span><span class="p">,</span> <span class="s2">&quot;isSandwich&quot;</span><span class="p">,</span> <span class="s2">&quot;isFish&quot;</span><span class="p">,</span>
                  <span class="s2">&quot;isPork&quot;</span><span class="p">,</span> <span class="s2">&quot;isChicken&quot;</span><span class="p">,</span> <span class="s2">&quot;isBbq&quot;</span><span class="p">,</span> <span class="s2">&quot;isPotato&quot;</span><span class="p">,</span> <span class="s2">&quot;isTuna&quot;</span><span class="p">,</span> <span class="s2">&quot;isIce&quot;</span><span class="p">,</span> <span class="s2">&quot;isDeli&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;isPizza&quot;</span><span class="p">,</span> <span class="s2">&quot;isMeat&quot;</span><span class="p">,</span> <span class="s2">&quot;isMilk&quot;</span><span class="p">,</span> <span class="s2">&quot;isCake&quot;</span><span class="p">,</span> <span class="s2">&quot;isBeef&quot;</span><span class="p">,</span> <span class="s2">&quot;isRice&quot;</span><span class="p">,</span> <span class="s2">&quot;isEthnic&quot;</span><span class="p">,</span> 
+                <span class="s2">&quot;isPizza&quot;</span><span class="p">,</span> <span class="s2">&quot;isMeat&quot;</span><span class="p">,</span> <span class="s2">&quot;isMilk&quot;</span><span class="p">,</span> <span class="s2">&quot;isCake&quot;</span><span class="p">,</span> <span class="s2">&quot;isBeef&quot;</span><span class="p">,</span> <span class="s2">&quot;isRice&quot;</span><span class="p">,</span> <span class="s2">&quot;isEthnic&quot;</span><span class="p">,</span>
                  <span class="s2">&quot;isColeslaw&quot;</span><span class="p">,</span> <span class="s2">&quot;isBeans&quot;</span><span class="p">,</span> <span class="s2">&quot;isFruit&quot;</span><span class="p">,</span> <span class="s2">&quot;isSushi&quot;</span><span class="p">,</span> <span class="s2">&quot;isCheeseburger&quot;</span><span class="p">,</span> <span class="s2">&quot;isEggs&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;isSteak&quot;</span><span class="p">,</span> <span class="s2">&quot;isCantaloupe&quot;</span><span class="p">,</span> <span class="s2">&quot;isGuacamole&quot;</span><span class="p">,</span> <span class="s2">&quot;isHam&quot;</span><span class="p">,</span> <span class="s2">&quot;isTomato&quot;</span><span class="p">,</span> <span class="s2">&quot;isLettuce&quot;</span><span class="p">,</span> 
-                 <span class="s2">&quot;isMushrooms&quot;</span><span class="p">]</span>   
+                <span class="s2">&quot;isSteak&quot;</span><span class="p">,</span> <span class="s2">&quot;isCantaloupe&quot;</span><span class="p">,</span> <span class="s2">&quot;isGuacamole&quot;</span><span class="p">,</span> <span class="s2">&quot;isHam&quot;</span><span class="p">,</span> <span class="s2">&quot;isTomato&quot;</span><span class="p">,</span> <span class="s2">&quot;isLettuce&quot;</span><span class="p">,</span>
+                 <span class="s2">&quot;isMushrooms&quot;</span><span class="p">]</span>
 
 <span class="n">poisoning_df</span><span class="o">.</span><span class="n">Food</span> <span class="o">=</span> <span class="n">poisoning_df</span><span class="o">.</span><span class="n">Food</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
 <span class="n">create_columns</span><span class="p">(</span><span class="n">poisoning_df</span><span class="o">.</span><span class="n">Food</span><span class="p">,</span> <span class="n">newFoodColumn</span><span class="p">)</span>
@@ -13176,14 +13184,14 @@ And we can have an idea of what we did by displaying the 5 first rows of our dat
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><font color="#5A5A5A" size="3.2" face = "Lano">
-Now, we have all the columns we need to begin our prediction. 
+Now, we have all the columns we need to begin our prediction.
 </font>
 <br>
 <br></p>
 <p><B>
 <br>
 <font size=4 color="#FCAC45" face = "Lano">
-PART II: 
+PART II:
 <font size=4 color ="#5A5A5A" face = "Lano">
 MACHINE LEARNING
 </font>
@@ -13259,7 +13267,7 @@ And directly show the result voluntarily. In the next part our approach will be 
 <font color="#5A5A5A" size="3.2" face = "Lano">
 Now that we have done our prediction over initial data we will do the same with the columns we created for food and place. The idea is to make a prediction more complex over things a person can manage like the food he'll eat and the place he'll go.<br>
 To do that we recovered in a same list both of location and food columns we created before, as feature.<br>
-Using the same target we performed a bootstrap (recover 40% 15494-&gt;40%-&gt;6198 random data of poisoning_df data set) 
+Using the same target we performed a bootstrap (recover 40% 15494-&gt;40%-&gt;6198 random data of poisoning_df data set)
 </font></p>
 
 </div>
@@ -13294,8 +13302,8 @@ Using the same target we performed a bootstrap (recover 40% 15494-&gt;40%-&gt;61
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>full shape: (15494, 64) 
-test shape: (6198, 64) 
+<pre>full shape: (15494, 64)
+test shape: (6198, 64)
 train shape: (9296, 64)
 </pre>
 </div>
@@ -13408,10 +13416,10 @@ Then from this dataframe, we create another one keeping the 10 most important fe
     <span class="n">variable_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
     <span class="n">variable_score</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">imp</span><span class="p">)</span>
     <span class="n">variable_std</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mystd</span><span class="p">)</span>
-    
+
 <span class="n">index</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">variable_name</span><span class="p">))</span>
 <span class="n">d</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;Variable_Name&#39;</span><span class="p">:</span> <span class="n">variable_name</span><span class="p">,</span> 
+    <span class="s1">&#39;Variable_Name&#39;</span><span class="p">:</span> <span class="n">variable_name</span><span class="p">,</span>
     <span class="s1">&#39;Variable_Score&#39;</span><span class="p">:</span> <span class="n">variable_score</span><span class="p">,</span>
     <span class="s1">&#39;Variable_Std&#39;</span><span class="p">:</span> <span class="n">variable_std</span>
     <span class="p">}</span>
@@ -13537,15 +13545,15 @@ From this 10 dataframe lines we create a plot showing well the importance of eac
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Feature importances&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
-        <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">variable_importance_TOP10_df</span><span class="p">)),</span> 
-        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">variable_importance_TOP10_df</span><span class="p">[</span><span class="s1">&#39;Variable_Score&#39;</span><span class="p">]),</span> 
-        <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span> 
-        <span class="n">yerr</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">variable_importance_TOP10_df</span><span class="p">[</span><span class="s1">&#39;Variable_Std&#39;</span><span class="p">]),</span> 
+        <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">variable_importance_TOP10_df</span><span class="p">)),</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">variable_importance_TOP10_df</span><span class="p">[</span><span class="s1">&#39;Variable_Score&#39;</span><span class="p">]),</span>
+        <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span>
+        <span class="n">yerr</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">variable_importance_TOP10_df</span><span class="p">[</span><span class="s1">&#39;Variable_Std&#39;</span><span class="p">]),</span>
         <span class="n">align</span><span class="o">=</span><span class="s2">&quot;center&quot;</span><span class="p">,</span>
         <span class="n">width</span><span class="o">=</span><span class="mf">0.5</span>
        <span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span>
-            <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">variable_importance_TOP10_df</span><span class="p">)),</span> 
+            <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">variable_importance_TOP10_df</span><span class="p">)),</span>
             <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">variable_importance_TOP10_df</span><span class="p">[</span><span class="s1">&#39;Variable_Name&#39;</span><span class="p">]),</span>
             <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span>
           <span class="p">)</span>
@@ -13795,7 +13803,7 @@ The score:
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><font color="#5A5A5A" size="3.2" face = "Lano">
-From now our work will be to improve this pretty good score.<br> 
+From now our work will be to improve this pretty good score.<br>
 We will use get_features_importance function created in student notebook doing almost what we have done above and improve it returning an array composed of a dataframe and a score.
 </font></p>
 
@@ -13808,7 +13816,7 @@ We will use get_features_importance function created in student notebook doing a
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_features_importance</span><span class="p">(</span><span class="n">arg_dataframe</span><span class="p">,</span> <span class="n">arg_columntarget</span><span class="p">,</span> <span class="n">arg_features</span><span class="p">,</span> <span class="n">arg_topNumber</span><span class="p">):</span>
-  
+
   <span class="n">predictors</span> <span class="o">=</span> <span class="n">arg_dataframe</span><span class="p">[</span><span class="n">arg_features</span><span class="p">]</span><span class="c1">#student_df[arg_features]</span>
   <span class="n">target</span> <span class="o">=</span> <span class="n">arg_columntarget</span><span class="c1">#student_df.Global_Marks</span>
 
@@ -13819,7 +13827,7 @@ We will use get_features_importance function created in student notebook doing a
   <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">data_train</span><span class="p">[</span><span class="n">arg_features</span><span class="p">],</span> <span class="n">target_train</span><span class="p">)</span>
   <span class="n">importances</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">feature_importances_</span>
   <span class="n">std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">([</span><span class="n">tree</span><span class="o">.</span><span class="n">feature_importances_</span> <span class="k">for</span> <span class="n">tree</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">estimators_</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-    
+
   <span class="n">variable_name</span> <span class="o">=</span> <span class="p">[]</span>
   <span class="n">variable_score</span> <span class="o">=</span> <span class="p">[]</span>
   <span class="n">variable_std</span> <span class="o">=</span> <span class="p">[]</span>
@@ -13827,10 +13835,10 @@ We will use get_features_importance function created in student notebook doing a
     <span class="n">variable_name</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
     <span class="n">variable_score</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">imp</span><span class="p">)</span>
     <span class="n">variable_std</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mystd</span><span class="p">)</span>
-    
+
   <span class="n">index</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">variable_name</span><span class="p">))</span>
   <span class="n">d</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;Variable_Name&#39;</span><span class="p">:</span> <span class="n">variable_name</span><span class="p">,</span> 
+    <span class="s1">&#39;Variable_Name&#39;</span><span class="p">:</span> <span class="n">variable_name</span><span class="p">,</span>
     <span class="s1">&#39;Variable_Score&#39;</span><span class="p">:</span> <span class="n">variable_score</span><span class="p">,</span>
     <span class="s1">&#39;Variable_Std&#39;</span><span class="p">:</span> <span class="n">variable_std</span>
   <span class="p">}</span>
@@ -13846,7 +13854,7 @@ We will use get_features_importance function created in student notebook doing a
   <span class="n">prediction</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data_test</span><span class="p">[</span><span class="n">features_TOP</span><span class="p">])</span>
 
   <span class="n">TOP_score</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">data_test</span><span class="p">[</span><span class="n">features_TOP</span><span class="p">],</span> <span class="n">target_test</span><span class="p">)</span>
-    
+
   <span class="n">resultArray</span> <span class="o">=</span> <span class="p">[</span><span class="n">variable_importance_TOP_df</span><span class="p">,</span> <span class="n">TOP_score</span><span class="p">]</span>
 
   <span class="k">return</span><span class="p">(</span><span class="n">resultArray</span><span class="p">)</span>
@@ -13886,7 +13894,7 @@ A second "Vegetable" column and another one named "Meat".
     <span class="k">return</span> <span class="mi">1</span>
   <span class="k">else</span><span class="p">:</span>
     <span class="k">return</span> <span class="mi">0</span>
-  
+
 <span class="n">poisoning_df</span><span class="p">[</span><span class="s2">&quot;Sea&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">poisoning_df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">sea_food</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
@@ -13910,8 +13918,8 @@ A second "Vegetable" column and another one named "Meat".
   <span class="n">tomato</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">isTomato</span>
   <span class="n">lettuce</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">isLettuce</span>
   <span class="n">mushrooms</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">isMushrooms</span>
-  <span class="k">if</span> <span class="p">((</span><span class="n">salad</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">potato</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">beans</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">coleslaw</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> 
-      <span class="o">|</span> <span class="p">(</span><span class="n">cantaloupe</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">guacamole</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">tomato</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> 
+  <span class="k">if</span> <span class="p">((</span><span class="n">salad</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">potato</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">beans</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">coleslaw</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+      <span class="o">|</span> <span class="p">(</span><span class="n">cantaloupe</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">guacamole</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">tomato</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span>
       <span class="p">(</span><span class="n">lettuce</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span><span class="o">|</span> <span class="p">(</span><span class="n">mushrooms</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)):</span>
     <span class="k">return</span> <span class="mi">1</span>
   <span class="k">else</span><span class="p">:</span>
@@ -13939,7 +13947,7 @@ A second "Vegetable" column and another one named "Meat".
   <span class="n">beef</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">isBeef</span>
   <span class="n">cheeseburger</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">isCheeseburger</span>
   <span class="n">ham</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">isHam</span>
-  <span class="k">if</span> <span class="p">((</span><span class="n">pork</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">chicken</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">bbq</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">deli</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> 
+  <span class="k">if</span> <span class="p">((</span><span class="n">pork</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">chicken</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">bbq</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">deli</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
       <span class="o">|</span> <span class="p">(</span><span class="n">meat</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">beef</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">cheeseburger</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">ham</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)):</span>
     <span class="k">return</span> <span class="mi">1</span>
   <span class="k">else</span><span class="p">:</span>
@@ -15244,7 +15252,7 @@ You can see that proportion show a bigger danger when you eat oysters at home me
   </div>
 </body>
 
- 
+
 
 
 </html>

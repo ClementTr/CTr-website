@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
+
+<!-- Favicons
+================================================== -->
+<link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
 <title>Titanic Analysis Python</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
@@ -8451,15 +8459,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11233,7 +11241,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11676,7 +11684,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11732,14 +11740,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -11799,7 +11807,7 @@ div#notebook {
 <br></p>
 <p><B>
 <font size=4 color="#FCAC45" face = "Lano">
-PART I: 
+PART I:
 <font size=4 color ="#5A5A5A" face = "Lano">
 DATA CLEANING AND FIRST INTUITIONS
 </font>
@@ -11972,7 +11980,7 @@ dtype: object
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><font color ="#5A5A5A" face = "Lano" size="3.2">
-We can also create a new column from an older.<br> 
+We can also create a new column from an older.<br>
 In fact in the column "Name" there is 3 information (Lastname, Title. Firstname) separated by ',' and '.'.<br>
 Using the same separator '|', we can easily create a new column "Title" from the column name spliting information according to the separator.
 </font></p>
@@ -12287,7 +12295,7 @@ We can now call the describe function</font></p>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">median_age</span> <span class="o">=</span> <span class="n">titanic_df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
 <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">titanic_df</span><span class="o">.</span><span class="n">Age</span><span class="p">[</span> <span class="n">titanic_df</span><span class="o">.</span><span class="n">Age</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span> <span class="p">])</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="n">titanic_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">titanic_df</span><span class="o">.</span><span class="n">Age</span><span class="o">.</span><span class="n">isnull</span><span class="p">()),</span> <span class="s1">&#39;Age&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">median_age</span>
-    
+
 <span class="n">titanic_df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
 </pre></div>
 
@@ -12380,7 +12388,7 @@ We can now call the describe function</font></p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><font color ="#5A5A5A" face = "Lano" size="3.2">
-Let's look at the Title column. We would like to display the different titles present on the boat. 
+Let's look at the Title column. We would like to display the different titles present on the boat.
 </font></p>
 
 </div>
@@ -12440,7 +12448,7 @@ Name: Title, dtype: int64</pre>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><font color ="#5A5A5A" face = "Lano" size="3.2">
-Finally we can summaryze our data defining the shape of our dataframe. 
+Finally we can summaryze our data defining the shape of our dataframe.
 </font></p>
 
 </div>
@@ -12660,7 +12668,7 @@ Name: Survived, dtype: float64
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><font color ="#5A5A5A" face = "Lano" size="3.2">So we can see that only 38% of passengers have survived.<br>
-We will create a new column 'Survived_Hypo' considering initially that all the passengers are dead.<br> 
+We will create a new column 'Survived_Hypo' considering initially that all the passengers are dead.<br>
 It is this column that will be modified gradually to create our model of prediction.<br>
 Logically, our model will then be just at 62%.</font></p>
 
@@ -13099,8 +13107,8 @@ Let's say that 25% of the women who bought the cheapest tickets died.</font></p>
 <span class="n">titanic_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">titanic_df</span><span class="o">.</span><span class="n">Sex</span> <span class="o">==</span> <span class="s2">&quot;female&quot;</span><span class="p">),</span> <span class="s2">&quot;Survived_Hypo&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
 
 <span class="n">quart_age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">titanic_df</span><span class="o">.</span><span class="n">Fare</span><span class="o">.</span><span class="n">quantile</span><span class="p">([</span><span class="o">.</span><span class="mi">25</span><span class="p">])))</span>
-<span class="n">titanic_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">titanic_df</span><span class="o">.</span><span class="n">Sex</span> <span class="o">==</span> <span class="s2">&quot;female&quot;</span><span class="p">)</span> 
-               <span class="o">&amp;</span> <span class="p">(</span><span class="n">titanic_df</span><span class="o">.</span><span class="n">Fare</span> <span class="o">&lt;=</span> <span class="n">quart_age</span><span class="p">)</span> 
+<span class="n">titanic_df</span><span class="o">.</span><span class="n">loc</span><span class="p">[(</span><span class="n">titanic_df</span><span class="o">.</span><span class="n">Sex</span> <span class="o">==</span> <span class="s2">&quot;female&quot;</span><span class="p">)</span>
+               <span class="o">&amp;</span> <span class="p">(</span><span class="n">titanic_df</span><span class="o">.</span><span class="n">Fare</span> <span class="o">&lt;=</span> <span class="n">quart_age</span><span class="p">)</span>
                <span class="o">&amp;</span> <span class="p">(</span><span class="n">titanic_df</span><span class="o">.</span><span class="n">Pclass</span> <span class="o">==</span> <span class="mi">3</span><span class="p">),</span> <span class="s2">&quot;Survived_Hypo&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="n">accuracy_score</span><span class="p">(</span><span class="n">titanic_df</span><span class="o">.</span><span class="n">Survived</span><span class="p">,</span> <span class="n">titanic_df</span><span class="o">.</span><span class="n">Survived_Hypo</span><span class="p">)</span>
@@ -13271,7 +13279,7 @@ Then the idea is to make a prediction with 'predictors' on a random part of our 
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="k">import</span> <span class="n">train_test_split</span>
 
-<span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;Fare&#39;</span><span class="p">,</span> <span class="s1">&#39;Pclass&#39;</span><span class="p">]</span> 
+<span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">,</span> <span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;Fare&#39;</span><span class="p">,</span> <span class="s1">&#39;Pclass&#39;</span><span class="p">]</span>
 <span class="n">predictors</span> <span class="o">=</span> <span class="n">titanic_df</span><span class="p">[</span><span class="n">features</span><span class="p">]</span>
 <span class="n">target</span> <span class="o">=</span> <span class="n">titanic_df</span><span class="o">.</span><span class="n">Survived</span>
 <span class="n">split</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">titanic_df</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.4</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
@@ -13291,8 +13299,8 @@ Then the idea is to make a prediction with 'predictors' on a random part of our 
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>full shape: (891, 10) 
-test shape: (357, 10) 
+<pre>full shape: (891, 10)
+test shape: (357, 10)
 train shape: (534, 10)
 </pre>
 </div>
@@ -13360,7 +13368,7 @@ Then we'll display the importance of each columns and the error estimation using
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>  
+<pre>
   1. Age -&gt; 0.266334
   2. Sex -&gt; 0.258859
   3. Fare -&gt; 0.357780
@@ -13698,7 +13706,7 @@ BXwL+J2qun3UdUlbwzl36Vcu66fMFgDvN9i1I3PkLkkNcs5dkhpkuEtSgwx3SWqQ4S5JDTLcJalB
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Performence: 0.817927170868 
+<pre>Performence: 0.817927170868
 
 </pre>
 </div>
@@ -13752,7 +13760,7 @@ Then we will create a dataframe that will display the prediction proposed by the
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>==&gt; predict: 
+<pre>==&gt; predict:
      prediction  reality get_it
 709           1        0    non
 439           1        1    yes
@@ -13799,7 +13807,7 @@ Name: get_it, dtype: int64
 <span class="kn">import</span> <span class="nn">pydotplus</span>
 
 <span class="c1">#make classifier with our feature</span>
-<span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">]</span> 
+<span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">]</span>
 <span class="n">predictors</span> <span class="o">=</span> <span class="n">titanic_df</span><span class="p">[</span><span class="n">features</span><span class="p">]</span>
 <span class="n">targets</span> <span class="o">=</span> <span class="n">titanic_df</span><span class="o">.</span><span class="n">Survived</span>
 <span class="n">pred_train</span><span class="p">,</span> <span class="n">pred_test</span><span class="p">,</span> <span class="n">tar_train</span><span class="p">,</span> <span class="n">tar_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">predictors</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=.</span><span class="mi">4</span><span class="p">)</span>
@@ -14216,7 +14224,7 @@ OPD/Colei1GvdXgAAAAASUVORK5CYII=
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#make classifier with our feature</span>
-<span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">]</span> 
+<span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Sex&#39;</span><span class="p">,</span> <span class="s1">&#39;Age&#39;</span><span class="p">]</span>
 <span class="n">predictors</span> <span class="o">=</span> <span class="n">titanic_df</span><span class="p">[</span><span class="n">features</span><span class="p">]</span>
 <span class="n">targets</span> <span class="o">=</span> <span class="n">titanic_df</span><span class="o">.</span><span class="n">Survived</span>
 <span class="n">pred_train</span><span class="p">,</span> <span class="n">pred_test</span><span class="p">,</span> <span class="n">tar_train</span><span class="p">,</span> <span class="n">tar_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">predictors</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=.</span><span class="mi">4</span><span class="p">)</span>
@@ -22586,7 +22594,7 @@ It is finished for this presentation of some machine learning algorithms around 
   </div>
 </body>
 
- 
+
 
 
 </html>

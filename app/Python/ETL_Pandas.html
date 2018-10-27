@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
+
+<!-- Favicons
+================================================== -->
+<link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
 <title>ETL_Pandas</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
@@ -8451,15 +8459,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11233,7 +11241,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11676,7 +11684,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11730,14 +11738,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -11781,7 +11789,7 @@ div#notebook {
             <center>
                 <b>
                     <font size=5 color="#FCAC45" face = "Lano">ETL:</font>
-                </b> 
+                </b>
                 Extract Transform Load
             </center>
       </font>
@@ -11943,13 +11951,13 @@ div#notebook {
     <span class="n">URL</span> <span class="o">=</span> <span class="s2">&quot;http://www.sports.fr/football/&quot;</span> <span class="o">+</span> <span class="n">league</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="n">year</span> <span class="o">+</span> <span class="s2">&quot;/classements/classement-general.html&quot;</span>
     <span class="n">page</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
     <span class="n">html</span> <span class="o">=</span> <span class="n">lxml</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
-    <span class="n">scraping</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;//td[@class=&#39;tl nowrap&#39;]&quot;</span><span class="p">)</span> 
-    
+    <span class="n">scraping</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;//td[@class=&#39;tl nowrap&#39;]&quot;</span><span class="p">)</span>
+
     <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">team_name_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">sc</span><span class="o">.</span><span class="n">text_content</span><span class="p">()</span> <span class="k">for</span> <span class="n">sc</span> <span class="ow">in</span> <span class="n">scraping</span><span class="p">]</span>
     <span class="n">team_name_list</span> <span class="o">=</span> <span class="n">clean_scraping_dict</span><span class="p">(</span><span class="n">team_name_list</span><span class="p">)</span>
     <span class="n">web_name_list</span> <span class="o">=</span> <span class="n">to_web_name</span><span class="p">(</span><span class="n">team_name_list</span><span class="p">)</span>
-    
+
     <span class="k">for</span> <span class="n">wn</span><span class="p">,</span> <span class="n">tn</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">web_name_list</span><span class="p">,</span> <span class="n">team_name_list</span><span class="p">):</span>
         <span class="n">dict_league</span><span class="p">[</span><span class="n">tn</span><span class="p">]</span> <span class="o">=</span> <span class="n">wn</span>
     <span class="k">return</span> <span class="n">dict_league</span>
@@ -12026,11 +12034,11 @@ div#notebook {
 <span class="sd">    </span>
 <span class="sd">    This function return the results of team over a year as dataframe object</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">URL</span> <span class="o">=</span> <span class="s2">&quot;http://www.sports.fr/football/&quot;</span> <span class="o">+</span> <span class="n">league</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/calendrier/&quot;</span> <span class="o">+</span> <span class="n">team</span> <span class="o">+</span> <span class="s2">&quot;.html&quot;</span> 
+    <span class="n">URL</span> <span class="o">=</span> <span class="s2">&quot;http://www.sports.fr/football/&quot;</span> <span class="o">+</span> <span class="n">league</span> <span class="o">+</span> <span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;/calendrier/&quot;</span> <span class="o">+</span> <span class="n">team</span> <span class="o">+</span> <span class="s2">&quot;.html&quot;</span>
     <span class="n">page</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">URL</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
     <span class="n">html</span> <span class="o">=</span> <span class="n">lxml</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
-    <span class="n">scraping</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;//tr[@class=&#39;alt&#39;]//td&quot;</span><span class="p">)</span> 
-    
+    <span class="n">scraping</span> <span class="o">=</span> <span class="n">html</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s2">&quot;//tr[@class=&#39;alt&#39;]//td&quot;</span><span class="p">)</span>
+
     <span class="n">data</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">data_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">sc</span><span class="o">.</span><span class="n">text_content</span><span class="p">()</span> <span class="k">for</span> <span class="n">sc</span> <span class="ow">in</span> <span class="n">scraping</span><span class="p">]</span>
     <span class="n">results_list</span> <span class="o">=</span> <span class="n">data_list</span><span class="p">[</span><span class="mi">3</span><span class="p">::</span><span class="mi">8</span><span class="p">]</span>
@@ -12039,27 +12047,27 @@ div#notebook {
     <span class="n">team_away_list</span> <span class="o">=</span> <span class="n">data_list</span><span class="p">[</span><span class="mi">6</span><span class="p">::</span><span class="mi">8</span><span class="p">]</span>
     <span class="n">played_day_list</span> <span class="o">=</span> <span class="n">data_list</span><span class="p">[</span><span class="mi">2</span><span class="p">::</span><span class="mi">8</span><span class="p">]</span>
     <span class="n">score_list</span> <span class="o">=</span> <span class="n">data_list</span><span class="p">[</span><span class="mi">5</span><span class="p">::</span><span class="mi">8</span><span class="p">]</span>
-    
+
     <span class="c1">#Results</span>
     <span class="n">results_list_cleaned</span> <span class="o">=</span> <span class="n">clean_scraping</span><span class="p">(</span><span class="n">results_list</span><span class="p">)</span>
     <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Results&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">results_list_cleaned</span>
-    
+
     <span class="c1">#Date</span>
     <span class="n">dates_list_cleaned</span> <span class="o">=</span> <span class="n">clean_scraping</span><span class="p">(</span><span class="n">dates_list</span><span class="p">)</span>
     <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dates_list_cleaned</span>
-    
+
     <span class="c1">#Team Name Home</span>
     <span class="n">team_home_list_cleaned</span> <span class="o">=</span> <span class="n">clean_scraping</span><span class="p">(</span><span class="n">team_home_list</span><span class="p">)</span>
     <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Team_Home&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">team_home_list_cleaned</span>
-    
+
     <span class="c1">#Team Name Away</span>
     <span class="n">team_away_list_cleaned</span> <span class="o">=</span> <span class="n">clean_scraping</span><span class="p">(</span><span class="n">team_away_list</span><span class="p">)</span>
     <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Team_Away&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">team_away_list_cleaned</span>
-    
+
     <span class="c1"># Played Day</span>
     <span class="n">played_day_list_cleaned</span> <span class="o">=</span> <span class="n">clean_scraping</span><span class="p">(</span><span class="n">played_day_list</span><span class="p">)</span>
     <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Played_Day&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">played_day_list_cleaned</span>
-    
+
     <span class="c1"># Goal(s) scored Team Home/Away</span>
     <span class="n">score_list_cleaned</span> <span class="o">=</span> <span class="n">clean_scraping</span><span class="p">(</span><span class="n">score_list</span><span class="p">)</span>
     <span class="n">score_list_home_cleaned</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">score_list_cleaned</span><span class="p">)[</span><span class="mi">0</span><span class="p">::</span><span class="mi">4</span><span class="p">]</span>
@@ -12068,7 +12076,7 @@ div#notebook {
     <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Score_Away&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">score_away_list_cleaned</span><span class="p">))</span>
     <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">team</span><span class="o">.</span><span class="n">title</span><span class="p">()</span>
     <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Football_Season&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
-    
+
     <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="k">assert</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shape</span> <span class="o">==</span> <span class="p">(</span><span class="mi">38</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">df</span>
@@ -12781,7 +12789,7 @@ div#notebook {
         <span class="k">return</span> <span class="mi">2</span>
     <span class="k">return</span> <span class="mi">3</span>
 
-<span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">/%m/%y&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span> 
+<span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">/%m/%y&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
 <span class="n">df_england</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s1">&#39;Date&#39;</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Year&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_england</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span>
@@ -13389,11 +13397,11 @@ div#notebook {
     <span class="n">date</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">name</span>
     <span class="n">season</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">Football_Season</span>
     <span class="n">team</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">Team_Concerned</span>
-    
-    <span class="n">cum_points</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;=</span> <span class="n">date</span><span class="p">)</span> 
-                  <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Football_Season</span> <span class="o">==</span> <span class="n">season</span><span class="p">)</span> 
+
+    <span class="n">cum_points</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;=</span> <span class="n">date</span><span class="p">)</span>
+                  <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Football_Season</span> <span class="o">==</span> <span class="n">season</span><span class="p">)</span>
                   <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Team_Concerned</span> <span class="o">==</span> <span class="n">team</span><span class="p">)][</span><span class="n">str_col_name</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">cum_points</span> 
+    <span class="k">return</span> <span class="n">cum_points</span>
 
 <span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Cumul_Points&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_england</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_cumul</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Points_Won&#39;</span><span class="p">,</span> <span class="n">df_england</span><span class="p">,))</span>
 <span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Cumul_Difference&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_england</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">get_cumul</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;Difference&#39;</span><span class="p">,</span> <span class="n">df_england</span><span class="p">,))</span>
@@ -13621,10 +13629,10 @@ div#notebook {
     <span class="n">date</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">name</span>
     <span class="n">season</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">Football_Season</span>
     <span class="n">team</span> <span class="o">=</span> <span class="n">row</span><span class="o">.</span><span class="n">Team_Concerned</span>
-    
-    <span class="n">classement</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;=</span> <span class="n">date</span><span class="p">)</span> 
+
+    <span class="n">classement</span> <span class="o">=</span> <span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span> <span class="o">&lt;=</span> <span class="n">date</span><span class="p">)</span>
                     <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Football_Season</span> <span class="o">==</span> <span class="n">season</span><span class="p">)][[</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">,</span> <span class="s2">&quot;Points_Won&quot;</span><span class="p">,</span> <span class="s2">&quot;Difference&quot;</span><span class="p">]]</span>\
-                    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Points_Won&quot;</span><span class="p">,</span> <span class="s1">&#39;Difference&#39;</span><span class="p">],</span> 
+                    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Points_Won&quot;</span><span class="p">,</span> <span class="s1">&#39;Difference&#39;</span><span class="p">],</span>
                                                                  <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">team</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">classement</span>
 
@@ -14639,12 +14647,12 @@ Name: sum, dtype: int64</pre>
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_england_resume_teams_classement</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_england_resume_teams_classement</span><span class="o">.</span><span class="n">Football_Season</span> <span class="o">==</span> <span class="mi">2016</span><span class="p">,</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_england_resume_teams_classement</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_england_resume_teams_classement</span><span class="o">.</span><span class="n">Football_Season</span> <span class="o">==</span> <span class="mi">2016</span><span class="p">,</span>
                                         <span class="s2">&quot;Classement&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span>
-<span class="n">df_england_resume_teams_classement</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_england_resume_teams_classement</span><span class="o">.</span><span class="n">Football_Season</span> <span class="o">==</span> <span class="mi">2017</span><span class="p">,</span> 
+<span class="n">df_england_resume_teams_classement</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df_england_resume_teams_classement</span><span class="o">.</span><span class="n">Football_Season</span> <span class="o">==</span> <span class="mi">2017</span><span class="p">,</span>
                                         <span class="s2">&quot;Classement&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">21</span><span class="p">)</span>
 
-<span class="n">df_england_resume_teams_classement</span> <span class="o">=</span> <span class="n">df_england_resume_teams_classement</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">,</span> 
+<span class="n">df_england_resume_teams_classement</span> <span class="o">=</span> <span class="n">df_england_resume_teams_classement</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">,</span>
                                             <span class="s2">&quot;Football_Season&quot;</span><span class="p">])[</span><span class="s2">&quot;Classement&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span>
 <span class="n">df_england_resume_teams_classement</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -14945,7 +14953,7 @@ Name: sum, dtype: int64</pre>
     <span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;Month&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Team_Concerned&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Results&#39;</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span>\
     <span class="o">.</span><span class="n">unstack</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">&#39;Results&#39;</span><span class="p">})</span><span class="o">.</span><span class="n">reset_index</span><span class="p">([</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">,</span> <span class="s2">&quot;Month&quot;</span><span class="p">])</span>
 
-<span class="n">df_arsenal</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_b6</span><span class="p">[</span><span class="n">df_b6</span><span class="o">.</span><span class="n">Team_Concerned</span> <span class="o">==</span> <span class="s2">&quot;Arsenal&quot;</span><span class="p">][[</span><span class="s2">&quot;is_Big6_Opponent&quot;</span><span class="p">]],</span> 
+<span class="n">df_arsenal</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_b6</span><span class="p">[</span><span class="n">df_b6</span><span class="o">.</span><span class="n">Team_Concerned</span> <span class="o">==</span> <span class="s2">&quot;Arsenal&quot;</span><span class="p">][[</span><span class="s2">&quot;is_Big6_Opponent&quot;</span><span class="p">]],</span>
                         <span class="n">df_l</span><span class="p">[</span><span class="n">df_l</span><span class="o">.</span><span class="n">Team_Concerned</span> <span class="o">==</span> <span class="s2">&quot;Arsenal&quot;</span><span class="p">]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="n">football_months</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;January&quot;</span><span class="p">,</span> <span class="s2">&quot;February&quot;</span><span class="p">,</span> <span class="s2">&quot;March&quot;</span><span class="p">,</span> <span class="s2">&quot;April&quot;</span><span class="p">,</span> <span class="s2">&quot;May&quot;</span><span class="p">,</span> <span class="s2">&quot;August&quot;</span><span class="p">,</span> <span class="s2">&quot;September&quot;</span><span class="p">,</span>
@@ -14953,12 +14961,12 @@ Name: sum, dtype: int64</pre>
 
 <span class="c1"># Plot #</span>
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">9</span><span class="p">))</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span> 
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
 <span class="n">ax2</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
 <span class="n">width</span> <span class="o">=</span> <span class="mf">0.2</span>
-<span class="n">df_arsenal</span><span class="o">.</span><span class="n">Results</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors_club</span><span class="p">[</span><span class="s2">&quot;Arsenal&quot;</span><span class="p">],</span> 
+<span class="n">df_arsenal</span><span class="o">.</span><span class="n">Results</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors_club</span><span class="p">[</span><span class="s2">&quot;Arsenal&quot;</span><span class="p">],</span>
                                               <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">df_arsenal</span><span class="o">.</span><span class="n">is_Big6_Opponent</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors_club</span><span class="p">[</span><span class="s2">&quot;Chelsea&quot;</span><span class="p">],</span> 
+<span class="n">df_arsenal</span><span class="o">.</span><span class="n">is_Big6_Opponent</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors_club</span><span class="p">[</span><span class="s2">&quot;Chelsea&quot;</span><span class="p">],</span>
                                               <span class="n">ax</span><span class="o">=</span><span class="n">ax2</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">width</span><span class="p">,</span> <span class="n">position</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Arsenal losses by month function of top6 opponent</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Arsenal losses&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors_club</span><span class="p">[</span><span class="s2">&quot;Arsenal&quot;</span><span class="p">],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
@@ -15004,7 +15012,7 @@ Name: sum, dtype: int64</pre>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Data Preparation #</span>
 <span class="c1"># Wins</span>
 <span class="n">df_england_wins</span> <span class="o">=</span> <span class="n">df_england</span><span class="p">[</span><span class="n">df_england</span><span class="p">[</span><span class="s1">&#39;Results&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;V&#39;</span><span class="p">][[</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">,</span> <span class="s2">&quot;Month&quot;</span><span class="p">,</span> <span class="s2">&quot;Results&quot;</span><span class="p">]]</span>\
-                        <span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;Month&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Team_Concerned&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Results&#39;</span><span class="p">,</span> 
+                        <span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;Month&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Team_Concerned&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Results&#39;</span><span class="p">,</span>
                         <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">&#39;Results&#39;</span><span class="p">})</span>
 
 <span class="n">ars_w_val</span><span class="p">,</span> <span class="n">che_w_val</span><span class="p">,</span> <span class="n">to_w_val</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="p">[</span><span class="n">df_england_wins</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">df_england_wins</span><span class="o">.</span><span class="n">index</span>\
@@ -15013,7 +15021,7 @@ Name: sum, dtype: int64</pre>
 
 <span class="c1"># Played</span>
 <span class="n">df_england_played</span> <span class="o">=</span> <span class="n">df_england</span><span class="p">[[</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">,</span> <span class="s2">&quot;Month&quot;</span><span class="p">,</span> <span class="s2">&quot;Results&quot;</span><span class="p">]]</span>\
-                        <span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;Month&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Team_Concerned&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Results&#39;</span><span class="p">,</span> 
+                        <span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s1">&#39;Month&#39;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Team_Concerned&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Results&#39;</span><span class="p">,</span>
                         <span class="n">fill_value</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;count&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">()</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s1">&#39;Results&#39;</span><span class="p">})</span>
 
 <span class="n">ars_p_val</span><span class="p">,</span> <span class="n">che_p_val</span><span class="p">,</span> <span class="n">to_p_val</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="p">[</span><span class="n">df_england_played</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">df_england_played</span><span class="o">.</span><span class="n">index</span>\
@@ -15029,7 +15037,7 @@ Name: sum, dtype: int64</pre>
     <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">m</span> <span class="o">-</span> <span class="mf">0.01</span><span class="p">,</span> <span class="n">ars_w_val</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.1</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">ars_p_val</span><span class="p">[</span><span class="n">m</span><span class="p">]),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors_club</span><span class="p">[</span><span class="s2">&quot;Arsenal&quot;</span><span class="p">])</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">m</span> <span class="o">-</span> <span class="mf">0.01</span><span class="p">,</span> <span class="n">che_w_val</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.3</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">che_p_val</span><span class="p">[</span><span class="n">m</span><span class="p">]),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors_club</span><span class="p">[</span><span class="s2">&quot;Chelsea&quot;</span><span class="p">])</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">m</span> <span class="o">-</span> <span class="mf">0.01</span><span class="p">,</span> <span class="n">to_w_val</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.2</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">to_p_val</span><span class="p">[</span><span class="n">m</span><span class="p">]),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">11</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors_club</span><span class="p">[</span><span class="s2">&quot;Tottenham&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;Arsenal won 7 matches in</span><span class="se">\n</span><span class="s1">October and played 8 times&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors_club</span><span class="p">[</span><span class="s2">&quot;Arsenal&quot;</span><span class="p">],</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;Arsenal won 7 matches in</span><span class="se">\n</span><span class="s1">October and played 8 times&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors_club</span><span class="p">[</span><span class="s2">&quot;Arsenal&quot;</span><span class="p">],</span>
              <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Months impact on victories by club over 2 years</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="n">club</span> <span class="k">for</span> <span class="n">club</span> <span class="ow">in</span> <span class="n">colors_club</span><span class="o">.</span><span class="n">keys</span><span class="p">()],</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
@@ -15082,7 +15090,7 @@ Name: sum, dtype: int64</pre>
 <span class="n">ars_colors</span> <span class="o">=</span> <span class="p">[</span><span class="nb">abs</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">ars_colors</span><span class="p">]</span>
 
 <span class="n">mpl_fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">ars_stats</span><span class="p">[</span><span class="s2">&quot;Difference&quot;</span><span class="p">][</span><span class="s1">&#39;size&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">ars_stats</span><span class="p">[</span><span class="s2">&quot;Month&quot;</span><span class="p">],</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">ars_stats</span><span class="p">[</span><span class="s2">&quot;Difference&quot;</span><span class="p">][</span><span class="s1">&#39;size&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">ars_stats</span><span class="p">[</span><span class="s2">&quot;Month&quot;</span><span class="p">],</span>
             <span class="n">s</span> <span class="o">=</span> <span class="p">(</span><span class="n">ars_stats</span><span class="p">[</span><span class="s2">&quot;Difference&quot;</span><span class="p">][</span><span class="s1">&#39;sum&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span> <span class="o">*</span> <span class="mi">150</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="n">cmap</span><span class="p">(</span><span class="n">ars_colors</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Month&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
@@ -15136,26 +15144,26 @@ Name: sum, dtype: int64</pre>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Data Preparation #</span>
-<span class="n">ars_games_won</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_england</span><span class="p">[(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Arsenal&quot;</span><span class="p">)</span> 
+<span class="n">ars_games_won</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_england</span><span class="p">[(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Arsenal&quot;</span><span class="p">)</span>
                              <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Results&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;V&#39;</span><span class="p">)])</span>
-<span class="n">wat_games_won</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_england</span><span class="p">[(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Watford&quot;</span><span class="p">)</span> 
+<span class="n">wat_games_won</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_england</span><span class="p">[(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Watford&quot;</span><span class="p">)</span>
                                  <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Results&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;V&#39;</span><span class="p">)])</span>
-<span class="n">ars_games_draws</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_england</span><span class="p">[(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Arsenal&quot;</span><span class="p">)</span> 
+<span class="n">ars_games_draws</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_england</span><span class="p">[(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Arsenal&quot;</span><span class="p">)</span>
                              <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Results&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;N&#39;</span><span class="p">)])</span>
-<span class="n">wat_games_draws</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_england</span><span class="p">[(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Watford&quot;</span><span class="p">)</span> 
+<span class="n">wat_games_draws</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_england</span><span class="p">[(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Watford&quot;</span><span class="p">)</span>
                                  <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Results&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;N&#39;</span><span class="p">)])</span>
-<span class="n">ars_games_losses</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_england</span><span class="p">[(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Arsenal&quot;</span><span class="p">)</span> 
+<span class="n">ars_games_losses</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_england</span><span class="p">[(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Arsenal&quot;</span><span class="p">)</span>
                              <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Results&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;D&#39;</span><span class="p">)])</span>
-<span class="n">wat_games_losses</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_england</span><span class="p">[(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Watford&quot;</span><span class="p">)</span> 
+<span class="n">wat_games_losses</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_england</span><span class="p">[(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Team_Concerned&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Watford&quot;</span><span class="p">)</span>
                                  <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_england</span><span class="p">[</span><span class="s2">&quot;Results&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;D&#39;</span><span class="p">)])</span>
 
 <span class="c1"># Plot #</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span> 
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 <span class="n">gs</span> <span class="o">=</span> <span class="n">gridspec</span><span class="o">.</span><span class="n">GridSpec</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">height_ratios</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">])</span>
 <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#3b7e49&#39;</span><span class="p">,</span> <span class="s1">&#39;#023473&#39;</span><span class="p">,</span> <span class="s1">&#39;#F00100&#39;</span><span class="p">]</span>
 <span class="n">explode</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">)</span>
 <span class="n">ax0</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">autotexts0</span> <span class="o">=</span> <span class="n">ax0</span><span class="o">.</span><span class="n">pie</span><span class="p">([</span><span class="n">ars_games_won</span><span class="p">,</span> <span class="n">ars_games_draws</span><span class="p">,</span> <span class="n">ars_games_losses</span><span class="p">],</span> <span class="n">explode</span><span class="o">=</span><span class="n">explode</span><span class="p">,</span> 
+<span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">autotexts0</span> <span class="o">=</span> <span class="n">ax0</span><span class="o">.</span><span class="n">pie</span><span class="p">([</span><span class="n">ars_games_won</span><span class="p">,</span> <span class="n">ars_games_draws</span><span class="p">,</span> <span class="n">ars_games_losses</span><span class="p">],</span> <span class="n">explode</span><span class="o">=</span><span class="n">explode</span><span class="p">,</span>
                            <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;WIN&quot;</span><span class="p">,</span> <span class="s2">&quot;DRAW&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFEAT&quot;</span><span class="p">],</span> <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">ax0</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Proportion of Matches Results</span><span class="se">\n</span><span class="s2">Arsenal&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">autotext</span> <span class="ow">in</span> <span class="n">autotexts0</span><span class="p">:</span>
@@ -15163,7 +15171,7 @@ Name: sum, dtype: int64</pre>
     <span class="n">autotext</span><span class="o">.</span><span class="n">set_size</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span>
 
 <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">gs</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">autotexts1</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">pie</span><span class="p">([</span><span class="n">wat_games_won</span><span class="p">,</span> <span class="n">wat_games_draws</span><span class="p">,</span> <span class="n">wat_games_losses</span><span class="p">],</span> <span class="n">explode</span><span class="o">=</span><span class="n">explode</span><span class="p">,</span> 
+<span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">autotexts1</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">pie</span><span class="p">([</span><span class="n">wat_games_won</span><span class="p">,</span> <span class="n">wat_games_draws</span><span class="p">,</span> <span class="n">wat_games_losses</span><span class="p">],</span> <span class="n">explode</span><span class="o">=</span><span class="n">explode</span><span class="p">,</span>
                            <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;WIN&quot;</span><span class="p">,</span> <span class="s2">&quot;DRAW&quot;</span><span class="p">,</span> <span class="s2">&quot;DEFEAT&quot;</span><span class="p">],</span> <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%1.1f%%</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">shadow</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Proportion of Matches Results</span><span class="se">\n</span><span class="s2">Watford&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">autotext</span> <span class="ow">in</span> <span class="n">autotexts1</span><span class="p">:</span>
@@ -15358,7 +15366,7 @@ Name: sum, dtype: int64</pre>
   </div>
 </body>
 
- 
+
 
 
 </html>
