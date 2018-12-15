@@ -168,12 +168,12 @@ let trip_data = {
   'Malta':{
     year: "1998",
     photo: ['img/map/malte.jpg'],
-    description: ["Malta, description coming soon"]
+    description: ["You can see me at 4 years old with my most <br>beautiful pink cap and all my family in Malta."]
   },
   'Tozeur':{
     year: "2001",
     photo: ['img/map/tozeur.jpg'],
-    description: ["Tozeur, description coming soon"]
+    description: ["Aged of 7 I'm sure you can imagine <br>how happy I was to discover the Sahara Desert<br> and its iconic sets from the Star Wars movies"]
   },
   'Louxor':{
     year: "2002",
@@ -225,7 +225,7 @@ let trip_data = {
     year: "2008",
     description: ["Martinique, description coming soon"]
   },
-  'Sicilia':{
+  'Sicile':{
     photo: ['img/map/no.png'],
     year: "2008",
     description: ["Sicilia, description coming soon"]
@@ -238,12 +238,12 @@ let trip_data = {
   'London':{
     photo: ['img/map/londres.jpg'],
     year: "2014",
-    description: ["London, description coming soon"]
+    description: ["If you already met me, you know how much I love football<br> and especially Arsenal, THE ONLY North London football team.<br>That picture was taken just before my first game in the Emirates Stadium."]
   },
   'Budapest':{
     photo: ['img/map/budapest.jpg'],
     year: "2015",
-    description: ["Budapest, description coming soon"]
+    description: ["My first true adventure abroad was in Budapest and it is just<br> about good memories. Over there I completed my bachelor in<br>'Automation & Applied Informatics and Advanced Data Analysis' "]
   },
   'Barcelone':{
     photo: ['img/map/barcelone.jpg'],
@@ -253,42 +253,52 @@ let trip_data = {
   'Nice':{
     photo: ['img/map/nice.jpg'],
     year: "2016",
-    description: ["Nice, description coming soon"]
+    description: ["It's hard to believe seeing this picture<br> but I came to Nice (2016) as a Data Scientist intern !<br>Prozone (now Stats) was my first internship in Data<br> and it helps me to reach every steps which came after."]
   },
   'Madrid':{
-    photo: ['img/map/madrid.jpg'],
+    photo: ['img/map/madrid.jpg', 'img/map/madrid1.jpg'],
     year: "2016",
-    description: ["Madrid, description coming soon"]
+    description: ["I came to Madrid to visit a friend who used to live there during one semester.<br>As a dedicated football fan I was delighted to see in this specific place<br>the Champions League final between Atletico Madrid and Real Madrid.<br>Guess who won?"]
   },
   'Roma':{
     photo: ['img/map/rome.jpg'],
     year: "2017",
-    description: ["Roma, description coming soon"]
+    description: ["Roma is definitively the most beautiful city I have seen in Europe.<br>(If I don't take Paris into account of course 🤭)"]
   },
   'Montreux-Lausanne-Genève':{
     photo: ['img/map/montreux.jpeg', 'img/map/geneve.jpg'],
     year: "2018",
-    description: ["Montreux-Lausanne-Genève, description coming soon"]
+    description: ["Montreux-Lausanne-Genève<br>Lac Leman mini road trip"]
   },
   'Chicago':{
     photo: ['img/map/chicago.jpg'],
     year: "2018",
-    description: ["So far this city was the most beautiful surprise of<br> my US journey. Everything you need is there."]
+    description: ["It was so far the was most beautiful surprise of<br> my U.S. journey. Everything you need is there."]
   },
   'Washington':{
-    photo: ['img/map/washington.jpg'],
+    photo: ['img/map/washington.jpg', 'img/map/washington2.png'],
     year: "2018",
-    description: ["I took the opportunity to visit the capital of<br> the United States during my ContentSquare adventure."]
+    description: ["I took the opportunity to visit the<br> U.S. capital during my ContentSquare adventure.<br>Every movies I used to watch in my childhood was there.<br>The first one I have in mind is Forsest Gump."]
+  },
+  'Boston':{
+    photo: ['img/map/boston.jpg'],
+    year: "2018",
+    description: ["Boston was like a quick come back in Europe.<br>Beautiful city with of the course best<br>universities of the world !<br>Harvard first and below, MIT."]
+  },
+  'Philadelphia':{
+    photo: ['img/map/philadelphia1.jpg','img/map/philadelphia2.jpg'],
+    year: "2018",
+    description: ["From the Old City to the Museum of Art<br>I finally met you Phily, home of<br>my childhood hero (and cheesesteak)."]
   },
   'New York':{
     photo: ['img/map/newyork.jpg'],
     year: "2018-2019",
-    description: ["I used to work in the Big Apple<br> as a Data Scientist at ContentSquare."]
+    description: ["I use to work in the Big Apple<br> as a Data Scientist for ContentSquare.<br>For me, a couple of minutes was enough to fall<br>in love with this place."]
   },
   'Paris':{
     photo: ['img/map/paris.jpg'],
     year: "-",
-    description: ["I was born (1994) close from Paris and spent my young years there.<br> I received the Master's Degree in Computer Engineering of ESME Sudria<br> after a second internship in Data Science at OCTO Technology (2017).<br> In 2018 I during my Advanced Master in Machine Learning & Data Science<br> I co-founded DataDeer a consulting firm helping startups."]
+    description: ["I was born (1994) in a small town close from Paris where I spent my young years.<br>I received the Master's Degree in Computer Engineering of ESME Sudria<br> after a second internship in Data Science at OCTO Technology (2017).<br> In 2018, during my Advanced Master in Machine Learning & Big Data,<br>I co-founded DataDeer a consulting firm helping startups."]
   }
 }
 
@@ -439,6 +449,18 @@ let marker_washington = new L.Marker([38.8976763, -77.03652979999998], {country:
   .on('mousedown', onClick);
   $(marker_washington._icon).addClass("hide")
 
+/* USA Boston 2018 */
+let marker_boston = new L.Marker([42.3600825, -71.05888010000001], {country: "United States", city: 'Boston', year: '2018', icon: blueIcon})
+  .addTo(map)
+  .on('mousedown', onClick);
+  $(marker_boston._icon).addClass("hide")
+
+/* USA Philadelphia 2018 */
+let marker_philadelphia = new L.Marker([39.9525839, -75.16522150000003], {country: "United States", city: 'Philadelphia', year: '2018', icon: blueIcon})
+  .addTo(map)
+  .on('mousedown', onClick);
+  $(marker_philadelphia._icon).addClass("hide")
+
 /* USA New York 2018 */
 let marker_newyork = new L.Marker([40.750568, -73.99351899999999], {country: "United States", city: 'New York', year: '2018-', icon: redIcon})
   .addTo(map)
@@ -457,7 +479,7 @@ let markers_array = [
                      marker_malte, marker_tozeur, marker_louxor, marker_canaries, marker_marrakech, marker_guadeloupe,
                      marker_djerba, marker_ouarzazate, marker_saly, marker_rhodes, marker_martinique, marker_sicile,
                      marker_corfou, marker_london, marker_budapest, marker_barcelone, marker_madrid, marker_nice, marker_rome,
-                     marker_suisse, marker_chicago, marker_washington, marker_newyork,
+                     marker_suisse, marker_chicago, marker_washington, marker_boston, marker_philadelphia, marker_newyork,
                      marker_paris
                     ]
 

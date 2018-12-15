@@ -23,50 +23,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
     <link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
-    <link rel="stylesheet" type="text/css" href="css/map.css">
-
-    <style>
-    .info {
-        padding: 6px 8px;
-        font: 14px/16px Arial, Helvetica, sans-serif;
-        background: white;
-        background: rgba(255,255,255,0.8);
-        box-shadow: 0 0 15px rgba(0,0,0,0.2);
-        border-radius: 5px;
-    }
-    .info h4 {
-        margin: 0 0 5px;
-        color: #777;
-    }
-    .hide{
-      display: none;
-    }
-
-    .legend {
-        line-height: 18px;
-        color: #555;
-    }
-    .legend i {
-        width: 18px;
-        height: 18px;
-        float: left;
-        margin-right: 8px;
-        opacity: 0.7;
-    }
-
-    .description {
-      display: block;
-      position: absolute;
-      z-index: 100;
-      top: 2.5%;
-      left: 4%;
-    }
-    .text_description{
-      font-family: 'Lato', sans-serif;
-      font-weight: 400;
-      text-align: center;
-    }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
   </head>
 
@@ -76,36 +33,9 @@
     <div>
       <div id="leaflet" style="float: left; width: 100%; height: 700px;"></div>
       <div id="description" class="info legend description" style="display: none"></div>
-      <!-- <div id="description" style="height: 500px;">
-          <h1 class="my_location_font" style="margin-top: 0px;">Londres</h1>
-        <center>
-          <img class="img_border" src='img/map/londres.jpg' width='300'/>
-          <div id=year class"year_border">2014</div>
-          <br>
-          <div class"my_location_font" id=travel_description>London, description coming soon</div>
-        </center>
-      </div>
-      <div>
-        <h3>Visited countries</h3>
-        <img src='img/map/flags/flag_france.jpg' width='50'/>
-        <img src='img/map/flags/flag_malte.png' width='50'/>
-        <img src='img/map/flags/flag_tunisie.png' width='50'/>
-        <img src='img/map/flags/flag_egypte.png' width='50'/>
-        <img src='img/map/flags/flag_espagne.png' width='50'/>
-        <img src='img/map/flags/flag_maroc.png' width='50'/>
-        <img src='img/map/flags/flag_senegal.png' width='50'/>
-        <img src='img/map/flags/flag_grece.png' width='50'/>
-        <img src='img/map/flags/flag_italie.png' width='50'/>
-        <img src='img/map/flags/flag_angleterre.png' width='50'/>
-        <img src='img/map/flags/flag_hongrie.png' width='50'/>
-        <img src='img/map/flags/flag_monaco.png' width='50'/>
-        <img src='img/map/flags/flag_vatican.png' width='50'/>
-        <img src='img/map/flags/flag_suisse.png' width='50'/>
-        <img src='img/map/flags/flag_usa.png' width='50'/>
-      </div> -->
 
       <!-- ADD THIS TO XHTML -->
-      <div id="preloaded-images">
+      <div id="preloaded-images" style="display:none">
         <img src="img/map/no.png" width="1" height="1"/>
         <img src="img/map/malte.jpg" width="1" height="1"/>
         <img src="img/map/tozeur.jpg" width="1" height="1"/>
@@ -114,12 +44,14 @@
         <img src="img/map/barcelone.jpg" width="1" height="1"/>
         <img src="img/map/nice.jpg" width="1" height="1"/>
         <img src="img/map/madrid.jpg" width="1" height="1"/>
+        <img src="img/map/madrid1.jpg" width="1" height="1"/>
         <img src="img/map/rome.jpg" width="1" height="1"/>
         <img src="img/map/geneve.jpg" width="1" height="1"/>
         <img src="img/map/montreux.jpeg" width="1" height="1"/>
         <img src="img/map/newyork.jpg" width="1" height="1"/>
         <img src="img/map/chicago.jpg" width="1" height="1"/>
         <img src="img/map/washington.jpg" width="1" height="1"/>
+        <img src="img/map/washington2.png" width="1" height="1"/>
       </div>
     </div>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>

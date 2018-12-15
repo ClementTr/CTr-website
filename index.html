@@ -10,6 +10,15 @@
       gtag('config', 'UA-114718272-1');
     </script>
 
+    <style>
+    .element {
+      position: fixed;
+      top: 25%;
+      left: 2%;
+      z-index: 10;
+    }
+    </style>
+
 
     <!-- Basic Page Needs
     ================================================== -->
@@ -90,6 +99,7 @@
             <li><a href="#tf-career" class="page-scroll">Career</a></li>
             <li><a href="#tf-works" class="page-scroll">Projects</a></li>
             <li><a href="#tf-testimonials" class="page-scroll">Hobbies</a></li>
+            <li><a href="map.html" class="page-scroll">My World</a></li>
           </ul>
         </div>
 
@@ -196,7 +206,7 @@
                   to create data tools and data collection processes.<br><br>
                   DataDeer helps European startups to scale up and create value from their data.
                 </p>
-                <a class="btn_timeline" href="https://www.datadeer.fr" target="_blank">More</a>
+                <a class="btn_timeline" href="http://www.datadeer.fr" target="_blank">More</a>
               </div>
           </div>
 
@@ -485,91 +495,22 @@
                   <div class="hover-bg">
                     <br>
                     <br>
-                    <a href="https://twitter.com/Clement_Tr" target="_blank">
-                      <img src="img/main/twitter.png" style="width:70px"></img>
-                    </a>
+                    <div id="mapover" class="info legend element" style="display: none">
+                      <center>
+                        <img width=400 src='img/main/maphover.png'>
+                        <br>
+                        <br>
+                        <p class='text_description'>Click for more information about me !</p>
+                      </center>
+                    </div>
                     <br>
-                    <a class="btn_resume" href="map.html" target="_blank">This is my world</a>
+                    <a class="btn_resume" href="map.html" target="_blank" onmouseover="show_map()" onmouseleave="hide_map()">Click to my world</a>
                   </div>
                 </center>
               </div>
           </div>
       </div>
-      <!-- <div id="leaflet"></div> -->
 
-    <!-- Contact Section
-    ==========================================-->
-    <!--
-    <div id="tf-contact" class="text-center">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-
-                    <div class="section-title center">
-                        <h2>Feel free to <strong>contact me</strong></h2>
-                        <div class="line">
-                            <hr>
-                        </div>
-                        <div class="clearfix"></div>
-                        <small><em>I'll try to answer you as fast as I can.</em></small>
-                    </div>
-
-                    <form>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Email address</label>
-                                    <input type="email" class="form-control" id="email_name" placeholder="Enter email">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="exampleInputPassword1">Object</label>
-                                    <input type="text" class="form-control" id="email_adress" placeholder="Object">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Message</label>
-                            <textarea id="email_message" class="form-control" rows="3"></textarea>
-                        </div>
-
-                        <button onclick="SendMailEmailJS()" type="submit" class="btn tf-btn btn-default">Submit</button>
-                        <div id="Success"></div>
-                    </form>
-
-                    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-                    <script>
-                        ( function(){
-                           emailjs.init("user_2Al3shrMTJMpl7R6siK4J");
-                          })();
-
-                          function SendMailEmailJS(){
-                    		var service_id = 'gmail';
-                    		var template_id = 'template_CTr';
-                    		var template_params = {
-                        		name: email_name.value,
-                        		email: email_adress.value,
-                        		message: email_message.value
-                    		};
-                    		template_params.message = template_params.message.replace(/(?:\r\n|\r|\n)/g, '<br>');
-                    		emailjs.send(service_id,template_id,template_params)
-                        		.then(
-                        			function(response) {
-                            			alert('Your email has been successfully sent !');
-                        			},
-                        			function(error) {
-                            			alert("Thank you for your message, you can also contact me directly on my personal mail adress: clement.tailleur@gmail.com");
-                        			}
-                    		);
-                		}
-            		</script>
-
-                </div>
-            </div>
-        </div>
-    </div>-->
 
 
 
@@ -580,7 +521,7 @@
                 <ul class="footer-social">
                     <li><a href="https://www.linkedin.com/in/clément-tailleur-9970b2bb/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                     <li><a href="https://github.com/ClementTr" target="_blank"><i class="fa fa-github"></i></a></li>
-                    <!--<li><a href="https://twitter.com/Clement_Tr" target="_blank"><i class="fa fa-twitter"></i></a></li>-->
+                    <li><a href="https://twitter.com/Clement_Tr" target="_blank"><i class="fa fa-twitter"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -605,3 +546,13 @@
 
   </body>
 </html>
+
+<script>
+function show_map(){
+  document.getElementById("mapover").style.display = "block"
+}
+
+function hide_map(){
+  document.getElementById("mapover").style.display = "none"
+}
+</script>
