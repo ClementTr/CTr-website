@@ -151,6 +151,24 @@ legend.onAdd = function (map) {
 
 legend.addTo(map);
 
+// let legend2 = L.control({position: 'bottomright'});
+// legend2.onAdd = function (map) {
+//     let div = L.DomUtil.create('div', 'info legend'),
+//         grades = ["Visit", "Work", "Studies"],
+//         colors = ["#084677", "#E0848C", "#669E8F"];
+//
+//     // loop through our density intervals and generate a label with a colored square for each interval
+//     for (let i = 0; i < grades.length; i++) {
+//         div.innerHTML += '<i style="background:' + colors[i] + '"></i> ' + grades[i]
+//         if(i != grades.length-1){
+//           div.innerHTML += '<br><br>'
+//         }
+//     }
+//     return div;
+// };
+//
+// legend2.addTo(map);
+
 
 let description = document.getElementById("description");
 
@@ -290,10 +308,75 @@ let trip_data = {
     year: "2018",
     description: ["From the Old City to the Museum of Art<br>I finally met you Phily, home of<br>my childhood hero (and cheesesteak)."]
   },
+  'Orlando':{
+    photo: ['img/map/orlando.jpg'],
+    year: "2019",
+    description: ["Florida Road Trip - Télécom Degree Celebraton - Stop 1"]
+  },
+  'Miami':{
+    photo: ['img/map/miami.jpg'],
+    year: "2019",
+    description: ["Florida Road Trip - Télécom Degree Celebraton - Stop 2"]
+  },
   'New York':{
     photo: ['img/map/newyork.jpg'],
     year: "2018-2019",
     description: ["I use to work in the Big Apple<br> as a Data Scientist for ContentSquare.<br>For me, a couple of minutes was enough to fall<br>in love with this place."]
+  },
+  'Charleston':{
+    photo: ['img/map/charleston.jpg'],
+    year: "2019",
+    description: ["USA Road Trip - Stop 1"]
+  },
+  'Savannah':{
+    photo: ['img/map/savannah.jpg'],
+    year: "2019",
+    description: ["USA Road Trip - Stop 2"]
+  },
+  'Atlanta':{
+    photo: ['img/map/atlanta.jpg'],
+    year: "2019",
+    description: ["USA Road Trip - Stop 3"]
+  },
+  'Nashville':{
+    photo: ['img/map/nashville.jpg', 'img/map/nashville2.jpg'],
+    year: "2019",
+    description: ["USA Road Trip - Stop 4"]
+  },
+  'New Orleans':{
+    photo: ['img/map/neworleans.jpg'],
+    year: "2019",
+    description: ["USA Road Trip - Stop 5"]
+  },
+  'Houston':{
+    photo: ['img/map/houston.jpg'],
+    year: "2019",
+    description: ["USA Road Trip - Stop 6"]
+  },
+  'San Antonio':{
+    photo: ['img/map/sanantonio.jpg'],
+    year: "2019",
+    description: ["USA Road Trip - Stop 7"]
+  },
+  'Austin':{
+    photo: ['img/map/austin.jpg'],
+    year: "2019",
+    description: ["USA Road Trip - Stop 8"]
+  },
+  'Dallas':{
+    photo: ['img/map/dallas.jpg'],
+    year: "2019",
+    description: ["USA Road Trip - Stop 9"]
+  },
+  'Tombstone':{
+    photo: ['img/map/tombstone.jpg', 'img/map/tombstone2.jpg'],
+    year: "2019",
+    description: ["USA Road Trip - Stop 10"]
+  },
+  'Phoenix':{
+    photo: ['img/map/phoenix.jpg'],
+    year: "2019",
+    description: ["USA Road Trip - Stop 11 (Last One)"]
   },
   'Paris':{
     photo: ['img/map/paris.jpg'],
@@ -461,11 +544,89 @@ let marker_philadelphia = new L.Marker([39.9525839, -75.16522150000003], {countr
   .on('mousedown', onClick);
   $(marker_philadelphia._icon).addClass("hide")
 
+/* USA Orlando 2019 */
+let marker_orlando = new L.Marker([28.5421097, -81.3790388], {country: "United States", city: 'Orlando', year: '2019', icon: blueIcon})
+  .addTo(map)
+  .on('mousedown', onClick);
+  $(marker_orlando._icon).addClass("hide")
+
+/* USA Miami 2019 */
+let marker_miami = new L.Marker([25.7742658, -80.1936589], {country: "United States", city: 'Miami', year: '2019', icon: blueIcon})
+  .addTo(map)
+  .on('mousedown', onClick);
+  $(marker_miami._icon).addClass("hide")
+
 /* USA New York 2018 */
 let marker_newyork = new L.Marker([40.750568, -73.99351899999999], {country: "United States", city: 'New York', year: '2018-', icon: redIcon})
   .addTo(map)
   .on('mousedown', onClick);
   $(marker_newyork._icon).addClass("hide")
+
+/* USA Charleston 2019 */
+let marker_charleston = new L.Marker([32.7876012, -79.9402728], {country: "United States", city: 'Charleston', year: '2019', icon: blueIcon})
+  .addTo(map)
+  .on('mousedown', onClick);
+  $(marker_charleston._icon).addClass("hide")
+
+/* USA Savannah 2019 */
+let marker_savannah = new L.Marker([32.0809263, -81.0911768], {country: "United States", city: 'Savannah', year: '2019', icon: blueIcon})
+  .addTo(map)
+  .on('mousedown', onClick);
+  $(marker_savannah._icon).addClass("hide")
+
+/* USA Atlanta 2019 */
+let marker_atlanta = new L.Marker([33.7490987, -84.3901849], {country: "United States", city: 'Atlanta', year: '2019', icon: blueIcon})
+  .addTo(map)
+  .on('mousedown', onClick);
+  $(marker_atlanta._icon).addClass("hide")
+
+/* USA Nashville 2019 */
+let marker_nashville = new L.Marker([36.1622296, -86.7743531], {country: "United States", city: 'Nashville', year: '2019', icon: blueIcon})
+  .addTo(map)
+  .on('mousedown', onClick);
+  $(marker_nashville._icon).addClass("hide")
+
+/* USA New Orleans 2019 */
+let marker_neworleans = new L.Marker([29.9499, -90.07010000000002], {country: "United States", city: 'New Orleans', year: '2019', icon: blueIcon})
+  .addTo(map)
+  .on('mousedown', onClick);
+  $(marker_neworleans._icon).addClass("hide")
+
+/* USA Houston 2019 */
+let marker_houston = new L.Marker([29.7589382, -95.3676974], {country: "United States", city: 'Houston', year: '2019', icon: blueIcon})
+  .addTo(map)
+  .on('mousedown', onClick);
+  $(marker_houston._icon).addClass("hide")
+
+/* USA San Antonio 2019 */
+let marker_sanantonio = new L.Marker([29.4246, -98.49509999999998], {country: "United States", city: 'San Antonio', year: '2019', icon: blueIcon})
+  .addTo(map)
+  .on('mousedown', onClick);
+  $(marker_sanantonio._icon).addClass("hide")
+
+/* USA Austin 2019 */
+let marker_austin = new L.Marker([30.2711286, -97.7436995], {country: "United States", city: 'Austin', year: '2019', icon: blueIcon})
+  .addTo(map)
+  .on('mousedown', onClick);
+  $(marker_austin._icon).addClass("hide")
+
+/* USA Dallas 2019 */
+let marker_dallas = new L.Marker([32.7762719, -96.7968559], {country: "United States", city: 'Dallas', year: '2019', icon: blueIcon})
+  .addTo(map)
+  .on('mousedown', onClick);
+  $(marker_dallas._icon).addClass("hide")
+
+/* USA Tombstone 2019 */
+let marker_tombstone = new L.Marker([31.7128683, -110.0675764], {country: "United States", city: 'Tombstone', year: '2019', icon: blueIcon})
+  .addTo(map)
+  .on('mousedown', onClick);
+  $(marker_tombstone._icon).addClass("hide")
+
+/* USA Phoenix 2019 */
+let marker_phoenix = new L.Marker([33.4485866, -112.0773456], {country: "United States", city: 'Phoenix', year: '2019', icon: blueIcon})
+  .addTo(map)
+  .on('mousedown', onClick);
+  $(marker_phoenix._icon).addClass("hide")
 
 /* PARIS */
 let marker_paris = new L.Marker([48.826294, 2.346419], {country: "France", city: 'Paris', year: '-', icon: greenIcon})
@@ -479,7 +640,10 @@ let markers_array = [
                      marker_malte, marker_tozeur, marker_louxor, marker_canaries, marker_marrakech, marker_guadeloupe,
                      marker_djerba, marker_ouarzazate, marker_saly, marker_rhodes, marker_martinique, marker_sicile,
                      marker_corfou, marker_london, marker_budapest, marker_barcelone, marker_madrid, marker_nice, marker_rome,
-                     marker_suisse, marker_chicago, marker_washington, marker_boston, marker_philadelphia, marker_newyork,
+                     marker_suisse, marker_chicago, marker_washington, marker_boston, marker_philadelphia, marker_orlando,
+                     marker_miami, marker_newyork,
+                     marker_charleston, marker_savannah, marker_atlanta, marker_nashville, marker_neworleans, marker_houston,
+                     marker_sanantonio, marker_austin, marker_dallas, marker_tombstone, marker_phoenix,
                      marker_paris
                     ]
 
