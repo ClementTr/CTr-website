@@ -3,50 +3,97 @@ import { Link } from 'react-router-dom'
 
 function HeaderComponent (){
   return (
-    // Navigation
-    // ==========================================
-    <div id="nav-bar">
-      <nav id="tf-menu" className="navbar navbar-default navbar-fixed-top">
-        <div className="container">
+    <div id="header-navbar">
 
-          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul className="nav navbar-nav navbar-center">
-              <li>
-                <Link className="page-scroll navbar-style" to="/"> Home </Link>
-              </li>
-              <li>
-                <Link className="page-scroll navbar-style" data-toggle="dropdown" to="/about"> Categories <span className="caret"></span></Link>
-                <ul className="dropdown-menu">
-                    <li>
-                      <Link to="/data-engineering"> Data Engineering </Link>
-                    </li>
-                    <li>
-                      <Link to="/machine-learning"> Machine Learning </Link>
-                    </li>
-                    <li>
-                      <Link to="/data-visualization"> Data Visualization </Link>
-                    </li>
-                    <li>
-                      <Link to="/industrialized-projects"> Industrialized Projects </Link>
-                    </li>
+      <div id="pc">
+        <nav className="navbar navbar-expand-lg navbar-light">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a className="nav-link" href="/">Home</a>
+            </li>
+            <li className="nav-item dropdown">
+              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Categories
+              </a>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a className="dropdown-item" href="/data-engineering">Data Engineering</a>
+                <a className="dropdown-item" href="/machine-learning">Machine Learning</a>
+                <a className="dropdown-item" href="/data-visualization">Data Visualization</a>
+                <a className="dropdown-item" href="/industrialized-projects">Industrialized Projects</a>
+              </div>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/about">About</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/contact">Contact</a>
+            </li>
+            <li className="nav-item-pic">
+              <a className="nav-link" href="/ctr-map"><img src="/img/worldwide.svg" width="30"/></a>
+            </li>
+          </ul>
+        </nav>
+        <hr className="vectline" align="center" width="80%" color="midnightblue" size="3"/>
+      </div>
+
+      <div id="mobile">
+        <div className="pos-f-t">
+          <div className="collapse" id="navbarToggleExternalContent">
+            <div className="bg-light p-4">
+              <h4 className="nav-title">Menu</h4>
+
+              <div id="accordion">
+
+                <ul className="list col-a">
+                  <li>
+                    <a href="/">Home</a>
+                  </li>
+
+                  <li>
+                    <div>
+                      <div id="headingTwo">
+                          <a data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Categories
+                          </a>
+                      </div>
+                      <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <ul className="list col-b">
+                          <li>
+                            <a className="dropdown-item" href="/data-engineering">Data Engineering</a>
+                            <a className="dropdown-item" href="/machine-learning">Machine Learning</a>
+                            <a className="dropdown-item" href="/data-visualization">Data Visualization</a>
+                            <a className="dropdown-item" href="/industrialized-projects">Industrialized Projects</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li>
+                    <a href="/about">About</a>
+                  </li>
+                  <li>
+                    <a href="/contact">Contact</a>
+                  </li>
+                  <li>
+                    <a href="/ctr-map" id="navmobile-worldwide">Worldwide</a>
+                  </li>
                 </ul>
-              </li>
-              <li>
-                <Link className="page-scroll navbar-style" to="/about"> About </Link>
-              </li>
-              <li>
-                <Link className="page-scroll navbar-style" to="/contact"> Contact </Link>
-              </li>
-              <li>
-                <Link className="page-scroll" to="/ctr-map"> <img src="/img/worldwide.svg" width="30"/> </Link>
-              </li>
-            </ul>
+
+              </div>
+            </div>
           </div>
 
+          <nav id="nav-mobile" className="navbar navbar-light bg-light">
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+          </nav>
         </div>
-      </nav>
-      <hr className="vectline" align="center" width="80%" color="midnightblue" size="3"/>
+      </div>
+
     </div>
+
   )
 }
 
