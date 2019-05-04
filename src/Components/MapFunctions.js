@@ -24,4 +24,5 @@ function style(feature) {
   };
 }
 
+
 export default style;
