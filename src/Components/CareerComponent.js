@@ -5,17 +5,13 @@ function CareerComponent (){
    <div id="tf-career">
      <div className="container">
 
-       <div className="section-title text-center center">
-         <h2 className="title-career"><strong>My Data Career</strong></h2>
-       </div>
-
        <section className="timeline">
          <div className="timeline-item">
            <div className="timeline-img"></div>
              <div className="timeline-content js--fadeInLeft">
                <div className="align-left">
-                 <h3>Data Scientist & Analyst <i>Job</i></h3>
-                 <h4>CONTENTSQUARE - New York</h4>
+                 <h3 className="timeline-title">Data Scientist & Analyst <i>Job</i></h3>
+                 <h4 className="timeline-title">CONTENTSQUARE - New York</h4>
                </div>
                <div className="date">2018 -</div>
                <p>
@@ -31,12 +27,12 @@ function CareerComponent (){
            <div className="timeline-img"></div>
              <div className="timeline-content js--fadeInRight">
                <div className="align-right">
-                 <h3 className="no-margin">CEO & Co-Founder</h3>
-                 <h4>DATADEER - Paris</h4>
+                 <h3 className="no-margin timeline-title">CEO & Co-Founder</h3>
+                 <h4 className="timeline-title">DATADEER - Paris</h4>
                </div>
                <div className="date">2018 -</div>
                <p><u>Data Consultin</u>g<u>  Firm</u> - Founded with
-                 <a href="https://www.linkedin.com/in/poulainmaxime/">Maxime Poulain</a>, we bring via DataDeer,
+                 <a href="https://www.linkedin.com/in/poulainmaxime/"> Maxime Poulain</a>, we bring via DataDeer,
                  our <small>Machine Learning</small> and <small>Big Data</small> expertise
                  to create data tools and data collection processes.<br/><br/>
                  DataDeer helps European startups to scale up and create value from their data.
@@ -49,8 +45,8 @@ function CareerComponent (){
            <div className="timeline-img"></div>
              <div className="timeline-content js--fadeInLeft">
                <div className="align-left">
-                 <h3>Data Engineering / Visualization <i>Project</i></h3>
-                 <h4>Télécom ParisTech - Paris</h4>
+                 <h3 className="timeline-title">Data Eng. / Vis. <i>Project</i></h3>
+                 <h4 className="timeline-title">Télécom ParisTech - Paris</h4>
                </div>
                <div className="date">2018<br/>1 month</div>
                <p>
@@ -65,8 +61,8 @@ function CareerComponent (){
            <div className="timeline-img"></div>
              <div className="timeline-content js--fadeInRight">
                <div className="align-right">
-                 <h3 className="no-margin">Data Science / Spark <i>Project</i></h3>
-                 <h4>Télécom ParisTech - Paris</h4>
+                 <h3 className="no-margin timeline-title">Data Science / Spark <i>Project</i></h3>
+                 <h4 className="timeline-title">Télécom ParisTech - Paris</h4>
                </div>
                <div className="date">2017<br/>1 month</div>
                <p><u>AchieveIT</u> - Developed a model that can predict whether a Kickstarter campaign
@@ -78,8 +74,8 @@ function CareerComponent (){
            <div className="timeline-img"></div>
              <div className="timeline-content js--fadeInLeft">
                <div className="align-left">
-                 <h3>Data Scientist <i>Job</i></h3>
-                 <h4>OCTO Technology - Paris</h4>
+                 <h3 className="timeline-title">Data Scientist <i>Job</i></h3>
+                 <h4 className="timeline-title">OCTO Technology - Paris</h4>
                </div>
                <div className="date">2017<br/>6 months</div>
                <p><u>Peo</u>p<u>le Anal</u>y<u>tics</u> - Implemented <b>machine learning</b> algorithms to identify
@@ -94,8 +90,8 @@ function CareerComponent (){
            <div className="timeline-img"></div>
              <div className="timeline-content js--fadeInRight">
                <div className="align-right">
-                 <h3 className="no-margin">Data Engineering <i>Project</i></h3>
-                 <h4>ESME Sudria - Paris</h4>
+                 <h3 className="no-margin timeline-title">Data Engineering <i>Project</i></h3>
+                 <h4 className="timeline-title">ESME Sudria - Paris</h4>
                </div>
                <div className="date">2016<br/>6 months</div>
                <p><u>L</u>y<u>nkid</u> - Captured real-time data simulation from household electrical meters, analyzing them and creating
@@ -107,8 +103,8 @@ function CareerComponent (){
            <div className="timeline-img"></div>
              <div className="timeline-content js--fadeInLeft">
                <div className="align-left">
-                 <h3>Data Scientist <i>Job</i></h3>
-                 <h4>Stats (previously Prozone) - Nice</h4>
+                 <h3 className="timeline-title">Data Scientist <i>Job</i></h3>
+                 <h4 className="timeline-title">Stats (previously Prozone) - Nice</h4>
                </div>
                <div className="date">2016<br/>4 months</div>
                <p>Developed a <b>predictive model</b> with <small>R</small>, able to assess the injury risk of a professional football player.<br/>
@@ -121,8 +117,8 @@ function CareerComponent (){
            <div className="timeline-img"></div>
              <div className="timeline-content js--fadeInRight">
                <div className="align-right">
-                 <h3 className="no-margin">Data Analyst <i>Project</i></h3>
-                 <h4>BME - Budapest</h4>
+                 <h3 className="no-margin timeline-title">Data Analyst <i>Project</i></h3>
+                 <h4 className="timeline-title">BME - Budapest</h4>
                </div>
                <div className="date">2015<br/>4 months</div>
                <p><u>Best Pla</u>y<u>ers</u> - Get specific group of football players using <small>RapidMiner</small>.</p>

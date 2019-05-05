@@ -1,26 +1,32 @@
-import React from 'react';
+import PersonalData from './PersonalData.json';
 import ReactDOM from 'react-dom';
+import React from 'react';
 import L from 'leaflet';
-import myData from './data.json';
 
 let map_data = require('./MapData.js').default;
 let markers = []
 let zoom = false
 
-const work_countries = ["France", "United States"]
-const study_countries = ["France", "Hungary"]
+function distinct(value, index, self) {
+    return self.indexOf(value) === index;
+}
 
-const visited_countries = []
-myData.travels.forEach(function(obj){
-  if(visited_countries.includes(obj.country) == false){
-    visited_countries.push(obj.country)
-  }
-})
+function getPurposeContries(data, purpose){
+  let purpose_countries = data.travels.filter(e => e.purpose === purpose);
+  purpose_countries = purpose_countries.map(obj => {
+    return obj.country;
+  });
+  purpose_countries = purpose_countries.filter(distinct)
+  return purpose_countries
+}
+const work_countries = getPurposeContries(PersonalData, 'work')
+const studies_countries = getPurposeContries(PersonalData, 'studies')
+const visited_countries = getPurposeContries(PersonalData, 'visit')
 
 function getColor(name) {
   if(work_countries.includes(name)){
     return "#E0848C"
-  }else if(study_countries.includes(name)){
+  }else if(studies_countries.includes(name)){
     return "#669E8F"
   }else if(visited_countries.includes(name)){
     return '#517FA3'
@@ -43,7 +49,8 @@ function style(feature) {
 class Map extends React.Component {
 
     componentDidMount() {
-        var map = this.map = L.map(ReactDOM.findDOMNode(this), {
+      /* START VARIABLES */
+      let map = this.map = L.map(ReactDOM.findDOMNode(this), {
           'zoomControl': false,
           'center': [0, 0],
           'zoom': 1.5,
@@ -57,16 +64,13 @@ class Map extends React.Component {
           ],
         });
         let southWest = L.latLng(-60, -180),
-        northEast = L.latLng(89, 180);
+            northEast = L.latLng(89, 180);
         let bounds = L.latLngBounds(southWest, northEast);
-
         map.setMaxBounds(bounds);
         map.on('drag', function() {
             map.panInsideBounds(bounds, { animate: false });
         });
         map.setView([40, -7], 2.5);
-
-        let description = document.getElementById("descriptionId");
 
         let geojson;
         geojson = L.geoJson(map_data, {
@@ -74,18 +78,40 @@ class Map extends React.Component {
             onEachFeature: onEachFeature
         }).addTo(map);
 
-        function setDescription(country, city, year, photos, text_description){
-          description.style.display = "block"
-          description.innerHTML = "<b>" + country + "</b> - " + city + "<br><i>" + year + "</i><br><br>"
-          photos.forEach(function(photo){
-            description.innerHTML += "<center><img width=300 src='" + photo + "' ></center>"
-          })
-          description.innerHTML += "<p class='text_description'>" + text_description + "</p>"
-        }
+        let info = L.control();
+        info.onAdd = function (map) {
+            this._div = L.DomUtil.create('div', 'info');
+            this.update();
+            return this._div;
+        };
+        info.update = function (props) {
+            this._div.innerHTML = '<h4>Country</h4>' +  (props ?
+                '<b>' + props.name + '</b>'
+                : 'Hover over a country');
+        };
+        info.addTo(map);
 
-        function removeDescription(){
-          description.style.display = "none"
-        }
+        let legend = L.control({position: 'bottomright'});
+        legend.onAdd = function (map) {
+            let div = L.DomUtil.create('div', 'info legend'),
+                grades = ["Visit", "Work", "Studies"],
+                colors = ["#084677", "#E0848C", "#669E8F"];
+            // loop through our density intervals and generate a label with a colored square for each interval
+            for (let i = 0; i < grades.length; i++) {
+                div.innerHTML += '<i style="background:' + colors[i] + '"></i> ' + grades[i]
+                if(i != grades.length-1){
+                  div.innerHTML += '<br><br>'
+                }
+            }
+            return div;
+        };
+        legend.addTo(map);
+
+        let description = document.getElementById("descriptionId");
+
+        map.on('click', this.onMapClick);
+        map.fitWorld();
+        /* END VARIABLES */
 
         function overMap(e) {
           let layer = e.target;
@@ -111,30 +137,22 @@ class Map extends React.Component {
 
         function clickMap(e) {
           let country = e.target.feature.properties.name
-          console.log(country)
           if(zoom == false){
             if(country === "France"){
               map.setView([40, -7], 3);
-              create_markers("France")
+              createMarkers("France")
               zoom = true
             }else{
               map.fitBounds(e.target.getBounds());
-              create_markers(country)
+              createMarkers(country)
               zoom = true
             }
           }else{
             map.setView([40, -7], 2);
             removeDescription()
-            remove_markers()
+            removeMarkers()
             zoom = false
           }
-        }
-
-        function remove_markers(){
-          {markers.map((m, idx) =>
-            map.removeLayer(m)
-          )}
-          markers = []
         }
 
         function onEachFeature(feature, layer) {
@@ -146,40 +164,81 @@ class Map extends React.Component {
         }
 
         function onMarkerClick(e){
-          console.log(e.target.options)
           let marker_data = e.target.options
-          console.log(marker_data)
           setDescription(marker_data.country, marker_data.city, marker_data.year, marker_data.photos, marker_data.description)
         }
 
-        function create_markers(country){
-          let country_data_selected = myData.travels.filter(e => e.country === country);
-          console.log("hihi", country_data_selected)
-
+        function createMarkers(country){
+          let country_data_selected = PersonalData.travels.filter(e => e.country === country);
           country_data_selected.map((obj, idx) =>
             markers.push(L.marker(obj.coordinates, {country: obj.country, city: obj.city, year: obj.year, photos: obj.photos, description:obj.description}).addTo(map).on('click', onMarkerClick))
           )
         }
 
-        let info = L.control();
+        function removeMarkers(){
+          {markers.map((m, idx) =>
+            map.removeLayer(m)
+          )}
+          markers = []
+        }
 
-        info.onAdd = function (map) {
-            this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
-            this.update();
-            return this._div;
-        };
+        function setDescription(country, city, year, photos, text_description){
+          description.style.display = "block"
+          description.innerHTML = "<b>" + country + "</b> - " + city + "<br><i>" + year + "</i><br><br>"
 
-        // method that we will use to update the control based on feature properties passed
-        info.update = function (props) {
-            this._div.innerHTML = '<h4>Country</h4>' +  (props ?
-                '<b>' + props.name + '</b>'
-                : 'Hover over a country');
-        };
+          if(photos.length > 1){
+            let str_description = ""
+            let cpt = 0
+            str_description += "\
+              <div id='myCarousel' class='carousel slide slide_travels' data-ride='carousel'><ol class='carousel-indicators'>"
 
-        info.addTo(map);
+            photos.forEach(function(photo){
+              if(cpt === 0){
+                str_description += "<li data-target='#myCarousel' data-slide-to='0' class='active'></li>";
+              }else{
+                str_description += "<li data-target='#myCarousel' data-slide-to='" + cpt + "'></li>";
+              }
+              cpt += 1;
+            })
 
-        map.on('click', this.onMapClick);
-        map.fitWorld();
+            str_description += "</ol><div class='carousel-inner'>"
+
+            cpt = 0
+            photos.forEach(function(photo){
+              if(cpt === 0){
+                str_description += "<div class='item active'><img src=" + photo + " style='width:100%;'></div>"
+              }else{
+                str_description += "<div class='item'><img src=" + photo + " style='width:100%;'></div>"
+              }
+              cpt += 1
+            })
+
+            str_description += "\
+                </div>\
+                <a class='left carousel-control' href='#myCarousel' data-slide='prev'>\
+                  <span class='glyphicon glyphicon-chevron-left'></span>\
+                  <span class='sr-only'>Previous</span>\
+                </a>\
+                <a class='right carousel-control' href='#myCarousel' data-slide='next'>\
+                  <span class='glyphicon glyphicon-chevron-right'></span>\
+                  <span class='sr-only'>Next</span>\
+                </a>\
+              </div>\
+            "
+            console.log(str_description)
+            description.innerHTML += str_description
+          }else{
+            description.innerHTML += "<center><img width=300 src='" + photos[0] + "' ></center>"
+          }
+
+
+
+          description.innerHTML += "<p class='text_description'>" + text_description + "</p>"
+        }
+
+        function removeDescription(){
+          description.style.display = "none"
+        }
     }
 
     componentWillUnmount() {
@@ -191,9 +250,6 @@ class Map extends React.Component {
         //console.log(e)
     }
 
-    // onMarkerClick = (e) => {
-    //   console.log(e.target.options)
-    // }
 
     render() {
         return (
