@@ -697,7 +697,8 @@ nav#footer p{
 	padding-top: 0px;
 }
 
-.post-entry-horzontal {
+/* .post-entry-horzontal {
+	margin-left: 100px;
   margin-bottom: 30px;
 }
 
@@ -757,7 +758,7 @@ nav#footer p{
 .post-entry-horzontal a:hover {
   -webkit-box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
-}
+} */
 
 .element-animate {
   opacity: 0;
@@ -780,6 +781,15 @@ nav#footer p{
 	margin: auto;
 	width: 70%;
 }
+
+.media-img{
+	width: 150px;
+}
+
+.media{
+	margin-bottom: 20px;
+}
+
 
 /*Remove leaflet adv*/
 .leaflet-control-attribution{
