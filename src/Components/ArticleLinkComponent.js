@@ -14,11 +14,12 @@ function ArticleLinkComponent (){
          <div className="col-md-6 col-lg-4">
            <a href="blog-single.html" className="a-block d-flex align-items-center height-md" style={divStyle}>
              <div className="text">
+               <h3>Extract, Transform & Load</h3>
+               <h3>Pandas Basics with Arsenal Football Club</h3>
                <div className="post-meta">
-                 <span className="category">Lifestyle</span>
-                 <span className="mr-2">March 15, 2018 </span> &bullet;
+                 <span className="category">ETL</span>
+                 <span className="mr-2">March 15, 2018 </span>
                </div>
-               <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
              </div>
            </a>
          </div>
@@ -26,11 +27,11 @@ function ArticleLinkComponent (){
          <div className="col-md-6 col-lg-4">
            <a href="blog-single.html" className="a-block d-flex align-items-center height-md" style={divStyle}>
              <div className="text">
+               <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
                <div className="post-meta">
                  <span className="category">Travel</span>
-                 <span className="mr-2">March 15, 2018 </span> &bullet;
+                 <span className="mr-2">March 15, 2018 </span>
                </div>
-               <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
              </div>
            </a>
          </div>
@@ -38,11 +39,11 @@ function ArticleLinkComponent (){
          <div className="col-md-6 col-lg-4">
            <a href="blog-single.html" className="a-block d-flex align-items-center height-md" style={divStyle}>
              <div className="text">
-               <div className="post-meta">
-                 <span className="category">Food</span>
-                 <span className="mr-2">March 15, 2018 </span> &bullet;
-               </div>
                <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
+               <div className="post-meta">
+                 <span className="category">Travel</span>
+                 <span className="mr-2">March 15, 2018 </span>
+               </div>
              </div>
            </a>
          </div>

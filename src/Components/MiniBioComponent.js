@@ -10,7 +10,7 @@ function MiniBioComponent (){
            <h2 className="bio-title">Clément Tailleur</h2>
            <h6 className="bio-title">clement.tailleur@gmail.com</h6>
            <h6 className="bio-title">(+33) 6.43.63.32.29</h6>
-           <p>
+           <p className="bio-text">
             Data OPS Engineer - Arsenal Fan<br/>
             Studied in Paris & Budapest<br/>
             Worked in Nice & New York<br/>

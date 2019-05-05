@@ -14,6 +14,7 @@ import AboutComponent from './Components/AboutComponent';
 import ContactComponent from './Components/ContactComponent';
 import MapComponent from './Components/MapComponent';
 import HeaderComponent from './Components/HeaderComponent';
+import ETLArticleComponent from './Components/ETLArticleComponent';
 import NotFoundComponent from './Components/NotFoundComponent';
 
 class App extends Component {
@@ -33,6 +34,8 @@ class App extends Component {
 
             <Route exact path='/about' component={AboutComponent}></Route>
             <Route exact path='/contact' component={ContactComponent}></Route>
+
+            <Route exact path='/article-etl' component={ETLArticleComponent}></Route>
             <Route component={NotFoundComponent}></Route>
           </Switch>
         </div>
