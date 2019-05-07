@@ -12,7 +12,7 @@ function CarouselComponent (){
            </ol>
            <div className="carousel-inner">
                <div className="item active">
-                 <img src="img/main/Photo_01.jpg" className="carousel-style" alt="First Slide"/>
+                 <img src="img/main/Carousel_01.jpg" className="carousel-style" alt="First Slide"/>
                  <div className="absolute-div">
                     <div className="carousel-caption">
                         <h3>Extract, Transform & Load</h3>
@@ -21,7 +21,7 @@ function CarouselComponent (){
                   </div>
                </div>
                <div className="item">
-                 <img src="img/main/Photo_02.jpg" className="carousel-style" alt="First Slide"/>
+                 <img src="img/main/Carousel_02.jpg" className="carousel-style" alt="First Slide"/>
                  <div className="absolute-div">
                     <div className="carousel-caption">
                         <h3>Natural Language Processing</h3>
@@ -30,7 +30,7 @@ function CarouselComponent (){
                   </div>
                </div>
                <div className="item">
-                 <img src="img/main/Photo_03.jpg" className="carousel-style" alt="First Slide"/>
+                 <img src="img/main/Carousel_03.jpg" className="carousel-style" alt="First Slide"/>
                  <div className="absolute-div">
                     <div className="carousel-caption">
                         <h3>Kubernetes Learning App</h3>

@@ -1,7 +1,15 @@
 import React from 'react';
 
-const divStyle = {
-  backgroundImage: "url('img/img1.png')",
+const style_article_01 = {
+  backgroundImage: "url('img/main/Article_01.jpg')",
+};
+
+const style_article_02 = {
+  backgroundImage: "url('img/main/Article_02.jpg')",
+};
+
+const style_article_03 = {
+  backgroundImage: "url('img/main/Article_03.jpg')",
 };
 
 
@@ -12,7 +20,7 @@ function ArticleLinkComponent (){
        <div className="row">
 
          <div className="col-md-6 col-lg-4">
-           <a href="blog-single.html" className="a-block d-flex align-items-center height-md" style={divStyle}>
+           <a href="/industrialized-projects/betit" className="a-block d-flex align-items-center height-md" style={style_article_01}>
              <div className="text">
                <h3>BetIt</h3>
                <h3>Data Driven Bets</h3>
@@ -25,7 +33,7 @@ function ArticleLinkComponent (){
          </div>
 
          <div className="col-md-6 col-lg-4">
-           <a href="blog-single.html" className="a-block d-flex align-items-center height-md" style={divStyle}>
+           <a href="/data-ops/aws-mongodb" className="a-block d-flex align-items-center height-md" style={style_article_02}>
              <div className="text">
                <h3>AWS MongoDB Cluster</h3>
                <h3>Create a Data Structure</h3>
@@ -38,7 +46,7 @@ function ArticleLinkComponent (){
          </div>
 
          <div className="col-md-6 col-lg-4">
-           <a href="blog-single.html" className="a-block d-flex align-items-center height-md" style={divStyle}>
+           <a href="/industrialized-projects/worldcup2018" className="a-block d-flex align-items-center height-md" style={style_article_03}>
              <div className="text">
                <h3>2018 FIFA Worldcup</h3>
                <h3>Live AI Dashboard</h3>

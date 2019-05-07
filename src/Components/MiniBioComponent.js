@@ -5,7 +5,7 @@ function MiniBioComponent (){
    <div className="col-md-3 margintop-navbar">
      <div className="sidebar-box">
        <div className="bio text-center">
-         <img src="img/main/profile.jpg" alt="Placeholder" className="img-fluid bio-profile"/>
+         <img src="/img/main/01.jpg" alt="Placeholder" className="img-fluid bio-profile"/>
          <div className="bio-body">
            <h2 className="bio-title">Clément Tailleur</h2>
            <h6 className="bio-title">clement.tailleur@gmail.com</h6>

@@ -99,7 +99,7 @@ class Map extends React.Component {
             // loop through our density intervals and generate a label with a colored square for each interval
             for (let i = 0; i < grades.length; i++) {
                 div.innerHTML += '<i style="background:' + colors[i] + '"></i> ' + grades[i]
-                if(i != grades.length-1){
+                if(i !== grades.length-1){
                   div.innerHTML += '<br><br>'
                 }
             }
@@ -137,7 +137,7 @@ class Map extends React.Component {
 
         function clickMap(e) {
           let country = e.target.feature.properties.name
-          if(zoom == false){
+          if(zoom === false){
             if(country === "France"){
               map.setView([40, -7], 3);
               createMarkers("France")

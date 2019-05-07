@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 
 function HeaderComponent (){
   return (
@@ -16,10 +15,10 @@ function HeaderComponent (){
                 Categories
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              {/*<a className="dropdown-item" href="/data-engineering">Data Engineering</a>*/}
-              <a className="dropdown-item" href="/machine-learning">Machine Learning</a>
-              {/*<a className="dropdown-item" href="/data-visualization">Data Visualization</a>*/}
-              <a className="dropdown-item" href="/industrialized-projects">Industrialized Projects</a>
+                <a className="dropdown-item" href="/data-ops">Data OPS</a>
+                <a className="dropdown-item" href="/data-science">Data Science</a>
+                {/*<a className="dropdown-item" href="/data-visualization">Data Visualization</a>*/}
+                <a className="dropdown-item" href="/industrialized-projects">Industrialized Projects</a>
               </div>
             </li>
             <li className="nav-item">
@@ -59,8 +58,8 @@ function HeaderComponent (){
                       <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <ul className="list col-b">
                           <li>
-                            {/*<a className="dropdown-item" href="/data-engineering">Data Engineering</a>*/}
-                            <a className="dropdown-item" href="/machine-learning">Machine Learning</a>
+                            <a className="dropdown-item" href="/data-ops">Data OPS</a>
+                            <a className="dropdown-item" href="/data-science">Data Science</a>
                             {/*<a className="dropdown-item" href="/data-visualization">Data Visualization</a>*/}
                             <a className="dropdown-item" href="/industrialized-projects">Industrialized Projects</a>
                           </li>

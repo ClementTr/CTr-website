@@ -11,8 +11,12 @@ body {
     color: #6c757d;
 }
 
-a {
-	text-decoration: none !important;
+#articles-section a{
+  text-decoration: none !important;
+}
+
+#morearticles-section a{
+  text-decoration: none !important;
 }
 
 .title-article{
@@ -624,7 +628,20 @@ button.btn.tf-btn.btn-default {
 
 
 .site-footer{
+  padding-bottom: 20px;
   background-color: #4a4949db;
+}
+
+.site-footer p{
+  color: #fff;
+}
+
+.site-footer a{
+  color: #fff;
+}
+
+.site-footer iframe{
+  width: 250px;
 }
 
 .site-footer h3 {
