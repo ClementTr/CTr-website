@@ -1,4 +1,3 @@
-import { Document } from 'react-pdf'
 import React from 'react';
 
 function FormationComponent (){

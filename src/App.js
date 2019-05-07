@@ -1,3 +1,15 @@
+import IndustrializedComponent from './Components/Blog/Other/IndustrializedComponent';
+import ETLArticleComponent from './Components/Blog/DS/Articles/ETLArticleComponent';
+import VisualizationComponent from './Components/Blog/DV/VisualizationComponent';
+import EngineeringComponent from './Components/Blog/DE/EngineeringComponent';
+import LearningComponent from './Components/Blog/DS/LearningComponent'
+import NotFoundComponent from './Components/NotFoundComponent';
+import AboutComponent from './Components/About/AboutComponent';
+import ContactComponent from './Components/ContactComponent';
+import HomeComponent from './Components/Home/HomeComponent';
+import HeaderComponent from './Components/HeaderComponent';
+import FooterComponent from './Components/FooterComponent';
+import MapComponent from './Components/Map/MapComponent';
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
@@ -5,24 +17,13 @@ import {
   Link,
   Switch
 } from 'react-router-dom';
-import EngineeringComponent from './Components/EngineeringComponent';
-import LearningComponent from './Components/LearningComponent'
-import VisualizationComponent from './Components/VisualizationComponent';
-import IndustrializedComponent from './Components/IndustrializedComponent';
-import HomeComponent from './Components/HomeComponent';
-import AboutComponent from './Components/AboutComponent';
-import ContactComponent from './Components/ContactComponent';
-import MapComponent from './Components/MapComponent';
-import HeaderComponent from './Components/HeaderComponent';
-import ETLArticleComponent from './Components/ETLArticleComponent';
-import NotFoundComponent from './Components/NotFoundComponent';
 
 class App extends Component {
   render() {
     return (
       <Router>
         <div>
-          <HeaderComponent></HeaderComponent>
+          <HeaderComponent/>
 
           <Switch>
             <Route exact path='/' component={HomeComponent}></Route>
@@ -38,7 +39,9 @@ class App extends Component {
             <Route exact path='/article-etl' component={ETLArticleComponent}></Route>
             <Route component={NotFoundComponent}></Route>
           </Switch>
+
         </div>
+        <FooterComponent/>
       </Router>
     );
   }

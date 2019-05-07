@@ -12,18 +12,31 @@ function CarouselComponent (){
            </ol>
            <div className="carousel-inner">
                <div className="item active">
-                   <img src="img/main/Photo_01.jpg" className="carousel-style" alt="First Slide"/>
-                   <div className="absolute-div">
-                          <div className="carousel-caption">
-                              <h3>What we Do</h3>
-                          </div>
+                 <img src="img/main/Photo_01.jpg" className="carousel-style" alt="First Slide"/>
+                 <div className="absolute-div">
+                    <div className="carousel-caption">
+                        <h3>Extract, Transform & Load</h3>
+                        <h3>Pandas Basics with Arsenal F.C. Data</h3>
                     </div>
+                  </div>
                </div>
                <div className="item">
-                   <img src="img/main/Photo_02.jpg" height='100' alt="Second Slide"/>
+                 <img src="img/main/Photo_02.jpg" className="carousel-style" alt="First Slide"/>
+                 <div className="absolute-div">
+                    <div className="carousel-caption">
+                        <h3>Natural Language Processing</h3>
+                        <h3>Legal Document Categorization</h3>
+                    </div>
+                  </div>
                </div>
                <div className="item">
-                   <img src="img/main/Photo_03.jpg" height='100' alt="Third Slide"/>
+                 <img src="img/main/Photo_03.jpg" className="carousel-style" alt="First Slide"/>
+                 <div className="absolute-div">
+                    <div className="carousel-caption">
+                        <h3>Kubernetes Learning App</h3>
+                        <h3>Flask Industrialization</h3>
+                    </div>
+                  </div>
                </div>
            </div>
            <a className="carousel-control left" href="#myCarousel" data-slide="prev">

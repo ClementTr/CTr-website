@@ -6,7 +6,7 @@ const divStyle = {
 
 function MoreArticleLinkComponent (){
  return (
-    <div id="morearticles-section" className="margin-section">
+    <div id="morearticles-section" className="margin-section last-section">
       <div className="container">
 
        <h2 className="title-style">More Blog Posts</h2>
@@ -20,7 +20,7 @@ function MoreArticleLinkComponent (){
              <div className="media-body">
                <h4>Extract, Transform & Load - Pandas Basics</h4>
                <span className="category">ETL</span>
-               <span className="mr-2">March 15, 2018 </span>
+               <span className="mr-2">March 15, 2018</span>
                <p>
                  blablabla
                </p>
@@ -36,9 +36,9 @@ function MoreArticleLinkComponent (){
                <img src='img/img1.png' className="media-object media-img"/>
              </div>
              <div className="media-body">
-               <h4>Architecture</h4>
-               <span className="category">Lifestyle</span>
-               <span className="mr-2">March 15, 2018 </span>
+               <h4>Natural Language Processing - Legal Document Categorization</h4>
+               <span className="category">ETL</span>
+               <span className="mr-2">April 26, 2018</span>
                <p>
                  lolilol
                </p>

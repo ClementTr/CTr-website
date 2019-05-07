@@ -14,10 +14,23 @@ function ArticleLinkComponent (){
          <div className="col-md-6 col-lg-4">
            <a href="blog-single.html" className="a-block d-flex align-items-center height-md" style={divStyle}>
              <div className="text">
-               <h3>Extract, Transform & Load</h3>
-               <h3>Pandas Basics with Arsenal Football Club</h3>
+               <h3>BetIt</h3>
+               <h3>Data Driven Bets</h3>
                <div className="post-meta">
-                 <span className="category">ETL</span>
+                 <span className="category">Industrialization</span>
+                 <span className="mr-2">August 16, 2018 </span>
+               </div>
+             </div>
+           </a>
+         </div>
+
+         <div className="col-md-6 col-lg-4">
+           <a href="blog-single.html" className="a-block d-flex align-items-center height-md" style={divStyle}>
+             <div className="text">
+               <h3>AWS MongoDB Cluster</h3>
+               <h3>Create a Data Structure</h3>
+               <div className="post-meta">
+                 <span className="category">Data OPS</span>
                  <span className="mr-2">March 15, 2018 </span>
                </div>
              </div>
@@ -27,22 +40,11 @@ function ArticleLinkComponent (){
          <div className="col-md-6 col-lg-4">
            <a href="blog-single.html" className="a-block d-flex align-items-center height-md" style={divStyle}>
              <div className="text">
-               <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
+               <h3>2018 FIFA Worldcup</h3>
+               <h3>Live AI Dashboard</h3>
                <div className="post-meta">
-                 <span className="category">Travel</span>
-                 <span className="mr-2">March 15, 2018 </span>
-               </div>
-             </div>
-           </a>
-         </div>
-
-         <div className="col-md-6 col-lg-4">
-           <a href="blog-single.html" className="a-block d-flex align-items-center height-md" style={divStyle}>
-             <div className="text">
-               <h3>There’s a Cool New Way for Men to Wear Socks and Sandals</h3>
-               <div className="post-meta">
-                 <span className="category">Travel</span>
-                 <span className="mr-2">March 15, 2018 </span>
+                 <span className="category">Industrialization</span>
+                 <span className="mr-2">May 28, 2018 </span>
                </div>
              </div>
            </a>

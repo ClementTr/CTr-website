@@ -181,6 +181,10 @@ ul.nav{
 	margin-bottom: 5px;
 }
 
+.last-section{
+  margin-bottom: 40px;
+}
+
 .bio-title{
 	margin-top: 0px;
 }
@@ -464,6 +468,7 @@ button.btn.tf-btn.btn-default {
 		margin-top: 30px;
 		margin-left: auto;
   	margin-right: auto;
+    margin-bottom: 30px;
 }
 
 /*OTHER ARTICLES*/
@@ -619,7 +624,6 @@ button.btn.tf-btn.btn-default {
 
 
 .site-footer{
-  margin-top: 65px;
   background-color: #4a4949db;
 }
 

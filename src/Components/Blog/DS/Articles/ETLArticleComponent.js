@@ -1,10 +1,11 @@
-import MiniBioComponent from './MiniBioComponent';
+import MiniBioComponent from './../../../MiniBioComponent';
 import React from 'react';
 
 function ETLArticleComponent (){
  return (
 
    <div className="container margin-section">
+
      <div className="col-md-9">
        <div className="title-article">
          <h1 className="title-font">Extract, Transform & Load</h1>
@@ -16,7 +17,7 @@ function ETLArticleComponent (){
         Bonjour à tous
        </p>
 
-       <div className=" highlight hl-ipython3">
+       <div id="etl-1" className="highlight hl-ipython3">
         <pre>
           <span></span>
           <span className="k">def</span>
@@ -79,11 +80,11 @@ function ETLArticleComponent (){
           <br/>
         </pre>
        </div>
+
      </div>
 
 
-
-     <MiniBioComponent></MiniBioComponent>
+     <MiniBioComponent/>
    </div>
  )
 
