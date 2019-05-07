@@ -4,20 +4,22 @@ import CarouselComponent from './CarouselComponent';
 import MiniBioComponent from './MiniBioComponent';
 import ArticleLinkComponent from './ArticleLinkComponent'
 import MoreArticleLinkComponent from './MoreArticleLinkComponent'
+import FooterComponent from './FooterComponent'
 
 function HomeComponent (){
  return (
    <div>
-    <section id="home-section" className="margin-section">
+    <div id="home-section" className="margin-section">
      <div className="container">
        <div className="row">
         <CarouselComponent></CarouselComponent>
         <MiniBioComponent></MiniBioComponent>
        </div>
       </div>
-    </section>
+    </div>
     <ArticleLinkComponent></ArticleLinkComponent>
     <MoreArticleLinkComponent></MoreArticleLinkComponent>
+    <FooterComponent/>
 
 
   </div>

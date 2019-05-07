@@ -1,8 +1,9 @@
+import { Document } from 'react-pdf'
 import React from 'react';
 
 function FormationComponent (){
  return (
-   <div id="tf-about">
+   <div id="section-about">
       <div className="container">
          <div className="row">
              <div className="col-md-6">
@@ -37,7 +38,7 @@ function FormationComponent (){
                    </ul>
                    <br/>
                    <br/>
-                   <p><a href="#" className="btn btn-primary btn-sm">GET MY RESUME</a></p>
+                   <a href="/Resume_Tailleur.pdf" target="_blank" className="btn btn-primary btn-sm">GET MY RESUME</a>
                </div>
              </div>
         </div>

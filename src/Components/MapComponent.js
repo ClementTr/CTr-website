@@ -253,7 +253,7 @@ class Map extends React.Component {
 
     render() {
         return (
-          <div id="full-map">
+          <div id="section-map">
             <div className='map'></div>
             <div id="descriptionId" className="description"></div>
           </div>

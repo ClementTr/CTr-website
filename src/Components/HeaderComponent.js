@@ -16,18 +16,18 @@ function HeaderComponent (){
                 Categories
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a className="dropdown-item" href="/data-engineering">Data Engineering</a>
-                <a className="dropdown-item" href="/machine-learning">Machine Learning</a>
-                <a className="dropdown-item" href="/data-visualization">Data Visualization</a>
-                <a className="dropdown-item" href="/industrialized-projects">Industrialized Projects</a>
+              {/*<a className="dropdown-item" href="/data-engineering">Data Engineering</a>*/}
+              <a className="dropdown-item" href="/machine-learning">Machine Learning</a>
+              {/*<a className="dropdown-item" href="/data-visualization">Data Visualization</a>*/}
+              <a className="dropdown-item" href="/industrialized-projects">Industrialized Projects</a>
               </div>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/about">About</a>
             </li>
-            <li className="nav-item">
+            {/*<li className="nav-item">
               <a className="nav-link" href="/contact">Contact</a>
-            </li>
+            </li>*/}
             <li className="nav-item-pic">
               <a className="nav-link" href="/ctr-map"><img src="/img/worldwide.svg" width="30"/></a>
             </li>
@@ -59,9 +59,9 @@ function HeaderComponent (){
                       <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <ul className="list col-b">
                           <li>
-                            <a className="dropdown-item" href="/data-engineering">Data Engineering</a>
+                            {/*<a className="dropdown-item" href="/data-engineering">Data Engineering</a>*/}
                             <a className="dropdown-item" href="/machine-learning">Machine Learning</a>
-                            <a className="dropdown-item" href="/data-visualization">Data Visualization</a>
+                            {/*<a className="dropdown-item" href="/data-visualization">Data Visualization</a>*/}
                             <a className="dropdown-item" href="/industrialized-projects">Industrialized Projects</a>
                           </li>
                         </ul>
@@ -72,9 +72,9 @@ function HeaderComponent (){
                   <li>
                     <a href="/about">About</a>
                   </li>
-                  <li>
+                  {/*<li>
                     <a href="/contact">Contact</a>
-                  </li>
+                  </li>*/}
                   <li>
                     <a href="/ctr-map" id="navmobile-worldwide">Worldwide</a>
                   </li>

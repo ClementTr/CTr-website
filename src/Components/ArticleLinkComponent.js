@@ -7,7 +7,7 @@ const divStyle = {
 
 function ArticleLinkComponent (){
  return (
-   <section className="site-section pt-5 margin-section">
+   <div id="articles-section" className="margin-section">
      <div className="container">
        <div className="row">
 
@@ -50,7 +50,7 @@ function ArticleLinkComponent (){
 
        </div>
      </div>
-   </section>
+   </div>
  )
 }
 

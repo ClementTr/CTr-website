@@ -2,7 +2,7 @@ import React from 'react';
 
 function CareerComponent (){
  return (
-   <div id="tf-career">
+   <div id="section-career">
      <div className="container">
 
        <section className="timeline">
