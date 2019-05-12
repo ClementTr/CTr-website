@@ -81,6 +81,14 @@
   window.onresize = function(event) {
     nav_resizer()
   }
+
+  if(window.location.pathname === '/industrialized-projects/betit'){
+    let iframe_width = document.getElementById('video-component').clientWidth
+    document.getElementById('video-article').style.height = iframe_width/1.78 + 'px'
+  }else if (window.location.pathname === '/data-ops/aws-mongodb') {
+    let iframe_width = document.getElementById('video-component').clientWidth
+    document.getElementById('video-article').style.height = iframe_width/1.78 + 'px'
+  }
   </script>
 
 </html>

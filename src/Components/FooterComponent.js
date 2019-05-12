@@ -11,17 +11,17 @@ function FooterComponent (){
        <div className="col-md-3">
         <h3>Essentials</h3>
         <ul className="list-unstyled">
-          <li><a href="https://www.arsenal.com/"><span className="fa fa-futbol-o"></span> Arsenal</a></li>
-          <li><a href="https://www.youtube.com/watch?v=JWeJpp0wYMk"><span className="fa fa-music"></span> Orange - Napkey</a></li>
-          <li><a href="https://www.youtube.com/watch?v=0jxVnlRdelU"><span className="fa fa-film"></span> 12 Angry Men</a></li>
-          <li><a href="https://www.ynharari.com/book/sapiens/"><span className="fa fa-book"></span> Sapiens</a></li>
+          <li><a href="https://www.arsenal.com/" target="_blank"><span className="fa fa-futbol-o"></span> Arsenal</a></li>
+          <li><a href="https://www.youtube.com/watch?v=JWeJpp0wYMk" target="_blank"><span className="fa fa-music"></span> Orange - Napkey</a></li>
+          <li><a href="https://www.youtube.com/watch?v=0jxVnlRdelU" target="_blank"><span className="fa fa-film"></span> 12 Angry Men</a></li>
+          <li><a href="https://www.ynharari.com/book/sapiens/" target="_blank"><span className="fa fa-book"></span> Sapiens</a></li>
         </ul>
 
        </div>
        <div className="col-md-2">
         <h3>Links</h3>
         <ul className="list-unstyled">
-          <li><a href="https://betit.ovh/"><img width="17px" src="img/main/betit-logo.png"/> BetIt</a></li>
+          <li><a href="https://betit.ovh/" target="_blank"><img width="17px" src="/img/main/betit-logo.png"/> BetIt</a></li>
           <li><a href="https://twitter.com/Clement_Tr">ETL</a></li>
           <li><a href="https://twitter.com/Clement_Tr">NLP</a></li>
           <li><a href="https://twitter.com/Clement_Tr">AWS Mongo</a></li>
@@ -30,10 +30,10 @@ function FooterComponent (){
        <div className="col-md-2">
         <h3>Social</h3>
         <ul className="list-unstyled footer-social">
-          <li><a href="https://twitter.com/Clement_Tr"><span className="fa fa-twitter"></span> Twitter</a></li>
-          <li><a href="https://www.facebook.com/clement.tr.5"><span className="fa fa-facebook"></span> Facebook</a></li>
-          <li><a href="https://www.linkedin.com/in/cl%C3%A9ment-tailleur/"><span className="fa fa-linkedin"></span> LinkedIn</a></li>
-          <li><a href="https://github.com/ClementTr"><span className="fa fa-github"></span> Github</a></li>
+          <li><a href="https://twitter.com/Clement_Tr" target="_blank"><span className="fa fa-twitter"></span> Twitter</a></li>
+          <li><a href="https://www.facebook.com/clement.tr.5" target="_blank"><span className="fa fa-facebook"></span> Facebook</a></li>
+          <li><a href="https://www.linkedin.com/in/cl%C3%A9ment-tailleur/" target="_blank"><span className="fa fa-linkedin"></span> LinkedIn</a></li>
+          <li><a href="https://github.com/ClementTr" target="_blank"><span className="fa fa-github"></span> Github</a></li>
         </ul>
        </div>
      </div>

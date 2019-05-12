@@ -13,9 +13,12 @@ function WC2018ArticleComponent (){
          <span className="mr-2 title-date">May 28, 2018</span>
        </div>
 
-       <p>
-        Bonjour à tous
-       </p>
+       <div className='article-content'>
+        <img width='100%' src='/img/wc2018/S1.png'/>
+        <img width='100%' src='/img/wc2018/S2.png'/>
+        <img width='50%' src='/img/wc2018/S3.png'/>
+        <img width='50%' src='/img/wc2018/S4.png'/>
+       </div>
 
      </div>
 

@@ -2,6 +2,7 @@ import MiniBioComponent from './../../../MiniBioComponent';
 import React from 'react';
 
 function BetItArticleComponent (){
+
  return (
 
    <div className="container margin-section">
@@ -13,9 +14,14 @@ function BetItArticleComponent (){
          <span className="mr-2 title-date">August 16, 2018 </span>
        </div>
 
+       <div id='video-component'>
+         <iframe id="video-article" src="https://drive.google.com/file/d/1mk6Rip3J1hcbl_8LgcgsJ6X-8isv5BPo/preview"></iframe>
+       </div>
+
        <p>
-        Bonjour à tous
+        Official website: <a href="https://betit.ovh">betit.ovh</a>
        </p>
+
 
      </div>
 

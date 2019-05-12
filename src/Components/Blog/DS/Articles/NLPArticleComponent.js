@@ -14,7 +14,7 @@ function NLPArticleComponent (){
        </div>
 
        <p>
-        Bonjour à tous
+         Work in progress...
        </p>
 
      </div>

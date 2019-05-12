@@ -22,7 +22,7 @@ function MoreArticleLinkComponent (){
                <span className="category">ETL</span>
                <span className="mr-2">March 15, 2018</span>
                <p>
-                 blablabla
+                 Python - Pandas, Numpy & Matplotlib on Arsenal F.C. scraped data.
                </p>
              </div>
            </div>
@@ -40,7 +40,7 @@ function MoreArticleLinkComponent (){
                <span className="category">NLP</span>
                <span className="mr-2">April 26, 2019</span>
                <p>
-                 lolilol
+                 Work in progress...
                </p>
              </div>
            </div>

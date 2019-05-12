@@ -13,9 +13,10 @@ function AWSMongoArticleComponent (){
          <span className="mr-2 title-date">February 02, 2018 </span>
        </div>
 
-       <p>
-        Bonjour à tous
-       </p>
+
+       <div id='video-component'>
+         <iframe id='video-article' src="https://www.youtube.com/embed/NZR1C0u1SMI"></iframe>
+       </div>
 
      </div>
 

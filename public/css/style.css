@@ -20,7 +20,7 @@ body {
 }
 
 .title-article{
-	margin-bottom: 50px;
+	margin-bottom: 30px;
 }
 
 .title-date{
@@ -650,4 +650,17 @@ button.btn.tf-btn.btn-default {
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: .2em;
+}
+
+.article-link{
+  float: right;
+}
+
+.article-content{
+  margin-bottom: 30px;
+}
+
+
+#video-article{
+  width: 100%;
 }
