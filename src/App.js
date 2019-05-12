@@ -5,7 +5,7 @@ import IndustrializedComponent from './Components/Blog/Other/IndustrializedCompo
 import ETLArticleComponent from './Components/Blog/DS/Articles/ETLArticleComponent';
 import NLPArticleComponent from './Components/Blog/DS/Articles/NLPArticleComponent';
 import VisualizationComponent from './Components/Blog/DV/VisualizationComponent';
-import LearningComponent from './Components/Blog/DS/LearningComponent'
+import DataScienceComponent from './Components/Blog/DS/DataScienceComponent'
 import NotFoundComponent from './Components/NotFoundComponent';
 import AboutComponent from './Components/About/AboutComponent';
 import OPSComponent from './Components/Blog/OPS/OPSComponent';
@@ -31,7 +31,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={HomeComponent}></Route>
             <Route exact path='/data-ops' component={OPSComponent}></Route>
-            <Route exact path='/data-science' component={LearningComponent}></Route>
+            <Route exact path='/data-science' component={DataScienceComponent}></Route>
             <Route exact path='/data-visualization' component={VisualizationComponent}></Route>
             <Route exact path='/industrialized-projects' component={IndustrializedComponent}></Route>
             <Route exact path='/ctr-map' component={MapComponent}></Route>

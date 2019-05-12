@@ -22,9 +22,9 @@ function FooterComponent (){
         <h3>Links</h3>
         <ul className="list-unstyled">
           <li><a href="https://betit.ovh/" target="_blank"><img width="17px" src="/img/main/betit-logo.png"/> BetIt</a></li>
-          <li><a href="https://twitter.com/Clement_Tr">ETL</a></li>
-          <li><a href="https://twitter.com/Clement_Tr">NLP</a></li>
-          <li><a href="https://twitter.com/Clement_Tr">AWS Mongo</a></li>
+          <li><a href="/data-science/etl">ETL</a></li>
+          <li><a href="/data-science/nlp">NLP</a></li>
+          <li><a href="/data-ops/aws-mongodb">AWS Mongo</a></li>
         </ul>
        </div>
        <div className="col-md-2">
