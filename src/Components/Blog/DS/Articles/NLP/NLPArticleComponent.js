@@ -1,4 +1,4 @@
-import MiniBioComponent from './../../../MiniBioComponent';
+import MiniBioComponent from './../../../../MiniBioComponent';
 import React from 'react';
 
 function NLPArticleComponent (){

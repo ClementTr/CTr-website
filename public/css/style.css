@@ -660,6 +660,24 @@ button.btn.tf-btn.btn-default {
   margin-bottom: 30px;
 }
 
+.minibio-margins{
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.article-menu{
+  border: 1px solid #e6e6e6;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.article-menu.affix {
+  position: fixed;
+  top: 120px;
+  z-index: 10;
+}
 
 #video-article{
   width: 100%;

@@ -2,8 +2,8 @@ import AWSMongoArticleComponent from './Components/Blog/OPS/Articles/AWSMongoArt
 import WC2018ArticleComponent from './Components/Blog/Other/Articles/WC2018ArticleComponent';
 import BetItArticleComponent from './Components/Blog/Other/Articles/BetItArticleComponent';
 import IndustrializedComponent from './Components/Blog/Other/IndustrializedComponent';
-import ETLArticleComponent from './Components/Blog/DS/Articles/ETLArticleComponent';
-import NLPArticleComponent from './Components/Blog/DS/Articles/NLPArticleComponent';
+import ETLArticleComponent from './Components/Blog/DS/Articles/ETL/ETLArticleComponent';
+import NLPArticleComponent from './Components/Blog/DS/Articles/NLP/NLPArticleComponent';
 import VisualizationComponent from './Components/Blog/DV/VisualizationComponent';
 import DataScienceComponent from './Components/Blog/DS/DataScienceComponent'
 import NotFoundComponent from './Components/NotFoundComponent';
