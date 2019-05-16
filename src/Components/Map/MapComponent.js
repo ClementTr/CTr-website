@@ -225,7 +225,7 @@ class Map extends React.Component {
                 </a>\
               </div>\
             "
-            console.log(str_description)
+
             description.innerHTML += str_description
           }else{
             description.innerHTML += "<center><img width=300 src='" + photos[0] + "' ></center>"

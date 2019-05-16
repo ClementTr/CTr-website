@@ -2,7 +2,7 @@ import React from 'react';
 
 function HeaderComponent (){
   return (
-    <div id="header-navbar">
+    <div id="header-navbar" className="header">
 
       <div id="pc">
         <nav className="navbar navbar-expand-lg navbar-light">
@@ -32,7 +32,7 @@ function HeaderComponent (){
             </li>
           </ul>
         </nav>
-        <hr className="vectline" align="center" width="80%" color="midnightblue" size="3"/>
+        <hr className="vectline" align="center" width="90%" size="3"/>
       </div>
 
       <div id="mobile">

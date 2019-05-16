@@ -4,19 +4,19 @@ import React from 'react';
 function DataScienceComponent (){
  return (
 
-   <div className="container margin-section">
+   <div className="container">
+    <div className="row">
 
      <div className="col-md-9">
+
        <div className="title-article">
          <h1 className="title-font">Data Science Category</h1>
        </div>
 
        <div className="col-md-12 box-margin">
-         <a className="box" href="/data-science/etl">
-           <div className="media-margin">
-             <div className="media-left">
-               <img src='img/main/More_01.jpg' className="media-object media-img"/>
-             </div>
+        <a className="box" href="/data-science/etl">
+           <div className="media">
+             <img className="align-self-center mr-3 media-object media-img" src='img/main/More_01.jpg' alt="Generic placeholder image"/>
              <div className="media-body">
                <h4>Extract, Transform & Load - Pandas Basics</h4>
                <span className="category">ETL</span>
@@ -30,11 +30,9 @@ function DataScienceComponent (){
        </div>
 
        <div className="col-md-12 box-margin">
-         <a className="box" href="/data-science/nlp">
-           <div className="media-margin">
-             <div className="media-left">
-               <img src='img/main/More_02.jpg' className="media-object media-img"/>
-             </div>
+        <a className="box" href="/data-science/nlp">
+           <div className="media">
+             <img className="align-self-center mr-3 media-object media-img" src='img/main/More_02.jpg' alt="Generic placeholder image"/>
              <div className="media-body">
                <h4>Natural Language Processing - Legal Document Categorization</h4>
                <span className="category">NLP</span>
@@ -46,11 +44,14 @@ function DataScienceComponent (){
            </div>
          </a>
        </div>
-
+      
      </div>
 
+     <div className="col-md-3">
+       <MiniBioComponent/>
+     </div>
 
-     <MiniBioComponent/>
+    </div>
    </div>
  )
 

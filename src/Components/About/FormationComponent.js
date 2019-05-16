@@ -6,7 +6,7 @@ function FormationComponent (){
       <div className="container">
          <div className="row">
              <div className="col-md-6">
-                 <img src="img/main/02.jpg" height="100px" className="img-responsive"/>
+                 <img src="img/main/02.jpg" width="80%" className="img-responsive"/>
              </div>
              <div className="col-md-6">
                <div className="about-text">
@@ -35,8 +35,6 @@ function FormationComponent (){
                            <strong>Télécom-ParisTech</strong> - <em>Paris: Big Data expertise</em>
                        </li>
                    </ul>
-                   <br/>
-                   <br/>
                    <a href="/Resume_Tailleur.pdf" target="_blank" className="btn btn-primary btn-sm">GET MY RESUME</a>
                </div>
              </div>

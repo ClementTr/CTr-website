@@ -2,52 +2,48 @@ import React from 'react';
 
 function CarouselComponent (){
  return (
-   <div className="col-md-9">
      <div className="bs-example">
-       <div id="myCarousel" className="carousel slide" data-ride="carousel">
-           <ol className="carousel-indicators">
-               <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
-               <li data-target="#myCarousel" data-slide-to="1"></li>
-               <li data-target="#myCarousel" data-slide-to="2"></li>
-           </ol>
-           <div className="carousel-inner">
-               <div className="item active">
-                 <img src="img/main/Carousel_01.jpg" className="carousel-style" alt="First Slide"/>
-                 <div className="absolute-div">
-                    <div className="carousel-caption">
-                        <h3>Extract, Transform & Load</h3>
-                        <h3>Pandas Basics with Arsenal F.C. Data</h3>
-                    </div>
-                  </div>
-               </div>
-               <div className="item">
-                 <img src="img/main/Carousel_02.jpg" className="carousel-style" alt="First Slide"/>
-                 <div className="absolute-div">
-                    <div className="carousel-caption">
-                        <h3>Natural Language Processing</h3>
-                        <h3>Legal Document Categorization</h3>
-                    </div>
-                  </div>
-               </div>
-               <div className="item">
-                 <img src="img/main/Carousel_03.jpg" className="carousel-style" alt="First Slide"/>
-                 <div className="absolute-div">
-                    <div className="carousel-caption">
-                        <h3>Kubernetes Learning App</h3>
-                        <h3>Flask Industrialization</h3>
-                    </div>
-                  </div>
-               </div>
-           </div>
-           <a className="carousel-control left" href="#myCarousel" data-slide="prev">
-               <span className="glyphicon glyphicon-chevron-left"></span>
-           </a>
-           <a className="carousel-control right" href="#myCarousel" data-slide="next">
-               <span className="glyphicon glyphicon-chevron-right"></span>
-           </a>
-       </div>
-     </div>
-   </div>
+
+       <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+        <ol className="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div className="carousel-inner">
+          <div className="carousel-item active">
+            <img className="d-block w-100" src="img/main/Carousel_01.jpg" alt="First slide"/>
+            <div className="carousel-caption d-none d-md-block">
+              <h5>Extract, Transform & Load</h5>
+              <p>Pandas Basics with Arsenal F.C. Data</p>
+            </div>
+          </div>
+          <div className="carousel-item">
+            <img className="d-block w-100" src="img/main/Carousel_02.jpg" alt="Second slide"/>
+            <div className="carousel-caption d-none d-md-block">
+              <h5>Natural Language Processing</h5>
+              <p>Legal Document Categorization</p>
+            </div>
+          </div>
+          <div className="carousel-item">
+            <img className="d-block w-100" src="img/main/Carousel_03.jpg" alt="Third slide"/>
+            <div className="carousel-caption d-none d-md-block">
+              <h5>Kubernetes Learning App</h5>
+              <p>Flask Industrialization</p>
+            </div>
+          </div>
+        </div>
+        <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="sr-only">Previous</span>
+        </a>
+        <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="sr-only">Next</span>
+        </a>
+      </div>
+
+    </div>
  )
 
 }

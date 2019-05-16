@@ -15,7 +15,7 @@ const style_article_03 = {
 
 function ArticleLinkComponent (){
  return (
-   <div id="articles-section" className="margin-section">
+   <div id="articles-section" className="articles">
      <div className="container">
        <div className="row">
 

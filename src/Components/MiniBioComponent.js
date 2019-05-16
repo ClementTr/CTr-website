@@ -2,7 +2,7 @@ import React from 'react';
 
 function MiniBioComponent (){
  return (
-   <div id='mini-bio' className="col-md-3 minibio-margins">
+   <div id='mini-bio' className="minibio-margins">
      <div className="sidebar-box">
        <div className="bio text-center">
          <img src="/img/main/01.jpg" alt="Placeholder" className="img-fluid bio-profile"/>

@@ -3,7 +3,7 @@ import React from 'react';
 function ETLMenuComponent (){
  return (
    <div className="margintop-navbar blog-menu">
-     <div className="col-sm-3">
+     <div className="col-sm-12">
        <nav className="article-menu" id="myScrollspy">
          <ul className="nav nav-pills nav-stacked">
           <li className="active"><a href="#scraper">Scraper</a></li>

@@ -4,7 +4,8 @@ import React from 'react';
 function OPSComponent (){
  return (
 
-   <div className="container margin-section">
+   <div className="container">
+    <div className="row">
 
      <div className="col-md-9">
        <div className="title-article">
@@ -12,11 +13,9 @@ function OPSComponent (){
        </div>
 
        <div className="col-md-12 box-margin">
-         <a className="box" href="/data-science/nlp">
-           <div className="media-margin">
-             <div className="media-left">
-               <img src='img/main/Article_02.jpg' className="media-object media-img"/>
-             </div>
+        <a className="box" href="/data-ops/aws-mongodb">
+           <div className="media">
+             <img className="align-self-center mr-3 media-object media-img" src='img/main/Article_02.jpg' alt="Generic placeholder image"/>
              <div className="media-body">
                <h4>AWS MongoDB Cluster</h4>
                <span className="category">Data OPS</span>
@@ -28,11 +27,13 @@ function OPSComponent (){
            </div>
          </a>
        </div>
-
      </div>
 
+     <div className="col-md-3">
+       <MiniBioComponent/>
+     </div>
 
-     <MiniBioComponent/>
+    </div>
    </div>
  )
 

@@ -6,17 +6,15 @@ const divStyle = {
 
 function MoreArticleLinkComponent (){
  return (
-    <div id="morearticles-section" className="margin-section last-section">
+    <div id="morearticles-section" className="morearticles">
       <div className="container">
 
        <h2 className="title-style">More Blog Posts</h2>
 
        <div className="col-md-12 box-margin">
-         <a className="box" href="/data-science/etl">
-           <div className="media-margin">
-             <div className="media-left">
-               <img src='img/main/More_01.jpg' className="media-object media-img"/>
-             </div>
+        <a className="box" href="/data-science/etl">
+           <div className="media">
+             <img className="align-self-center mr-3 media-object media-img" src='img/main/More_01.jpg' alt="Generic placeholder image"/>
              <div className="media-body">
                <h4>Extract, Transform & Load - Pandas Basics</h4>
                <span className="category">ETL</span>
@@ -29,12 +27,11 @@ function MoreArticleLinkComponent (){
          </a>
        </div>
 
+
        <div className="col-md-12 box-margin">
-         <a className="box" href="/data-science/nlp">
-           <div className="media-margin">
-             <div className="media-left">
-               <img src='img/main/More_02.jpg' className="media-object media-img"/>
-             </div>
+        <a className="box" href="/data-science/nlp">
+           <div className="media">
+             <img className="align-self-center mr-3 media-object media-img" src='img/main/More_02.jpg' alt="Generic placeholder image"/>
              <div className="media-body">
                <h4>Natural Language Processing - Legal Document Categorization</h4>
                <span className="category">NLP</span>

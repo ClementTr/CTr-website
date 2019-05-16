@@ -8,11 +8,15 @@ import React from 'react';
 function HomeComponent (){
  return (
     <div>
-      <div id="home-section" className="margin-section">
+      <div id="home-section">
        <div className="container">
          <div className="row">
-          <CarouselComponent/>
-          <MiniBioComponent/>
+            <div className="col-md-9">
+             <CarouselComponent/>
+            </div>
+            <div className="col-md-3">
+              <MiniBioComponent/>
+            </div>
          </div>
         </div>
       </div>

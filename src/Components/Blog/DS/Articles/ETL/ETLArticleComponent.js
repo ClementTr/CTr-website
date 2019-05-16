@@ -10,25 +10,28 @@ function ETLArticleComponent (){
  return (
 
    <div className="container margin-section">
-
-     <div className="col-md-9">
+    <div className="row">
+    
+     <div className="col-sm-9">
        <div className="title-article">
          <h1 className="title-font">Extract, Transform & Load</h1>
          <h3>Pandas Basics with Arsenal Football Club</h3>
          <span className="mr-2 title-date">March 15, 2018 </span>
        </div>
-
        <div className='article-content'>
          <ScraperComponent/>
          <TransformFeaturingComponent/>
          <TransformManipulationComponent/>
          <AnalysisVizComponent/>
        </div>
-
      </div>
 
-     <MiniBioComponent/>
-     <ETLMenuComponent/>
+     <div className="col-sd-3">
+       <MiniBioComponent/>
+       <ETLMenuComponent/>
+     </div>
+
+     </div>
    </div>
  )
 

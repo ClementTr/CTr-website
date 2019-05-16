@@ -56,7 +56,7 @@ header p {
 
 .timeline-item {
   width: 100%;
-  margin-bottom: 70px;
+  padding-bottom: 70px;
 }
 .timeline-item:nth-child(even) .timeline-content {
   float: right;
@@ -246,7 +246,6 @@ blockquote {
 	text-decoration: none;
 	color: #FFFFFF;
 }
-
 
 .timeline-title{
   color: #007bff;
