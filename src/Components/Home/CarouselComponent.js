@@ -45,7 +45,6 @@ function CarouselComponent (){
 
     </div>
  )
-
 }
 
 export default CarouselComponent;

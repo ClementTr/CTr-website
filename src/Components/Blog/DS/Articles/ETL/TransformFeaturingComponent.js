@@ -3,6 +3,7 @@ import React from 'react';
 function TransformFeaturingComponent (){
  return (
    <div id='transform-featuring'>
+    <h2>Transform - Data Featuring</h2>
      <div className="highlight hl-ipython3">
        <pre>
          <span></span>

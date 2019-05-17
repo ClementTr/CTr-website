@@ -4,14 +4,16 @@ import MiniBioComponent from './../../../../MiniBioComponent';
 import AnalysisVizComponent from './AnalysisVizComponent'
 import ScraperComponent from './ScraperComponent';
 import ETLMenuComponent from './ETLMenuComponent';
+import Script from 'react-load-script'
 import React from 'react';
 
 function ETLArticleComponent (){
  return (
-
    <div className="container margin-section">
     <div className="row">
-    
+
+    <Script url="/js/scrollMenuETL.js"/>
+
      <div className="col-sm-9">
        <div className="title-article">
          <h1 className="title-font">Extract, Transform & Load</h1>
@@ -34,7 +36,6 @@ function ETLArticleComponent (){
      </div>
    </div>
  )
-
 }
 
 export default ETLArticleComponent;

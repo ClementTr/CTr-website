@@ -3,6 +3,7 @@ import React from 'react';
 function TransformManipulationComponent (){
  return (
    <div id='transform-manipulation'>
+    <h2>Transform - Data Manipulation</h2>
      <div className="highlight hl-ipython3">
        <pre>
          <span></span>

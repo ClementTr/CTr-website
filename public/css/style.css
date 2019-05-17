@@ -674,6 +674,12 @@ button.btn.tf-btn.btn-default {
   margin-bottom: 30px;
 }
 
+.article-content h2{
+  padding-top: 15px;
+  margin-bottom: 10px;
+  color: #1a73e8;
+}
+
 .minibio-margins{
   margin-top: 10px;
   margin-bottom: 30px;
@@ -685,6 +691,7 @@ button.btn.tf-btn.btn-default {
   padding-bottom: 15px;
   padding-left: 10px;
   padding-right: 10px;
+  background-color: #f7f7f794;
 }
 
 .article-menu.affix {
@@ -695,4 +702,14 @@ button.btn.tf-btn.btn-default {
 
 #video-article{
   width: 100%;
+}
+
+.sticky{
+  position: fixed;
+  top: 20px;
+}
+
+a.active{
+  color: #007bff;
+  font-weight: bold;
 }

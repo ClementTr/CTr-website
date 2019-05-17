@@ -3,6 +3,7 @@ import React from 'react';
 function ScraperComponent (){
  return (
    <div id="scraper">
+    <h2>Scraper</h2>
      <div className="highlight hl-ipython3">
       <pre>
         <span></span>
