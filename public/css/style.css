@@ -421,7 +421,7 @@ button.btn.tf-btn.btn-default {
 .description {
 	display: none;
 	position: absolute;
-	width: 500px;
+	width: 380px;
 	z-index: 100;
 	top: 2.5%;
 	left: 1%;
@@ -431,13 +431,12 @@ button.btn.tf-btn.btn-default {
 	padding-right: 10px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+  border-radius: 1%;
 }
 .text_description{
-	font-family: 'Lato', sans-serif;
-	font-weight: 400;
-	text-align: center;
-	border-radius: 2%;
-	margin-top: 10px;
+  text-align: center;
+  border-radius: 2%;
+  margin-top: 10px;
 }
 
 .font-world{

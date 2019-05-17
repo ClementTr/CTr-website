@@ -190,40 +190,60 @@ class Map extends React.Component {
             let str_description = ""
             let cpt = 0
             str_description += "\
-              <div id='myCarousel' class='carousel slide slide_travels' data-ride='carousel'><ol class='carousel-indicators'>"
+            <div id='carouselExampleControls' class='carousel slide' data-ride='carousel'>\
+            <ol class='carousel-indicators'>\
+              "
 
             photos.forEach(function(photo){
-              if(cpt === 0){
-                str_description += "<li data-target='#myCarousel' data-slide-to='0' class='active'></li>";
-              }else{
-                str_description += "<li data-target='#myCarousel' data-slide-to='" + cpt + "'></li>";
-              }
-              cpt += 1;
-            })
+                if(cpt === 0){
+                  str_description += "\
+                  <li data-target='#carouselExampleControls' data-slide-to='0' class='active'></li>\
+                  ";
+                }else{
+                  str_description += "\
+                  <li data-target='#carouselExampleControls' data-slide-to='" + cpt + "'></li>\
+                  ";
+                }
+                cpt += 1;
+              })
 
-            str_description += "</ol><div class='carousel-inner'>"
+            str_description += "</ol>\
+            <div class='carousel-inner'>"
 
             cpt = 0
             photos.forEach(function(photo){
-              if(cpt === 0){
-                str_description += "<div class='item active'><img src=" + photo + " style='width:100%;'></div>"
-              }else{
-                str_description += "<div class='item'><img src=" + photo + " style='width:100%;'></div>"
-              }
-              cpt += 1
-            })
+                if(cpt === 0){
+                  str_description += "\
+                  <div class='carousel-item active'>\
+                    <img src='" + photo + "' style='width: 100%' alt='Slide 0'>\
+                  </div>\
+                  ";
+                }else{
+                  str_description += "\
+                  <div class='carousel-item'>\
+                    <img src='" + photo + "' style='width: 100%' alt='Slide " + cpt + "'>\
+                  </div>\
+                  ";
+                }
+                cpt += 1;
+              })
 
             str_description += "\
-                </div>\
-                <a class='left carousel-control' href='#myCarousel' data-slide='prev'>\
-                  <span class='glyphicon glyphicon-chevron-left'></span>\
-                  <span class='sr-only'>Previous</span>\
-                </a>\
-                <a class='right carousel-control' href='#myCarousel' data-slide='next'>\
-                  <span class='glyphicon glyphicon-chevron-right'></span>\
-                  <span class='sr-only'>Next</span>\
-                </a>\
-              </div>\
+                                </div>\
+                                "
+
+
+            str_description += "\
+            </div>\
+            <a class='carousel-control-prev' href='#carouselExampleControls' role='button' data-slide='prev'>\
+              <span class='carousel-control-prev-icon' aria-hidden='true'></span>\
+              <span class='sr-only'>Previous</span>\
+            </a>\
+            <a class='carousel-control-next' href='#carouselExampleControls' role='button' data-slide='next'>\
+              <span class='carousel-control-next-icon' aria-hidden='true'></span>\
+              <span class='sr-only'>Next</span>\
+            </a>\
+          </div>\
             "
 
             description.innerHTML += str_description
