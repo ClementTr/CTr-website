@@ -353,6 +353,15 @@
     },
     {
       "country": "France",
+      "city": "Arcachon",
+      "coordinates": [44.6539428, -1.1755714],
+      "year": "-",
+      "photos": ["img/map/arcachon.jpg", "img/map/arcachon2.jpg"],
+      "purpose": "visit",
+      "description": ["Description coming soon..."]
+    },
+    {
+      "country": "France",
       "city": "Paris",
       "coordinates": [48.826294, 2.346419],
       "year": "-",

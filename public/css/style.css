@@ -19,6 +19,10 @@ body {
   text-decoration: none !important;
 }
 
+#section-map{
+  margin-top: -20px;
+}
+
 .title-article{
 	margin-bottom: 30px;
 }

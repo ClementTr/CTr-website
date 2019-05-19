@@ -1,4 +1,5 @@
 import PersonalData from './PersonalData.json';
+import Script from 'react-load-script'
 import ReactDOM from 'react-dom';
 import React from 'react';
 import L from 'leaflet';
@@ -11,7 +12,7 @@ function distinct(value, index, self) {
     return self.indexOf(value) === index;
 }
 
-function getPurposeContries(data, purpose){
+function getPurposeCountries(data, purpose){
   let purpose_countries = data.travels.filter(e => e.purpose === purpose);
   purpose_countries = purpose_countries.map(obj => {
     return obj.country;
@@ -19,9 +20,10 @@ function getPurposeContries(data, purpose){
   purpose_countries = purpose_countries.filter(distinct)
   return purpose_countries
 }
-const work_countries = getPurposeContries(PersonalData, 'work')
-const studies_countries = getPurposeContries(PersonalData, 'studies')
-const visited_countries = getPurposeContries(PersonalData, 'visit')
+
+const visited_countries = getPurposeCountries(PersonalData, 'visit', 2019)
+const studies_countries = getPurposeCountries(PersonalData, 'studies', 2019)
+const work_countries = getPurposeCountries(PersonalData, 'work', 2019)
 
 function getColor(name) {
   if(work_countries.includes(name)){
@@ -250,8 +252,6 @@ class Map extends React.Component {
           }else{
             description.innerHTML += "<center><img width=300 src='" + photos[0] + "' ></center>"
           }
-
-
 
           description.innerHTML += "<p class='text_description'>" + text_description + "</p>"
         }

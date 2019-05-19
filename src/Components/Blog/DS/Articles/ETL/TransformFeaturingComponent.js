@@ -17,19 +17,19 @@ function TransformFeaturingComponent (){
          <span className="n"> end_year</span>
          <span className="p">):</span><br/>
          <span className="sd">    &#39;&#39;&#39;</span><br/>
-         <span className="sd">    input: league - type str - championnat we want to scrap</span><br/>
-         <span className="sd">           start_year - type int - first year we want to scrap</span><br/>
-         <span className="sd">           end_year - type int - last year we want to scrap</span><br/>
-         <span className="sd">    output: df_league - type pd.DataFrame - dataframe of all teams results in a specific league</span><br/>
+         <span className="sd">     input: league - type str - championnat we want to scrap</span><br/>
+         <span className="sd">     start_year - type int - first year we want to scrap</span><br/>
+         <span className="sd">     end_year - type int - last year we want to scrap</span><br/>
+         <span className="sd">     output: df_league - type pd.DataFrame - dataframe of all teams results in a specific league</span><br/>
          <span className="sd"></span><br/>
-         <span className="sd">    This function return a full dataframe of all teams results in a specific league between 2 dates</span><br/>
+         <span className="sd">     This function return a full dataframe of all teams results in a specific league between 2 dates</span><br/>
          <span className="sd">    &#39;&#39;&#39;</span><br/>
          <br/>
-         <span className="n">     frames</span>
+         <span className="n">    frames</span>
          <span className="o"> = </span>
          <span className="p">[]</span><br/>
          <br/>
-         <span className="k">     for</span>
+         <span className="k">    for</span>
          <span className="n"> year</span>
          <span className="ow"> in</span>
          <span className="nb"> range</span>
@@ -40,7 +40,7 @@ function TransformFeaturingComponent (){
          <span className="o"> + </span>
          <span className="mi">1</span>
          <span className="p">):</span><br/>
-         <span className="n">          dict_angleterre</span>
+         <span className="n">        dict_angleterre</span>
          <span className="o"> = </span>
          <span className="n">create_dict</span>
          <span className="p">(</span>
@@ -50,14 +50,14 @@ function TransformFeaturingComponent (){
          <span className="p">),</span>
          <span className="n"> league</span>
          <span className="p">)</span><br/>
-         <span className="k">          for</span>
+         <span className="k">    for</span>
          <span className="n"> team</span>
          <span className="ow"> in</span>
          <span className="n"> dict_angleterre</span>
          <span className="o">.</span>
          <span className="n">values</span>
          <span className="p">():</span><br/>
-         <span className="n">              df_foot</span>
+         <span className="n">        df_foot</span>
          <span className="o"> = </span>
          <span className="n">recover_main_football_data</span>
          <span className="p">(</span>
@@ -67,14 +67,14 @@ function TransformFeaturingComponent (){
          <span className="p">,</span>
          <span className="n"> year</span>
          <span className="p">)</span><br/>
-         <span className="n">              frames</span>
+         <span className="n">        frames</span>
          <span className="o">.</span>
          <span className="n">append</span>
          <span className="p">(</span>
          <span className="n">df_foot</span>
          <span className="p">)</span><br/>
          <br/>
-         <span className="k">     return</span>
+         <span className="k">    return</span>
          <span className="n"> pd</span>
          <span className="o">.</span>
          <span className="n">concat</span>
@@ -201,13 +201,13 @@ function TransformFeaturingComponent (){
          <span className="n">month</span>
          <span className="p">):</span><br/>
          <span className="sd">    &#39;&#39;&#39;</span><br/>
-         <span className="sd">    input: month - type int - month of the game</span><br/>
-         <span className="sd">    output: season_time - type str - season of the game</span><br/>
+         <span className="sd">     input: month - type int - month of the game</span><br/>
+         <span className="sd">     output: season_time - type str - season of the game</span><br/>
          <span className="sd"></span><br/>
-         <span className="sd">    This function return the season when the match was played.</span><br/>
+         <span className="sd">     This function return the season when the match was played.</span><br/>
          <span className="sd">    &#39;&#39;&#39;</span><br/>
          <br/>
-         <span className="k">     if</span>
+         <span className="k">    if</span>
          <span className="p"> (</span>
          <span className="n">month</span>
          <span className="o"> == </span>
@@ -219,9 +219,9 @@ function TransformFeaturingComponent (){
          <span className="o"> == </span>
          <span className="mi">7</span>
          <span className="p">):</span><br/>
-         <span className="k">          return</span>
+         <span className="k">        return</span>
          <span className="mi"> 0</span><br/>
-         <span className="k">     elif</span>
+         <span className="k">    elif</span>
          <span className="p"> (</span>
          <span className="n">month</span>
          <span className="o"> &gt;= </span>
@@ -233,9 +233,9 @@ function TransformFeaturingComponent (){
          <span className="o"> &lt; </span>
          <span className="mi">12</span>
          <span className="p"> ):</span><br/>
-         <span className="k">          return</span>
+         <span className="k">        return</span>
          <span className="mi"> 1</span><br/>
-         <span className="k">     elif</span>
+         <span className="k">    elif</span>
          <span className="p"> (</span>
          <span className="n">month</span>
          <span className="o"> &gt;= </span>
@@ -247,9 +247,9 @@ function TransformFeaturingComponent (){
          <span className="o"> &lt; </span>
          <span className="mi">3</span>
          <span className="p">):</span><br/>
-         <span className="k">          return</span>
+         <span className="k">        return</span>
          <span className="mi"> 2</span><br/>
-         <span className="k">     return</span>
+         <span className="k">    return</span>
          <span className="mi"> 3</span><br/>
          <br/>
          <span className="n">df_england</span>
@@ -484,14 +484,14 @@ function TransformFeaturingComponent (){
          <span className="n">opponent</span>
          <span className="p">):</span><br/>
          <span className="sd">    &#39;&#39;&#39;</span><br/>
-         <span className="sd">    input: opponent - type str - opponent team name</span><br/>
-         <span className="sd">           big_six - type list - list of big six teams in Premier League</span><br/>
-         <span className="sd">    output: is_op_big6 - type int - 1 if opponent is in big 6, 0 otherwise</span><br/>
+         <span className="sd">     input: opponent - type str - opponent team name</span><br/>
+         <span className="sd">            big_six - type list - list of big six teams in Premier League</span><br/>
+         <span className="sd">     output: is_op_big6 - type int - 1 if opponent is in big 6, 0 otherwise</span><br/>
          <span className="sd"></span><br/>
-         <span className="sd">    This function return if a team plays against a big 6 team (in London) or not</span><br/>
+         <span className="sd">     This function return if a team plays against a big 6 team (in London) or not</span><br/>
          <span className="sd">    &#39;&#39;&#39;</span><br/>
          <br/>
-         <span className="n">     big_six</span>
+         <span className="n">    big_six</span>
          <span className="o"> = </span>
          <span className="p">[</span>
          <span className="s2">&quot;Arsenal&quot;</span>
@@ -506,19 +506,19 @@ function TransformFeaturingComponent (){
          <span className="p">,</span>
          <span className="s2"> &quot;ManchesterUnited&quot;</span>
          <span className="p">]</span><br/>
-         <span className="k">     if</span>
+         <span className="k">    if</span>
          <span className="n"> opponent</span>
          <span className="ow"> in</span>
          <span className="n"> big_six</span>
          <span className="p">:</span><br/>
-         <span className="k">          if</span>
+         <span className="k">        if</span>
          <span className="n"> opponent</span>
          <span className="ow"> in</span>
          <span className="n"> big_six</span>
          <span className="p">[:</span>
          <span className="mi">3</span>
          <span className="p">]:</span><br/>
-         <span className="k">              return</span>
+         <span className="k">            return</span>
          <span className="n"> pd</span>
          <span className="o">.</span>
          <span className="n">Series</span>
@@ -528,9 +528,9 @@ function TransformFeaturingComponent (){
          <span className="mi">1</span>
          <span className="p">))</span>
          <span className="c1">#is_Big6_Opponent and is_Big6_London</span><br/>
-         <span className="k">          else</span>
+         <span className="k">        else</span>
          <span className="p">:</span><br/>
-         <span className="k">              return</span>
+         <span className="k">            return</span>
          <span className="n"> pd</span>
          <span className="o">.</span>
          <span className="n">Series</span>
@@ -539,7 +539,7 @@ function TransformFeaturingComponent (){
          <span className="p">,</span>
          <span className="mi">0</span>
          <span className="p">))</span><br/>
-         <span className="k">          return</span>
+         <span className="k">    return</span>
          <span className="n"> pd</span>
          <span className="o">.</span>
          <span className="n">Series</span>
@@ -768,11 +768,11 @@ function TransformFeaturingComponent (){
          <span className="p">(</span>
          <span className="n">result</span>
          <span className="p">):</span><br/>
-         <span className="sd">     &#39;&#39;&#39;</span><br/>
-         <span className="sd">    input: result - type str - result of a team V (Victories), D (Defeat) or N (Nul=Draw)</span><br/>
-         <span className="sd">    output: int_result - type int - return points won function of result</span><br/>
+         <span className="sd">    &#39;&#39;&#39;</span><br/>
+         <span className="sd">     input: result - type str - result of a team V (Victories), D (Defeat) or N (Nul=Draw)</span><br/>
+         <span className="sd">     output: int_result - type int - return points won function of result</span><br/>
          <span className="sd"></span><br/>
-         <span className="sd">    This function return the number of points won function of the result</span><br/>
+         <span className="sd">     This function return the number of points won function of the result</span><br/>
          <span className="sd">    &#39;&#39;&#39;</span><br/>
          <br/>
          <span className="k">    if</span>
@@ -780,7 +780,7 @@ function TransformFeaturingComponent (){
          <span className="o"> == </span>
          <span className="s2">&quot;V&quot;</span>
          <span className="p">:</span><br/>
-         <span className="k">         return</span>
+         <span className="k">        return</span>
          <span className="mi"> 3</span>
          <span className="c1"> #int_result</span><br/>
          <span className="k">    elif</span>
@@ -788,7 +788,7 @@ function TransformFeaturingComponent (){
          <span className="o"> == </span>
          <span className="s2">&quot;D&quot;</span>
          <span className="p">:</span><br/>
-         <span className="k">         return</span>
+         <span className="k">        return</span>
          <span className="mi"> 0</span><br/>
          <span className="k">    return</span>
          <span className="mi"> 1</span><br/>
@@ -1028,29 +1028,29 @@ function TransformFeaturingComponent (){
          <span className="n"> df</span>
          <span className="p">):</span><br/>
          <span className="sd">    &#39;&#39;&#39;</span><br/>
-         <span className="sd">    input: row - row of the apply dataframe we work on </span><br/>
-         <span className="sd">           str_col_name - column name we want to cumul</span><br/>
-         <span className="sd">           df - type pd.DataFrame - dataframe we work on</span><br/>
-         <span className="sd">    output: cum_points - int - cumul point at a specific date in a football season</span><br/>
+         <span className="sd">     input: row - row of the apply dataframe we work on </span><br/>
+         <span className="sd">            str_col_name - column name we want to cumul</span><br/>
+         <span className="sd">            df - type pd.DataFrame - dataframe we work on</span><br/>
+         <span className="sd">     output: cum_points - int - cumul point at a specific date in a football season</span><br/>
          <span className="sd"></span><br/>
-         <span className="sd">    This function return the cumul of a specific column at every moment of the season</span><br/>
+         <span className="sd">     This function return the cumul of a specific column at every moment of the season</span><br/>
          <span className="sd">    &#39;&#39;&#39;</span><br/>
-         <span className="n">     date</span>
+         <span className="n">    date</span>
          <span className="o"> = </span>
          <span className="n">row</span>
          <span className="o">.</span>
          <span className="n">name</span><br/>
-         <span className="n">     season</span>
+         <span className="n">    season</span>
          <span className="o"> = </span>
          <span className="n">row</span>
          <span className="o">.</span>
          <span className="n">Football_Season</span><br/>
-         <span className="n">     team</span>
+         <span className="n">    team</span>
          <span className="o"> = </span>
          <span className="n">row</span>
          <span className="o">.</span>
          <span className="n">Team_Concerned</span><br/>
-         <span className="n">     cum_points</span>
+         <span className="n">    cum_points</span>
          <span className="o"> = </span>
          <span className="n">df</span>
          <span className="p">[(</span>
@@ -1082,7 +1082,7 @@ function TransformFeaturingComponent (){
          <span className="n">sum</span>
          <span className="p">()</span><br/>
          <br/>
-         <span className="k">     return</span>
+         <span className="k">    return</span>
          <span className="n"> cum_points</span><br/>
          <br/>
          <span className="n">df_england</span>
@@ -1321,28 +1321,28 @@ function TransformFeaturingComponent (){
          <span className="n"> df</span>
          <span className="p">):</span><br/>
          <span className="sd">    &#39;&#39;&#39;</span><br/>
-         <span className="sd">    input: row - row of the apply dataframe we work on</span><br/>
-         <span className="sd">           df - type pd.DataFrame - dataframe we work on</span><br/>
-         <span className="sd">    output: cum_points - type int - classement at a specific date in a football season</span><br/>
+         <span className="sd">     input: row - row of the apply dataframe we work on</span><br/>
+         <span className="sd">            df - type pd.DataFrame - dataframe we work on</span><br/>
+         <span className="sd">     output: cum_points - type int - classement at a specific date in a football season</span><br/>
          <span className="sd"></span><br/>
-         <span className="sd">    This function return the classement of a team at every moment of the season</span><br/>
+         <span className="sd">     This function return the classement of a team at every moment of the season</span><br/>
          <span className="sd">    &#39;&#39;&#39;</span><br/>
-         <span className="n">     date</span>
+         <span className="n">    date</span>
          <span className="o"> = </span>
          <span className="n">row</span>
          <span className="o">.</span>
          <span className="n">name</span><br/>
-         <span className="n">     season</span>
+         <span className="n">    season</span>
          <span className="o"> = </span>
          <span className="n">row</span>
          <span className="o">.</span>
          <span className="n">Football_Season</span><br/>
-         <span className="n">     team</span>
+         <span className="n">    team</span>
          <span className="o"> = </span>
          <span className="n">row</span>
          <span className="o">.</span>
          <span className="n">Team_Concerned</span><br/>
-         <span className="n">     classement</span>
+         <span className="n">    classement</span>
          <span className="o"> = </span>
          <span className="n">df</span>
          <span className="p">[(</span>
@@ -1365,7 +1365,8 @@ function TransformFeaturingComponent (){
          <span className="s2">&quot;Points_Won&quot;</span>
          <span className="p">, </span>
          <span className="s2">&quot;Difference&quot;</span>
-         <span className="p">]]</span>\<br/>
+         <span className="p">]]</span>\
+         <br/>
          <span className="o">                    .</span>
          <span className="n">groupby</span>
          <span className="p">(</span>
@@ -1383,7 +1384,8 @@ function TransformFeaturingComponent (){
          <span className="s2">&quot;Points_Won&quot;</span>
          <span className="p">,</span>
          <span className="s1">&#39;Difference&#39;</span>
-         <span className="p">],</span><br/>
+         <span className="p">],</span>
+         <br/>
          <span className="n">                    ascending</span>
          <span className="o"> = </span>
          <span className="kc">False</span>
@@ -1398,7 +1400,7 @@ function TransformFeaturingComponent (){
          <span className="o">+</span>
          <span className="mi">1</span><br/>
          <br/>
-         <span className="k">     return</span>
+         <span className="k">    return</span>
          <span className="n"> classement</span><br/>
          <br/>
          <span className="n">df_england</span>

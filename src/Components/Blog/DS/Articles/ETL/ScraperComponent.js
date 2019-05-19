@@ -145,12 +145,12 @@ function ScraperComponent (){
         <span className="p">):</span>
         <br/>
         <span className="sd">    '''</span><br/>
-        <span className="sd">    input: list_to_clean - type list - list scrapped</span><br/>
-        <span className="sd">    output: list_clean - type list - list scrapped clean</span><br/>
+        <span className="sd">     input: list_to_clean - type list - list scrapped</span><br/>
+        <span className="sd">     output: list_clean - type list - list scrapped clean</span><br/>
         <span className="sd"></span><br/>
-        <span className="sd">    This function return list with scrapped elements cleaned</span><br/>
+        <span className="sd">     This function return list with scrapped elements cleaned</span><br/>
         <span className="sd">    '''</span><br/>
-        <span className="k">     return</span>
+        <span className="k">    return</span>
         <span className="p"> [</span>
         <span className="n">ltc</span>
         <span className="o">.</span>
@@ -179,8 +179,9 @@ function ScraperComponent (){
         <span className="s1">'</span>
         <span className="p">, </span>
         <span className="s1">''</span>
-        <span className="p">)</span>
-        <span className="o">.</span>
+        <span className="p">)</span>\
+        <br/>
+        <span className="o">                  .</span>
         <span className="n">replace</span>
         <span className="p">(</span>
         <span className="s1">' '</span>
@@ -200,8 +201,9 @@ function ScraperComponent (){
         <span className="s1">' '</span>
         <span className="p">, </span>
         <span className="s1">''</span>
-        <span className="p">)</span>
-        <span className="k"> for</span>
+        <span className="p">)</span>\
+        <br/>
+        <span className="k">                  for</span>
         <span className="n"> ltc</span>
         <span className="ow"> in</span>
         <span className="n"> list_to_clean</span>
@@ -216,29 +218,29 @@ function ScraperComponent (){
         <span className="p">):</span>
         <br/>
         <span className="sd">    '''</span><br/>
-        <span className="sd">    input: real_name - type list - name of teams scrapped</span><br/>
-        <span className="sd">    output: web_name - type list - name of teams used in URL</span><br/>
+        <span className="sd">     input: real_name - type list - name of teams scrapped</span><br/>
+        <span className="sd">     output: web_name - type list - name of teams used in URL</span><br/>
         <span className="sd"></span><br/>
-        <span className="sd">    This function return list that contains team names used in URL</span><br/>
+        <span className="sd">     This function return list that contains team names used in URL</span><br/>
         <span className="sd">    '''</span><br/>
-        <span className="n">     web_name</span>
+        <span className="n">    web_name</span>
         <span className="o"> = </span>
         <span className="p">[]</span>
         <br/>
-        <span className="k">     for</span>
+        <span className="k">    for</span>
         <span className="n"> r</span>
         <span className="ow"> in</span>
         <span className="n"> real_name</span>
         <span className="p">:</span>
         <br/>
-        <span className="n">          r</span>
+        <span className="n">        r</span>
         <span className="o"> = </span>
         <span className="n">r</span>
         <span className="o">.</span>
         <span className="n">lower</span>
         <span className="p">()</span>
         <br/>
-        <span className="n">          r</span>
+        <span className="n">        r</span>
         <span className="o"> = </span>
         <span className="n">r</span>
         <span className="o">.</span>
@@ -265,7 +267,7 @@ function ScraperComponent (){
         <span className="s1">''</span>
         <span className="p">)</span>
         <br/>
-        <span className="n">     web_name</span>
+        <span className="n">        web_name</span>
         <span className="o">.</span>
         <span className="n">append</span>
         <span className="p">(</span>
@@ -274,7 +276,7 @@ function ScraperComponent (){
         <span className="n">r</span>
         <span className="p">))</span>
         <br/>
-        <span className="k">     return</span>
+        <span className="k">    return</span>
         <span className="n"> web_name</span>
         <br/>
         <br/>
@@ -287,25 +289,25 @@ function ScraperComponent (){
         <span className="p">):</span>
         <br/>
         <span className="sd">    '''</span><br/>
-        <span className="sd">    input: year - type int - year team names to scrap </span><br/>
-        <span className="sd">           championnat - type str - championnat team names to scrap</span><br/>
-        <span className="sd">    output: dict_league - type dict - dict with key as team names in classement and values </span><br/>
-        <span className="sd">                                            as teams names used in URL</span><br/>
+        <span className="sd">     input: year - type int - year team names to scrap </span><br/>
+        <span className="sd">       championnat - type str - championnat team names to scrap</span><br/>
+        <span className="sd">     output: dict_league - type dict - dict with key as team names in classement and values </span><br/>
+        <span className="sd">                   as teams names used in URL</span><br/>
         <span className="sd"></span><br/>
-        <span className="sd">    This function return dict of with key as team names in classement </span><br/>
-        <span className="sd">    and values as teams names used in URL</span><br/>
+        <span className="sd">     This function return dict of with key as team names in classement </span><br/>
+        <span className="sd">     and values as teams names used in URL</span><br/>
         <span className="sd">    '''</span><br/>
-        <span className="n">     dict_league</span>
+        <span className="n">    dict_league</span>
         <span className="o"> = </span>
         <span className="p"> {"{}"} </span><br/>
-        <span className="n">     year</span>
+        <span className="n">    year</span>
         <span className="o"> = </span>
         <span className="nb">str</span>
         <span className="p">(</span>
         <span className="n">year</span>
         <span className="p">)</span>
         <br/>
-        <span className="n">     URL</span>
+        <span className="n">    URL</span>
         <span className="o"> = </span>
         <span className="s2">&quot;http://www.sports.fr/football/&quot;</span>
         <span className="o"> + </span>
@@ -317,7 +319,7 @@ function ScraperComponent (){
         <span className="o"> + </span>
         <span className="s2">&quot;/classements/classement-general.html&quot;</span>
         <br/>
-        <span className="n">     page</span>
+        <span className="n">    page</span>
         <span className="o"> = </span>
         <span className="n">urlopen</span>
         <span className="p">(</span>
@@ -327,7 +329,7 @@ function ScraperComponent (){
         <span className="n">read</span>
         <span className="p">()</span>
         <br/>
-        <span className="n">     html</span>
+        <span className="n">    html</span>
         <span className="o"> = </span>
         <span className="n">lxml</span>
         <span className="o">.</span>
@@ -338,7 +340,7 @@ function ScraperComponent (){
         <span className="n">page</span>
         <span className="p">)</span>
         <br/>
-        <span className="n">     scraping</span>
+        <span className="n">    scraping</span>
         <span className="o"> = </span>
         <span className="n">html</span>
         <span className="o">.</span>
@@ -347,11 +349,11 @@ function ScraperComponent (){
         <span className="s2">&quot;//td[@className='tl nowrap']&quot;</span>
         <span className="p">)</span>
         <br/>
-        <span className="n">     data</span>
+        <span className="n">    data</span>
         <span className="o"> = </span>
         <span className="p">{"{}"}</span>
         <br/>
-        <span className="n">     team_name_list</span>
+        <span className="n">    team_name_list</span>
         <span className="o"> = </span>
         <span className="p">[</span>
         <span className="n">sc</span>
@@ -364,21 +366,21 @@ function ScraperComponent (){
         <span className="n"> scraping</span>
         <span className="p">]</span>
         <br/>
-        <span className="n">     team_name_list</span>
+        <span className="n">    team_name_list</span>
         <span className="o"> = </span>
         <span className="n">clean_scraping_dict</span>
         <span className="p">(</span>
         <span className="n">team_name_list</span>
         <span className="p">)</span>
         <br/>
-        <span className="n">     web_name_list</span>
+        <span className="n">    web_name_list</span>
         <span className="o"> = </span>
         <span className="n">to_web_name</span>
         <span className="p">(</span>
         <span className="n">team_name_list</span>
         <span className="p">)</span>
         <br/>
-        <span className="k">     for</span>
+        <span className="k">    for</span>
         <span className="n"> wn</span>
         <span className="p">,</span>
         <span className="n"> tn</span>
@@ -390,14 +392,14 @@ function ScraperComponent (){
         <span className="n"> team_name_list</span>
         <span className="p">):</span>
         <br/>
-        <span className="n">          dict_league</span>
+        <span className="n">        dict_league</span>
         <span className="p">[</span>
         <span className="n">tn</span>
         <span className="p">]</span>
         <span className="o"> = </span>
         <span className="n">wn</span>
         <br/>
-        <span className="k">     return</span>
+        <span className="k">    return</span>
         <span className="n"> dict_league</span>
         <br/>
         <br/>
@@ -461,14 +463,14 @@ function ScraperComponent (){
         <span className="p">):</span>
         <br/>
         <span className="sd">    &#39;&#39;&#39;</span><br/>
-        <span className="sd">    input: list_to_clean - type list - list scrapped</span><br/>
-        <span className="sd">    output: list_clean - type list - list scrapped clean</span><br/>
+        <span className="sd">     input: list_to_clean - type list - list scrapped</span><br/>
+        <span className="sd">     output: list_clean - type list - list scrapped clean</span><br/>
         <span className="sd"></span><br/>
-        <span className="sd">    This function return list with scrapped elements cleaned</span><br/>
+        <span className="sd">     This function return list with scrapped elements cleaned</span><br/>
         <span className="sd">    &#39;&#39;&#39;</span><br/>
         <br/>
         <span className="k">    return</span>
-        <span className="p">[</span>
+        <span className="p"> [</span>
         <span className="n">ltc</span>
         <span className="o">.</span>
         <span className="n">replace</span>
@@ -487,8 +489,9 @@ function ScraperComponent (){
         <span className="s1">&#39;</span>
         <span className="p">,</span>
         <span className="s1"> &#39;&#39;</span>
-        <span className="p">)</span>
-        <span className="o">.</span>
+        <span className="p">)</span>\
+        <br/>
+        <span className="o">            .</span>
         <span className="n">replace</span>
         <span className="p">(</span>
         <span className="s1">&#39;</span>
@@ -517,8 +520,9 @@ function ScraperComponent (){
         <span className="s1">&#39;ej.&#39;</span>
         <span className="p">,</span>
         <span className="s1"> &#39;&#39;</span>
-        <span className="p">)</span>
-        <span className="k"> for</span>
+        <span className="p">)</span>\
+        <br/>
+        <span className="k">             for</span>
         <span className="n"> ltc</span>
         <span className="ow"> in</span>
         <span className="n"> list_to_clean</span>
@@ -537,15 +541,15 @@ function ScraperComponent (){
         <span className="p">):</span>
         <br/>
         <span className="sd">    &#39;&#39;&#39;</span><br/>
-        <span className="sd">    input: championnat - type str - league we want to scrap</span><br/>
-        <span className="sd">           team - type str - team result we want to scrap</span><br/>
-        <span className="sd">           year - type int - year result we want to scrap</span><br/>
-        <span className="sd">    output: df - type pd.DataFrame - df with results of a specific team over a year</span><br/>
+        <span className="sd">     input: championnat - type str - league we want to scrap</span><br/>
+        <span className="sd">     team - type str - team result we want to scrap</span><br/>
+        <span className="sd">     year - type int - year result we want to scrap</span><br/>
+        <span className="sd">     output: df - type pd.DataFrame - df with results of a specific team over a year</span><br/>
         <span className="sd"></span><br/>
-        <span className="sd">    This function return the results of team over a year as dataframe object</span><br/>
+        <span className="sd">     This function return the results of team over a year as dataframe object</span><br/>
         <span className="sd">    &#39;&#39;&#39;</span><br/>
         <br/>
-        <span className="n">     URL</span>
+        <span className="n">    URL</span>
         <span className="o"> = </span>
         <span className="s2">&quot;http://www.sports.fr/football/&quot;</span>
         <span className="o"> + </span>
@@ -564,7 +568,7 @@ function ScraperComponent (){
         <span className="o"> + </span>
         <span className="s2">&quot;.html&quot;</span>
         <br/>
-        <span className="n">     page</span>
+        <span className="n">    page</span>
         <span className="o"> = </span>
         <span className="n">urlopen</span>
         <span className="p">(</span>
@@ -574,7 +578,7 @@ function ScraperComponent (){
         <span className="n">read</span>
         <span className="p">()</span>
         <br/>
-        <span className="n">     html</span>
+        <span className="n">    html</span>
         <span className="o"> = </span>
         <span className="n">lxml</span>
         <span className="o">.</span>
@@ -585,7 +589,7 @@ function ScraperComponent (){
         <span className="n">page</span>
         <span className="p">)</span>
         <br/>
-        <span className="n">     scraping</span>
+        <span className="n">    scraping</span>
         <span className="o"> = </span>
         <span className="n">html</span>
         <span className="o">.</span>
@@ -594,11 +598,11 @@ function ScraperComponent (){
         <span className="s2">&quot;//tr[@className=&#39;alt&#39;]//td&quot;</span>
         <span className="p">)</span>
         <br/>
-        <span className="n">     data</span>
+        <span className="n">    data</span>
         <span className="o"> = </span>
         <span className="p">{"{}"}</span>
         <br/>
-        <span className="n">     data_list</span>
+        <span className="n">    data_list</span>
         <span className="o"> = </span>
         <span className="p">[</span>
         <span className="n">sc</span>
@@ -611,7 +615,7 @@ function ScraperComponent (){
         <span className="n"> scraping</span>
         <span className="p">]</span>
         <br/>
-        <span className="n">     results_list</span>
+        <span className="n">    results_list</span>
         <span className="o"> = </span>
         <span className="n">data_list</span>
         <span className="p">[</span>
@@ -620,7 +624,7 @@ function ScraperComponent (){
         <span className="mi">8</span>
         <span className="p">]</span>
         <br/>
-        <span className="n">     dates_list</span>
+        <span className="n">    dates_list</span>
         <span className="o"> = </span>
         <span className="n">data_list</span>
         <span className="p">[</span>
@@ -629,7 +633,7 @@ function ScraperComponent (){
         <span className="mi">8</span>
         <span className="p">]</span>
         <br/>
-        <span className="n">     team_home_list</span>
+        <span className="n">    team_home_list</span>
         <span className="o"> = </span>
         <span className="n">data_list</span>
         <span className="p">[</span>
@@ -638,7 +642,7 @@ function ScraperComponent (){
         <span className="mi">8</span>
         <span className="p">]</span>
         <br/>
-        <span className="n">     team_away_list</span>
+        <span className="n">    team_away_list</span>
         <span className="o"> = </span>
         <span className="n">data_list</span>
         <span className="p">[</span>
@@ -647,7 +651,7 @@ function ScraperComponent (){
         <span className="mi">8</span>
         <span className="p">]</span>
         <br/>
-        <span className="n">     played_day_list</span>
+        <span className="n">    played_day_list</span>
         <span className="o"> = </span>
         <span className="n">data_list</span>
         <span className="p">[</span>
@@ -656,7 +660,7 @@ function ScraperComponent (){
         <span className="mi">8</span>
         <span className="p">]</span>
         <br/>
-        <span className="n">     score_list</span>
+        <span className="n">    score_list</span>
         <span className="o"> = </span>
         <span className="n">data_list</span>
         <span className="p">[</span>
@@ -668,14 +672,14 @@ function ScraperComponent (){
         <br/>
         <span className="c1">    #Results</span>
         <br/>
-        <span className="n">     results_list_cleaned</span>
+        <span className="n">    results_list_cleaned</span>
         <span className="o"> = </span>
         <span className="n">clean_scraping</span>
         <span className="p">(</span>
         <span className="n">results_list</span>
         <span className="p">)</span>
         <br/>
-        <span className="n">     data</span>
+        <span className="n">    data</span>
         <span className="p">[</span>
         <span className="s2">&quot;Results&quot;</span>
         <span className="p">]</span>
@@ -685,14 +689,14 @@ function ScraperComponent (){
         <br/>
         <span className="c1">    #Date</span>
         <br/>
-        <span className="n">     dates_list_cleaned</span>
+        <span className="n">    dates_list_cleaned</span>
         <span className="o"> = </span>
         <span className="n">clean_scraping</span>
         <span className="p">(</span>
         <span className="n">dates_list</span>
         <span className="p">)</span>
         <br/>
-        <span className="n">     data</span>
+        <span className="n">    data</span>
         <span className="p">[</span>
         <span className="s2">&quot;Date&quot;</span>
         <span className="p">]</span>
@@ -702,14 +706,14 @@ function ScraperComponent (){
         <br/>
         <span className="c1">    #Team Name Home</span>
         <br/>
-        <span className="n">     team_home_list_cleaned</span>
+        <span className="n">    team_home_list_cleaned</span>
         <span className="o"> = </span>
         <span className="n">clean_scraping</span>
         <span className="p">(</span>
         <span className="n">team_home_list</span>
         <span className="p">)</span>
         <br/>
-        <span className="n">     data</span>
+        <span className="n">    data</span>
         <span className="p">[</span>
         <span className="s2">&quot;Team_Home&quot;</span>
         <span className="p">]</span>
@@ -719,14 +723,14 @@ function ScraperComponent (){
         <br/>
         <span className="c1">    #Team Name Away</span>
         <br/>
-        <span className="n">     team_away_list_cleaned</span>
+        <span className="n">    team_away_list_cleaned</span>
         <span className="o"> = </span>
         <span className="n">clean_scraping</span>
         <span className="p">(</span>
         <span className="n">team_away_list</span>
         <span className="p">)</span>
         <br/>
-        <span className="n">     data</span>
+        <span className="n">    data</span>
         <span className="p">[</span>
         <span className="s2">&quot;Team_Away&quot;</span>
         <span className="p">]</span>
@@ -736,14 +740,14 @@ function ScraperComponent (){
         <br/>
         <span className="c1">    #Played Day</span>
         <br/>
-        <span className="n">     played_day_list_cleaned</span>
+        <span className="n">    played_day_list_cleaned</span>
         <span className="o"> = </span>
         <span className="n">clean_scraping</span>
         <span className="p">(</span>
         <span className="n">played_day_list</span>
         <span className="p">)</span>
         <br/>
-        <span className="n">     data</span>
+        <span className="n">    data</span>
         <span className="p">[</span>
         <span className="s2">&quot;Played_Day&quot;</span>
         <span className="p">]</span>
@@ -751,16 +755,16 @@ function ScraperComponent (){
         <span className="n">played_day_list_cleaned</span>
         <br/>
         <br/>
-        <span className="c1">    # Goal(s) scored Team Home/Away</span>
+        <span className="c1">    #Goal(s) scored Team Home/Away</span>
         <br/>
-        <span className="n">     score_list_cleaned</span>
+        <span className="n">    score_list_cleaned</span>
         <span className="o"> = </span>
         <span className="n">clean_scraping</span>
         <span className="p">(</span>
         <span className="n">score_list</span>
         <span className="p">)</span>
         <br/>
-        <span className="n">     score_list_home_cleaned</span>
+        <span className="n">    score_list_home_cleaned</span>
         <span className="o"> = </span>
         <span className="s1">&#39;-&#39;</span>
         <span className="o">.</span>
@@ -773,7 +777,7 @@ function ScraperComponent (){
         <span className="mi">4</span>
         <span className="p">]</span>
         <br/>
-        <span className="n">     data</span>
+        <span className="n">    data</span>
         <span className="p">[</span>
         <span className="s2">&quot;Score_Home&quot;</span>
         <span className="p">]</span>
@@ -787,7 +791,7 @@ function ScraperComponent (){
         <span className="n"> score_list_home_cleaned</span>
         <span className="p">))</span>
         <br/>
-        <span className="n">     score_away_list_cleaned</span>
+        <span className="n">    score_away_list_cleaned</span>
         <span className="o"> = </span>
         <span className="s1">&#39;-&#39;</span>
         <span className="o">.</span>
@@ -800,7 +804,7 @@ function ScraperComponent (){
         <span className="mi">4</span>
         <span className="p">]</span>
         <br/>
-        <span className="n">     data</span>
+        <span className="n">    data</span>
         <span className="p">[</span>
         <span className="s2">&quot;Score_Away&quot;</span>
         <span className="p">]</span>
@@ -814,7 +818,7 @@ function ScraperComponent (){
         <span className="n"> score_away_list_cleaned</span>
         <span className="p">))</span>
         <br/>
-        <span className="n">     data</span>
+        <span className="n">    data</span>
         <span className="p">[</span>
         <span className="s2">&quot;Team_Concerned&quot;</span>
         <span className="p">]</span>
@@ -822,8 +826,8 @@ function ScraperComponent (){
         <span className="n">team</span>
         <span className="o">.</span>
         <span className="n">title</span>
-        <span className="p">()</span>
-        <span className="n">data</span>
+        <span className="p">()</span><br/>
+        <span className="n">    data</span>
         <span className="p">[</span>
         <span className="s2">&quot;Football_Season&quot;</span>
         <span className="p">]</span>
@@ -833,7 +837,7 @@ function ScraperComponent (){
         <span className="n">year</span>
         <span className="p">)</span>
         <br/>
-        <span className="n">     df</span>
+        <span className="n">    df</span>
         <span className="o"> = </span>
         <span className="n">pd</span>
         <span className="o">.</span>
@@ -842,7 +846,7 @@ function ScraperComponent (){
         <span className="n">data</span>
         <span className="p">)</span>
         <br/>
-        <span className="k">     assert</span>
+        <span className="k">    assert</span>
         <span className="p">(</span>
         <span className="n">df</span>
         <span className="o">.</span>
@@ -854,7 +858,7 @@ function ScraperComponent (){
         <span className="mi">9</span>
         <span className="p">))</span>
         <br/>
-        <span className="k">     return</span>
+        <span className="k">    return</span>
         <span className="n"> df</span>
         <br/>
         <br/>

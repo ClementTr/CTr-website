@@ -13,7 +13,7 @@ import ContactComponent from './Components/ContactComponent';
 import HomeComponent from './Components/Home/HomeComponent';
 import HeaderComponent from './Components/HeaderComponent';
 import FooterComponent from './Components/FooterComponent';
-import MapComponent from './Components/Map/MapComponent';
+import MapComponent from './Components/Map/WorldComponent';
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,

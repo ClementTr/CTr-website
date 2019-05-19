@@ -1449,6 +1449,7 @@ function AnalysisVizComponent (){
     		<span className="o">=</span>
     		<span className="n">colors</span>
     		<span className="p">,</span>
+        <br/>
     		<span className="n">                            autopct</span>
     		<span className="o">=</span>
     		<span className="s1">&#39;</span>
@@ -1533,6 +1534,7 @@ function AnalysisVizComponent (){
     		<span className="o">=</span>
     		<span className="n">colors</span>
     		<span className="p">,</span>
+        <br/>
     		<span className="n">                            autopct</span>
     		<span className="o">=</span>
     		<span className="s1">&#39;</span>
