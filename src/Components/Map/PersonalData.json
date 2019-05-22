@@ -64,15 +64,6 @@
       "description": ["Djerba, description coming soon"]
     },
     {
-      "country": "Morocco",
-      "city": "Ouarzazate",
-      "coordinates": [30.9335436, -6.937015999999],
-      "year": 2006,
-      "photos": ["img/map/no.png"],
-      "purpose": "visit",
-      "description": ["Ouarzazate, description coming soon"]
-    },
-    {
       "country": "Spain",
       "city": "Calp",
       "coordinates": [38.64364689999999, 0.045687600000064776],
@@ -80,6 +71,15 @@
       "photos": ["img/map/no.png"],
       "purpose": "visit",
       "description": ["Calp, description coming soon"]
+    },
+    {
+      "country": "Morocco",
+      "city": "Ouarzazate",
+      "coordinates": [30.9335436, -6.937015999999],
+      "year": 2006,
+      "photos": ["img/map/no.png"],
+      "purpose": "visit",
+      "description": ["Ouarzazate, description coming soon"]
     },
     {
       "country": "Senegal",
@@ -125,6 +125,24 @@
       "photos": ["img/map/no.png"],
       "purpose": "visit",
       "description": ["Corfou, description coming soon"]
+    },
+    {
+      "country": "Spain",
+      "city": "Ibiza",
+      "coordinates": [38.90883, 1.43296],
+      "year": 2010,
+      "photos": ["img/map/no.png"],
+      "purpose": "visit",
+      "description": ["Ibiza, description coming soon"]
+    },
+    {
+      "country": "United Kingdom",
+      "city": "Cambridge",
+      "coordinates": [52.2034823, 0.1235817],
+      "year": 2011,
+      "photos": ["img/map/no.png"],
+      "purpose": "visit",
+      "description": ["Cambridge, description coming soon"]
     },
     {
       "country": "United Kingdom",

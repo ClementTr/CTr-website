@@ -7,13 +7,19 @@ import L from 'leaflet';
 let map_data = require('./MapData.js').default;
 let markers = []
 let zoom = false
+let last_clicked_country
 
 function distinct(value, index, self) {
     return self.indexOf(value) === index;
 }
 
 function getPurposeCountries(data, purpose){
-  let purpose_countries = data.travels.filter(e => e.purpose === purpose);
+  let purpose_countries;
+  if(purpose){
+    purpose_countries = data.travels.filter(e => e.purpose === purpose);
+  }else{
+    purpose_countries = data.travels;
+  }
   purpose_countries = purpose_countries.map(obj => {
     return obj.country;
   });
@@ -21,9 +27,13 @@ function getPurposeCountries(data, purpose){
   return purpose_countries
 }
 
-const visited_countries = getPurposeCountries(PersonalData, 'visit', 2019)
-const studies_countries = getPurposeCountries(PersonalData, 'studies', 2019)
-const work_countries = getPurposeCountries(PersonalData, 'work', 2019)
+const all_distinct_countries = getPurposeCountries(PersonalData)
+const visited_countries = getPurposeCountries(PersonalData, 'visit')
+const studies_countries = getPurposeCountries(PersonalData, 'studies')
+const work_countries = getPurposeCountries(PersonalData, 'work')
+
+console.log(all_distinct_countries.length)
+console.log(all_distinct_countries)
 
 function getColor(name) {
   if(work_countries.includes(name)){
@@ -139,14 +149,20 @@ class Map extends React.Component {
 
         function clickMap(e) {
           let country = e.target.feature.properties.name
-          if(zoom === false){
-            if(country === "France"){
-              map.setView([40, -7], 3);
-              createMarkers("France")
-              zoom = true
+          if(all_distinct_countries.includes(country)){
+            if(country === last_clicked_country && zoom === true){
+              map.setView([40, -7], 2);
+              removeDescription()
+              removeMarkers()
+              zoom = false
             }else{
               map.fitBounds(e.target.getBounds());
+              removeDescription()
+              removeMarkers()
               createMarkers(country)
+
+              description.style.display = 'none'
+              last_clicked_country = country
               zoom = true
             }
           }else{
