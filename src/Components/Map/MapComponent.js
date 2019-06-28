@@ -13,10 +13,26 @@ function distinct(value, index, self) {
     return self.indexOf(value) === index;
 }
 
+function purposeFilter(e, purpose) {
+  let arr_countries = []
+  e.travels.forEach(function(travel){
+    travel.journey.forEach(function(journey){
+      if(journey.purpose === purpose){
+        arr_countries.push({
+          'country': travel.country,
+          'year': journey.year,
+          'photos': journey.photos
+        })
+      }
+    })
+  })
+  return arr_countries
+}
+
 function getPurposeCountries(data, purpose){
   let purpose_countries;
   if(purpose){
-    purpose_countries = data.travels.filter(e => e.purpose === purpose);
+    purpose_countries = purposeFilter(data, purpose)
   }else{
     purpose_countries = data.travels;
   }
@@ -24,6 +40,8 @@ function getPurposeCountries(data, purpose){
     return obj.country;
   });
   purpose_countries = purpose_countries.filter(distinct)
+  console.log(purpose)
+  console.log(purpose_countries)
   return purpose_countries
 }
 
@@ -31,9 +49,6 @@ const all_distinct_countries = getPurposeCountries(PersonalData)
 const visited_countries = getPurposeCountries(PersonalData, 'visit')
 const studies_countries = getPurposeCountries(PersonalData, 'studies')
 const work_countries = getPurposeCountries(PersonalData, 'work')
-
-console.log(all_distinct_countries.length)
-console.log(all_distinct_countries)
 
 function getColor(name) {
   if(work_countries.includes(name)){
@@ -183,13 +198,14 @@ class Map extends React.Component {
 
         function onMarkerClick(e){
           let marker_data = e.target.options
-          setDescription(marker_data.country, marker_data.city, marker_data.year, marker_data.photos, marker_data.description)
+          setDescription(marker_data.country, marker_data.city, marker_data.description, marker_data.journey)
         }
 
         function createMarkers(country){
           let country_data_selected = PersonalData.travels.filter(e => e.country === country);
+          console.log(country_data_selected)
           country_data_selected.map((obj, idx) =>
-            markers.push(L.marker(obj.coordinates, {country: obj.country, city: obj.city, year: obj.year, photos: obj.photos, description:obj.description}).addTo(map).on('click', onMarkerClick))
+            markers.push(L.marker(obj.coordinates, {country: obj.country, city: obj.city, description: obj.description, journey: obj.journey}).addTo(map).on('click', onMarkerClick))
           )
         }
 
@@ -200,46 +216,73 @@ class Map extends React.Component {
           markers = []
         }
 
-        function setDescription(country, city, year, photos, text_description){
+        function setDescription(country, city, text_description, journey){
+          console.log(country, city, text_description, journey)
           description.style.display = "block"
-          description.innerHTML = "<b>" + country + "</b> - " + city + "<br><i>" + year + "</i><br><br>"
+          description.innerHTML = "<b>" + country + "</b> - "
+          description.innerHTML += city
+          description.innerHTML += "<br/>"
+          journey.forEach(function(journey, i){
+            if(i==0){
+              description.innerHTML += journey.year
+            }else{
+              description.innerHTML += " & " + journey.year
+            }
+          })
 
-          if(photos.length > 1){
+          let carousel_description = []
+          journey.forEach(function(journey){
+            journey.photos.forEach(function(photo){
+              carousel_description.push({
+                year: journey.year,
+                photo: photo
+              })
+            })
+          })
+
+
+          if(carousel_description.length > 1){
             let str_description = ""
-            let cpt = 0
             str_description += "\
             <div id='carouselExampleControls' class='carousel slide' data-ride='carousel'>\
             <ol class='carousel-indicators'>\
               "
 
-            photos.forEach(function(photo){
-                if(cpt === 0){
-                  str_description += "\
-                  <li data-target='#carouselExampleControls' data-slide-to='0' class='active'></li>\
-                  ";
-                }else{
-                  str_description += "\
-                  <li data-target='#carouselExampleControls' data-slide-to='" + cpt + "'></li>\
-                  ";
-                }
-                cpt += 1;
-              })
+            for(cpt=0; cpt<carousel_description.length; cpt++){
+              if(cpt === 0){
+                str_description += "\
+                <li data-target='#carouselExampleControls' data-slide-to='0' class='active'></li>\
+                ";
+              }else{
+                str_description += "\
+                <li data-target='#carouselExampleControls' data-slide-to='" + cpt + "'></li>\
+                ";
+              }
+            }
 
             str_description += "</ol>\
             <div class='carousel-inner'>"
 
-            cpt = 0
-            photos.forEach(function(photo){
+            let cpt = 0
+            carousel_description.forEach(function(description){
                 if(cpt === 0){
                   str_description += "\
                   <div class='carousel-item active'>\
-                    <img src='" + photo + "' style='width: 100%' alt='Slide 0'>\
+                    <img src='/img/map/" + description.year + "/" + description.photo + "' style='width: 100%' alt='Slide 0'>\
+                    <div class='carousel-caption d-none d-md-block'>\
+                      <h5>" + description.year + "</h5>\
+                      <p>...</p>\
+                  </div>\
                   </div>\
                   ";
                 }else{
                   str_description += "\
                   <div class='carousel-item'>\
-                    <img src='" + photo + "' style='width: 100%' alt='Slide " + cpt + "'>\
+                    <img src='/img/map/" + description.year + "/" +  description.photo + "' style='width: 100%' alt='Slide " + cpt + "'>\
+                    <div class='carousel-caption d-none d-md-block'>\
+                      <h5>" + description.year + "</h5>\
+                      <p>...</p>\
+                    </div>\
                   </div>\
                   ";
                 }
@@ -266,10 +309,17 @@ class Map extends React.Component {
 
             description.innerHTML += str_description
           }else{
-            description.innerHTML += "<center><img width=300 src='" + photos[0] + "' ></center>"
+            console.log(carousel_description)
+            description.innerHTML += "\
+            <center>\
+              <img style='width: 100%' src='/img/map/" + carousel_description[0].year + "/" + carousel_description[0].photo + "' >\
+            </center>\
+            "
           }
 
           description.innerHTML += "<p class='text_description'>" + text_description + "</p>"
+
+
         }
 
         function removeDescription(){

@@ -684,6 +684,11 @@ button.btn.tf-btn.btn-default {
   color: #1a73e8;
 }
 
+.article-content h4{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 .minibio-margins{
   margin-top: 10px;
   margin-bottom: 30px;

@@ -1,391 +1,646 @@
 {
   "travels": [
     {
+      "country": "France",
+      "city": "Île d'Yeu",
+      "coordinates": [46.7030213, -2.3452089180],
+      "description": [""],
+      "journey": [
+        {
+          "year": 1997,
+          "purpose": "visit",
+          "photos": ["ile-dyeu.png"]
+        }
+      ]
+    },
+    {
       "country": "Malta",
-      "city": "Malta",
-      "coordinates": [35.903471, 14.495387],
-      "year": 1998,
-      "photos": ["img/map/malte.jpg"],
-      "purpose": "visit",
-      "description": ["You can see me at 4 years old with my most <br>beautiful pink cap and all my family in Malta."]
+      "city": "Valletta",
+      "coordinates": [35.899, 14.513699],
+      "description": [""],
+      "journey": [
+        {
+          "year": 1998,
+          "purpose": "visit",
+          "photos": ["malte1.png"]
+        },
+        {
+          "year": 2017,
+          "purpose": "visit",
+          "photos": ["malte.png"]
+        }
+      ]
+    },
+    {
+      "country": "Greece",
+      "city": "Crete",
+      "coordinates": [35.2788061, 24.9342885],
+      "description": [""],
+      "journey": [
+        {
+          "year": 1999,
+          "purpose": "visit",
+          "photos": ["crete.png"]
+        }
+      ]
+    },
+    {
+      "country": "France",
+      "city": "Île de Ré",
+      "coordinates": [46.2005587, -1.4003288],
+      "description": [""],
+      "journey": [
+        {
+          "year": 1999,
+          "purpose": "visit",
+          "photos": ["ile-de-re.png"]
+        }
+      ]
+    },
+    {
+      "country": "Cyprus",
+      "city": "Nicosie",
+      "coordinates": [35.180282, 33.3736959],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2000,
+          "purpose": "visit",
+          "photos": ["cyprus.png"]
+        }
+      ]
+    },
+    {
+      "country": "France",
+      "city": "Corse",
+      "coordinates": [42.1880897, 9.0684138],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2000,
+          "purpose": "visit",
+          "photos": ["corse.png"]
+        }
+      ]
     },
     {
       "country": "Tunisia",
       "city": "Tozeur",
       "coordinates": [33.918534, 8.1229329],
-      "year": 2001,
-      "photos": ["img/map/tozeur.jpg"],
-      "purpose": "visit",
-      "description": ["Aged of 7 I'm sure you can imagine <br>how happy I was to discover the Sahara Desert<br> and its iconic sets from the Star Wars movies"]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2001,
+          "purpose": "visit",
+          "photos": ["tozeur1.png", "tozeur2.png", "tozeur3.png"]
+        }
+      ]
     },
     {
       "country": "Egypt",
       "city": "Louxor",
       "coordinates": [25.687243, 32.639636],
-      "year": 2002,
-      "photos": ["img/map/no.png"],
-      "purpose": "visit",
-      "description": ["Louxor, description coming soon"]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2002,
+          "purpose": "visit",
+          "photos": ["no.png"]
+        }
+      ]
     },
     {
       "country": "Spain",
-      "city": "Canarias",
+      "city": "Canary Islands",
       "coordinates": [28.29156369, -16.6291304],
-      "year": 2003,
-      "photos": ["img/map/no.png"],
-      "purpose": "visit",
-      "description": ["Canarias, description coming soon"]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2003,
+          "purpose": "visit",
+          "photos": ["canary-islands1.png", "canary-islands2.png"]
+        }
+      ]
     },
     {
       "country": "Morocco",
       "city": "Marrakech",
       "coordinates": [31.6294723, -7.9810844999],
-      "year": 2004,
-      "photos": ["img/map/no.png"],
-      "purpose": "visit",
-      "description": ["Marrakech, description coming soon"]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2004,
+          "purpose": "visit",
+          "photos": ["marrakech1.png", "marrakech2.png", "marrakech3.png"]
+        }
+      ]
     },
     {
       "country": "France",
       "city": "Guadeloupe",
       "coordinates": [16.265, -61.550999999],
-      "year": 2005,
-      "photos": ["img/map/no.png"],
-      "purpose": "visit",
-      "description": ["Guadeloupe, description coming soon"]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2005,
+          "purpose": "visit",
+          "photos": ["guadeloupe1.png", "guadeloupe2.png"]
+        }
+      ]
     },
     {
       "country": "Tunisia",
       "city": "Djerba",
       "coordinates": [33.8075978, 10.84514669999],
-      "year": 2005,
-      "photos": ["img/map/no.png"],
-      "purpose": "visit",
-      "description": ["Djerba, description coming soon"]
-    },
-    {
-      "country": "Spain",
-      "city": "Calp",
-      "coordinates": [38.64364689999999, 0.045687600000064776],
-      "year": 2005,
-      "photos": ["img/map/no.png"],
-      "purpose": "visit",
-      "description": ["Calp, description coming soon"]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2005,
+          "purpose": "visit",
+          "photos": ["djerba.png"]
+        }
+      ]
     },
     {
       "country": "Morocco",
       "city": "Ouarzazate",
       "coordinates": [30.9335436, -6.937015999999],
-      "year": 2006,
-      "photos": ["img/map/no.png"],
-      "purpose": "visit",
-      "description": ["Ouarzazate, description coming soon"]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2006,
+          "purpose": "visit",
+          "photos": ["ouarzazate1.png", "ouarzazate2.png"]
+        }
+      ]
+    },
+    {
+      "country": "Spain",
+      "city": "Calp",
+      "coordinates": [38.64364689999999, 0.045687600000064776],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2006,
+          "purpose": "visit",
+          "photos": ["calp1.png", "calp2.png"]
+        }
+      ]
     },
     {
       "country": "Senegal",
       "city": "Saly",
       "coordinates": [14.443593, -16.98899040],
-      "year": 2006,
-      "photos": ["img/map/no.png"],
-      "purpose": "visit",
-      "description": ["Saly, description coming soon"]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2006,
+          "purpose": "visit",
+          "photos": ["no.png"]
+        }
+      ]
     },
     {
       "country": "Greece",
-      "city": "Rodhes",
+      "city": "Rhodes",
       "coordinates": [36.4340533, 28.2176379],
-      "year": 2007,
-      "photos": ["img/map/no.png"],
-      "purpose": "visit",
-      "description": ["Rodhes, description coming soon"]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2007,
+          "purpose": "visit",
+          "photos": ["no.png"]
+        }
+      ]
     },
     {
       "country": "France",
       "city": "Martinique",
       "coordinates": [14.641528, -61.024174000000016],
-      "year": 2008,
-      "photos": ["img/map/no.png"],
-      "purpose": "visit",
-      "description": ["Martinique, description coming soon"]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2008,
+          "purpose": "visit",
+          "photos": ["no.png"]
+        }
+      ]
     },
     {
       "country": "Italy",
       "city": "Sicile",
       "coordinates": [37.5999938, 14.015355699999986],
-      "year": 2008,
-      "photos": ["img/map/no.png"],
-      "purpose": "visit",
-      "description": ["Sicile, description coming soon"]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2008,
+          "purpose": "visit",
+          "photos": ["no.png"]
+        }
+      ]
     },
     {
       "country": "Greece",
-      "city": "Corfou",
+      "city": "Corfu",
       "coordinates": [39.624262, 19.921678],
-      "year": 2009,
-      "photos": ["img/map/no.png"],
-      "purpose": "visit",
-      "description": ["Corfou, description coming soon"]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2009,
+          "purpose": "visit",
+          "photos": ["corfu1.png", "corfu2.png"]
+        }
+      ]
     },
     {
       "country": "Spain",
       "city": "Ibiza",
       "coordinates": [38.90883, 1.43296],
-      "year": 2010,
-      "photos": ["img/map/no.png"],
-      "purpose": "visit",
-      "description": ["Ibiza, description coming soon"]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2010,
+          "purpose": "visit",
+          "photos": ["ibiza.jpg"]
+        }
+      ]
     },
     {
       "country": "United Kingdom",
       "city": "Cambridge",
       "coordinates": [52.2034823, 0.1235817],
-      "year": 2011,
-      "photos": ["img/map/no.png"],
-      "purpose": "visit",
-      "description": ["Cambridge, description coming soon"]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2011,
+          "purpose": "visit",
+          "photos": ["cambridge.jpg"]
+        }
+      ]
     },
     {
       "country": "United Kingdom",
       "city": "London",
       "coordinates": [51.554888, -0.108438],
-      "year": 2014,
-      "photos": ["img/map/londres.jpg"],
-      "purpose": "visit",
-      "description": ["If you already met me, you know how much I love football<br> and especially Arsenal, THE ONLY North London football team.<br>That picture was taken just before my first game in the Emirates Stadium."]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2014,
+          "purpose": "visit",
+          "photos": ["london.jpg"]
+        }
+      ]
     },
     {
       "country": "Hungary",
       "city": "Budapest",
       "coordinates": [47.497912, 19.040235],
-      "year": 2015,
-      "photos": ["img/map/budapest.jpg"],
-      "purpose": "studies",
-      "description": ["My first true adventure abroad was in Budapest and it is just<br> about good memories. Over there I completed my bachelor in<br>'Automation & Applied Informatics and Advanced Data Analysis' "]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2015,
+          "purpose": "studies",
+          "photos": ["budapest.jpg"]
+        }
+      ]
     },
     {
       "country": "Spain",
-      "city": "Barcelone",
+      "city": "Barcelona",
       "coordinates": [41.385064, 2.173403],
-      "year": 2015,
-      "photos": ["img/map/barcelone.jpg"],
-      "purpose": "visit",
-      "description": ["Barcelona, description coming soon"]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2015,
+          "purpose": "visit",
+          "photos": ["barcelona1.jpg", "barcelona2.jpg", "barcelona3.jpg"]
+        }
+      ]
     },
     {
       "country": "Spain",
       "city": "Madrid",
       "coordinates": [40.413980, -3.682179],
-      "photos": ["img/map/madrid.jpg", "img/map/madrid1.jpg"],
-      "year": 2016,
-      "purpose": "visit",
-      "description": ["I came to Madrid to visit a friend who used to live there during one semester.<br>As a dedicated football fan I was delighted to see in this specific place<br>the Champions League final between Atletico Madrid and Real Madrid.<br>Guess who won?"]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2016,
+          "purpose": "visit",
+          "photos": ["madrid1.jpg", "madrid2.jpg"]
+        }
+      ]
     },
     {
       "country": "France",
       "city": "Nice",
       "coordinates": [43.686011, 7.295201],
-      "photos": ["img/map/nice.jpg"],
-      "year": 2016,
-      "purpose": "work",
-      "description": ["It's hard to believe seeing this picture<br> but I came to Nice (2016) as a Data Scientist intern !<br>Prozone (now Stats) was my first internship in Data<br> and it helps me to reach every steps which came after."]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2016,
+          "purpose": "work",
+          "photos": ["nice.jpg"]
+        }
+      ]
+    },
+    {
+      "country": "Italy",
+      "city": "Venice",
+      "coordinates": [45.4371908, 12.3345898],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2016,
+          "purpose": "visit",
+          "photos": ["venice1.jpg", "venice2.jpg"]
+        }
+      ]
     },
     {
       "country": "Italy",
       "city": "Roma",
       "coordinates": [41.902783, 12.496366],
-      "photos": ["img/map/rome.jpg"],
-      "year": 2017,
-      "purpose": "visit",
-      "description": ["Roma is definitively the most beautiful city I have seen in Europe.<br>(If I don't take Paris into account of course 🤭)"]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2017,
+          "purpose": "visit",
+          "photos": ["rome.jpg"]
+        }
+      ]
     },
     {
       "country": "Switzerland",
       "city": "Montreux-Lausanne-Genève",
       "coordinates": [46.4312213, 6.91067989],
-      "year": 2018,
-      "photos": ["img/map/montreux.jpeg", "img/map/geneve.jpg"],
-      "purpose": "visit",
-      "description": ["Montreux-Lausanne-Genève<br>Lac Leman mini road trip"]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2018,
+          "purpose": "visit",
+          "photos": ["montreux.jpeg", "geneve.jpg"]
+        }
+      ]
     },
     {
       "country": "United States",
       "city": "Chicago",
       "coordinates": [41.8780841, -87.603152599],
-      "year": 2018,
-      "photos": ["img/map/chicago.jpg"],
-      "purpose": "visit",
-      "description": ["It was so far the was most beautiful surprise of<br> my U.S. journey. Everything you need is there."]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2018,
+          "purpose": "visit",
+          "photos": ["chicago.jpg"]
+        }
+      ]
     },
     {
       "country": "United States",
       "city": "Washington",
       "coordinates": [38.8976763, -77.03652979999998],
-      "year": 2018,
-      "photos": ["img/map/washington.jpg", "img/map/washington2.png"],
-      "purpose": "visit",
-      "description": ["I took the opportunity to visit the<br> U.S. capital during my ContentSquare adventure.<br>Every movies I used to watch in my childhood was there.<br>The first one I have in mind is Forsest Gump."]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2018,
+          "purpose": "visit",
+          "photos": ["washington.jpg", "washington2.png"]
+        }
+      ]
     },
     {
       "country": "United States",
       "city": "Boston",
       "coordinates": [42.3600825, -71.058880100],
-      "year": 2018,
-      "photos": ["img/map/boston.jpg"],
-      "purpose": "visit",
-      "description": ["Boston was like a quick come back in Europe.<br>Beautiful city with of the course best<br>universities of the world !<br>Harvard first and below, MIT."]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2018,
+          "purpose": "visit",
+          "photos": ["boston.jpg"]
+        }
+      ]
     },
     {
       "country": "United States",
       "city": "Philadelphia",
       "coordinates": [39.9525839, -75.16522150000003],
-      "year": 2018,
-      "photos": ["img/map/philadelphia1.jpg", "img/map/philadelphia2.jpg"],
-      "purpose": "visit",
-      "description": ["From the Old City to the Museum of Art<br>I finally met you Phily, home of<br>my childhood hero (and cheesesteak)."]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2018,
+          "purpose": "visit",
+          "photos": ["philadelphia1.jpg", "philadelphia2.jpg"]
+        }
+      ]
     },
     {
       "country": "United States",
       "city": "Orlando",
       "coordinates": [28.5421097, -81.3790388],
-      "year": 2019,
-      "photos": ["img/map/orlando.jpg"],
-      "purpose": "visit",
-      "description": ["Florida Road Trip - Télécom Degree Celebraton - Stop 1"]
+      "description": ["Florida Road Trip - Télécom Degree Celebraton - Stop 1"],
+      "journey": [
+        {
+          "year": 2019,
+          "purpose": "visit",
+          "photos": ["orlando.jpg"]
+        }
+      ]
     },
     {
       "country": "United States",
       "city": "Miami",
       "coordinates": [25.7742658, -80.1936589],
-      "year": 2019,
-      "photos": ["img/map/miami.jpg"],
-      "purpose": "visit",
-      "description": ["Florida Road Trip - Télécom Degree Celebraton - Stop 2"]
+      "description": ["Florida Road Trip - Télécom Degree Celebraton - Stop 2"],
+      "journey": [
+        {
+          "year": 2019,
+          "purpose": "visit",
+          "photos": ["miami.jpg"]
+        }
+      ]
     },
     {
       "country": "United States",
       "city": "New York",
       "coordinates": [40.750568, -73.99351899999999],
-      "year": "2018-2019",
-      "photos": ["img/map/newyork.jpg"],
-      "purpose": "work",
-      "description": ["I use to work in the Big Apple<br> as a Data Scientist for ContentSquare.<br>For me, a couple of minutes was enough to fall<br>in love with this place."]
+      "description": [""],
+      "journey": [
+        {
+          "year": 2019,
+          "purpose": "work",
+          "photos": ["newyork.jpg"]
+        }
+      ]
     },
     {
       "country": "United States",
       "city": "Charleston",
       "coordinates": [32.7876012, -79.9402728],
-      "year": 2019,
-      "photos": ["img/map/charleston.jpg"],
-      "purpose": "visit",
-      "description": ["USA Road Trip - Stop 1"]
+      "description": ["USA Road Trip - Stop 1"],
+      "journey": [
+        {
+          "year": 2019,
+          "purpose": "visit",
+          "photos": ["charleston.jpg"]
+        }
+      ]
     },
     {
       "country": "United States",
       "city": "Savannah",
       "coordinates": [32.0809263, -81.0911768],
-      "year": 2019,
-      "photos": ["img/map/savannah.jpg"],
-      "purpose": "visit",
-      "description": ["USA Road Trip - Stop 2"]
+      "description": ["USA Road Trip - Stop 2"],
+      "journey": [
+        {
+          "year": 2019,
+          "purpose": "visit",
+          "photos": ["savannah.jpg"]
+        }
+      ]
     },
     {
       "country": "United States",
       "city": "Atlanta",
       "coordinates": [33.7490987, -84.3901849],
-      "year": 2019,
-      "photos": ["img/map/savannah.jpg"],
-      "purpose": "visit",
-      "description": ["USA Road Trip - Stop 3"]
+      "description": ["USA Road Trip - Stop 3"],
+      "journey": [
+        {
+          "year": 2019,
+          "purpose": "visit",
+          "photos": ["atlanta.jpg"]
+        }
+      ]
     },
     {
       "country": "United States",
       "city": "Nashville",
       "coordinates": [36.1622296, -86.7743531],
-      "year": 2019,
-      "photos": ["img/map/nashville.jpg", "img/map/nashville2.jpg"],
-      "purpose": "visit",
-      "description": ["USA Road Trip - Stop 4"]
+      "description": ["USA Road Trip - Stop 4"],
+      "journey": [
+        {
+          "year": 2019,
+          "purpose": "visit",
+          "photos": ["nashville.jpg", "nashville2.jpg"]
+        }
+      ]
     },
     {
       "country": "United States",
       "city": "New Orleans",
       "coordinates": [29.9499, -90.07010000000002],
-      "year": 2019,
-      "photos": ["img/map/neworleans.jpg"],
-      "purpose": "visit",
-      "description": ["USA Road Trip - Stop 5"]
+      "description": ["USA Road Trip - Stop 5"],
+      "journey": [
+        {
+          "year": 2019,
+          "purpose": "visit",
+          "photos": ["neworleans.jpg"]
+        }
+      ]
     },
     {
       "country": "United States",
       "city": "Houston",
       "coordinates": [29.7589382, -95.3676974],
-      "year": 2019,
-      "photos": ["img/map/houston.jpg"],
-      "purpose": "visit",
-      "description": ["USA Road Trip - Stop 6"]
+      "description": ["USA Road Trip - Stop 6"],
+      "journey": [
+        {
+          "year": 2019,
+          "purpose": "visit",
+          "photos": ["houston.jpg"]
+        }
+      ]
     },
     {
       "country": "United States",
       "city": "San Antonio",
       "coordinates": [29.4246, -98.49509999999998],
-      "year": 2019,
-      "photos": ["img/map/sanantonio.jpg"],
-      "purpose": "visit",
-      "description": ["USA Road Trip - Stop 7"]
+      "description": ["USA Road Trip - Stop 7"],
+      "journey": [
+        {
+          "year": 2019,
+          "purpose": "visit",
+          "photos": ["sanantonio.jpg"]
+        }
+      ]
     },
     {
       "country": "United States",
       "city": "Austin",
       "coordinates": [30.2711286, -97.7436995],
-      "year": 2019,
-      "photos": ["img/map/austin.jpg"],
-      "purpose": "visit",
-      "description": ["USA Road Trip - Stop 8"]
+      "description": ["USA Road Trip - Stop 8"],
+      "journey": [
+        {
+          "year": 2019,
+          "purpose": "visit",
+          "photos": ["austin.jpg"]
+        }
+      ]
     },
     {
       "country": "United States",
       "city": "Dallas",
       "coordinates": [32.7762719, -96.7968559],
-      "year": 2019,
-      "photos": ["img/map/dallas.jpg"],
-      "purpose": "visit",
-      "description": ["USA Road Trip - Stop 9"]
+      "description": ["USA Road Trip - Stop 9"],
+      "journey": [
+        {
+          "year": 2019,
+          "purpose": "visit",
+          "photos": ["dallas.jpg"]
+        }
+      ]
     },
     {
       "country": "United States",
       "city": "Tombstone",
       "coordinates": [31.7128683, -110.0675764],
-      "year": 2019,
-      "photos": ["img/map/tombstone.jpg", "img/map/tombstone2.jpg"],
-      "purpose": "visit",
-      "description": ["USA Road Trip - Stop 10"]
+      "description": ["USA Road Trip - Stop 10"],
+      "journey": [
+        {
+          "year": 2019,
+          "purpose": "visit",
+          "photos": ["tombstone.jpg", "tombstone2.jpg"]
+        }
+      ]
     },
     {
       "country": "United States",
       "city": "Phoenix",
       "coordinates": [33.4485866, -112.0773456],
-      "year": 2019,
-      "photos": ["img/map/phoenix.jpg"],
-      "purpose": "visit",
-      "description": ["USA Road Trip - Stop 11 (Last One)"]
+      "description": ["USA Road Trip - Stop 11 (Last One)"],
+      "journey": [
+        {
+          "year": 2019,
+          "purpose": "visit",
+          "photos": ["phoenix.jpg"]
+        }
+      ]
     },
     {
       "country": "France",
       "city": "Arcachon",
       "coordinates": [44.6539428, -1.1755714],
-      "year": "-",
-      "photos": ["img/map/arcachon.jpg", "img/map/arcachon2.jpg"],
-      "purpose": "visit",
-      "description": ["Description coming soon..."]
+      "description": [""],
+      "journey": [
+        {
+          "year": "-",
+          "purpose": "visit",
+          "photos": ["arcachon.jpg"]
+        }
+      ]
     },
     {
       "country": "France",
       "city": "Paris",
       "coordinates": [48.826294, 2.346419],
-      "year": "-",
-      "photos": ["img/map/paris.jpg"],
-      "purpose": "work",
-      "description": ["I was born (1994) in a small town close from Paris where I spent my young years.<br>I received the Master's Degree in Computer Engineering of ESME Sudria<br> after a second internship in Data Science at OCTO Technology (2017).<br> In 2018, during my Advanced Master in Machine Learning & Big Data,<br>I co-founded DataDeer a consulting firm helping startups."]
+      "description": [""],
+      "journey": [
+        {
+          "year": "-",
+          "purpose": "work",
+          "photos": ["paris.jpg"]
+        }
+      ]
     }
   ]
 }
