@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import React from 'react';
 
 function HeaderComponent (){
@@ -8,27 +9,27 @@ function HeaderComponent (){
         <nav className="navbar navbar-expand-lg navbar-light">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="/">Home</a>
+              <Link to="/" className="nav-link">Home</Link>
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Categories
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a className="dropdown-item" href="/data-ops">Data OPS</a>
-                <a className="dropdown-item" href="/data-science">Data Science</a>
-                {/*<a className="dropdown-item" href="/data-visualization">Data Visualization</a>*/}
-                <a className="dropdown-item" href="/industrialized-projects">Industrialized Projects</a>
+                <Link to="/data-ops" className="dropdown-item">Data OPS</Link>
+                <Link to="/data-science" className="dropdown-item">Data Science</Link>
+                {/*<Link to="/data-visualization" className="dropdown-item">Data Visualization</Link>*/}
+                <Link to="/industrialized-projects" className="dropdown-item">Industrialized Projects</Link>
               </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/about">About</a>
+              <Link to="/about" className="nav-link">About</Link>
             </li>
             {/*<li className="nav-item">
-              <a className="nav-link" href="/contact">Contact</a>
+              <Link to="/contact" className="nav-link">Contact</Link>
             </li>*/}
             <li className="nav-item-pic">
-              <a className="nav-link" href="/ctr-map"><img src="/img/worldwide.svg" width="30"/></a>
+              <Link to="/ctr-map" className="nav-link"><img src="/img/worldwide.svg" width="30"/></Link>
             </li>
           </ul>
         </nav>
@@ -45,7 +46,7 @@ function HeaderComponent (){
 
                 <ul className="list col-a">
                   <li>
-                    <a href="/">Home</a>
+                    <Link to="/" className="nav-link">Home</Link>
                   </li>
 
                   <li>
@@ -58,10 +59,10 @@ function HeaderComponent (){
                       <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <ul className="list col-b">
                           <li>
-                            <a className="dropdown-item" href="/data-ops">Data OPS</a>
-                            <a className="dropdown-item" href="/data-science">Data Science</a>
-                            {/*<a className="dropdown-item" href="/data-visualization">Data Visualization</a>*/}
-                            <a className="dropdown-item" href="/industrialized-projects">Industrialized Projects</a>
+                            <Link to="/data-ops" className="dropdown-item">Data OPS</Link>
+                            <Link to="/data-science" className="dropdown-item">Data Science</Link>
+                            {/*<Link to="/data-visualization" className="dropdown-item">Data Visualization</Link>*/}
+                            <Link to="/industrialized-projects" className="dropdown-item">Industrialized Projects</Link>
                           </li>
                         </ul>
                       </div>
@@ -69,13 +70,13 @@ function HeaderComponent (){
                   </li>
 
                   <li>
-                    <a href="/about">About</a>
+                    <Link to="/about" className="nav-link">About</Link>
                   </li>
                   {/*<li>
-                    <a href="/contact">Contact</a>
+                    <Link to="/contact" className="nav-link">Contact</Link>
                   </li>*/}
                   <li>
-                    <a href="/ctr-map" id="navmobile-worldwide">Worldwide</a>
+                    <Link to="/ctr-map" className="nav-link"><img src="/img/worldwide.svg" width="30"/></Link>
                   </li>
                 </ul>
 

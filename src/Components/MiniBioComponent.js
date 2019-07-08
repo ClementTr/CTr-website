@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import React from 'react';
 
 function MiniBioComponent (){
@@ -18,7 +19,7 @@ function MiniBioComponent (){
             Entrepreneur & Data Poadcaster
            </p>
            <div id="world-getter" className="font-world">
-             GET MY WORLD <i className="fa fa-arrow-right" aria-hidden="true"></i> <a href="/ctr-map"><img className="bio-worldmap" src="/img/worldwide.svg" width="30"/></a>
+             GET MY WORLD <i className="fa fa-arrow-right" aria-hidden="true"></i> <Link to="/ctr-map"><img className="bio-worldmap" src="/img/worldwide.svg" width="30"/></Link>
            </div>
            <p><a href="/Resume_Tailleur.pdf" target="_blank"  className="btn btn-primary btn-sm">GET MY RESUME</a></p>
            <p className="social">
