@@ -23,6 +23,14 @@ body {
   margin-top: -20px;
 }
 
+.carousel-linker{
+  color: white
+}
+
+.carousel-linker:hover {
+  color: white
+}
+
 .title-article{
 	margin-bottom: 30px;
 }

@@ -19,6 +19,7 @@ function HeaderComponent (){
                 <Link to="/data-ops" className="dropdown-item">Data OPS</Link>
                 <Link to="/data-science" className="dropdown-item">Data Science</Link>
                 {/*<Link to="/data-visualization" className="dropdown-item">Data Visualization</Link>*/}
+                <Link to="/data-podcast" className="dropdown-item">Data Podcast</Link>
                 <Link to="/industrialized-projects" className="dropdown-item">Industrialized Projects</Link>
               </div>
             </li>
@@ -62,6 +63,7 @@ function HeaderComponent (){
                             <Link to="/data-ops" className="dropdown-item">Data OPS</Link>
                             <Link to="/data-science" className="dropdown-item">Data Science</Link>
                             {/*<Link to="/data-visualization" className="dropdown-item">Data Visualization</Link>*/}
+                            <Link to="/data-podcast" className="dropdown-item">Data Podcast</Link>
                             <Link to="/industrialized-projects" className="dropdown-item">Industrialized Projects</Link>
                           </li>
                         </ul>

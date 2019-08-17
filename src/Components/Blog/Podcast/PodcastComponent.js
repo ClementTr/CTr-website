@@ -1,20 +1,22 @@
+import MiniBioComponent from './../../MiniBioComponent';
 import React from 'react';
 
-const divStyle = {
-  backgroundImage: "url('img/img1.png')",
-};
-
-function MoreArticleLinkComponent (){
+function DataPodcastComponent (){
  return (
-    <div id="morearticles-section" className="morearticles">
-      <div className="container">
 
-       <h2 className="title-style">More Blog Posts</h2>
+   <div className="container">
+    <div className="row">
+
+     <div className="col-md-9">
+
+       <div className="title-article">
+         <h1 className="title-font">Data Podcast Category (French)</h1>
+       </div>
 
        <div className="col-md-12 box-margin">
         <a className="box" href="https://soundcloud.com/moment-donnees/moment-donnees-lapero-data-episode-pilote" target="_blank">
            <div className="media">
-             <img className="align-self-center mr-3 media-object media-img" src='img/main/More_03.jpg' alt="Generic placeholder image"/>
+             <img className="align-self-center mr-3 media-object media-img" src='img/main/podcast.png' alt="Generic placeholder image"/>
              <div className="media-body">
                <h4>Moment Données, l'apéro data - Épisode pilote</h4>
                <span className="category">Podcast</span>
@@ -28,11 +30,18 @@ function MoreArticleLinkComponent (){
          </a>
        </div>
 
+     </div>
 
-      </div>
+     <div className="col-md-3">
+       <MiniBioComponent/>
+     </div>
+
     </div>
+   </div>
  )
+
+
 
 }
 
-export default MoreArticleLinkComponent;
+export default DataPodcastComponent;

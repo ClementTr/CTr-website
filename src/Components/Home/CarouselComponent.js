@@ -14,15 +14,19 @@ function CarouselComponent (){
           <div className="carousel-item active">
             <img className="d-block w-100" src="img/main/Carousel_01.jpg" alt="First slide"/>
             <div className="carousel-caption d-none d-md-block">
-              <h5>Extract, Transform & Load</h5>
-              <p>Pandas Basics with Arsenal F.C. Data</p>
+              <a href='/data-science/etl' className='carousel-linker'>
+                <h5>Extract, Transform & Load</h5>
+                <p>Pandas Basics with Arsenal F.C. Data</p>
+              </a>
             </div>
           </div>
           <div className="carousel-item">
             <img className="d-block w-100" src="img/main/Carousel_02.jpg" alt="Second slide"/>
             <div className="carousel-caption d-none d-md-block">
-              <h5>Natural Language Processing</h5>
-              <p>Legal Document Categorization</p>
+              <a href='/data-science/nlp' className='carousel-linker'>
+                <h5>Natural Language Processing</h5>
+                <p>Legal Document Categorization</p>
+              </a>
             </div>
           </div>
           <div className="carousel-item">

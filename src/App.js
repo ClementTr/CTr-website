@@ -6,6 +6,7 @@ import ETLArticleComponent from './Components/Blog/DS/Articles/ETL/ETLArticleCom
 import NLPArticleComponent from './Components/Blog/DS/Articles/NLP/NLPArticleComponent';
 import VisualizationComponent from './Components/Blog/DV/VisualizationComponent';
 import DataScienceComponent from './Components/Blog/DS/DataScienceComponent'
+import PodcastComponent from './Components/Blog/Podcast/PodcastComponent'
 import NotFoundComponent from './Components/NotFoundComponent';
 import AboutComponent from './Components/About/AboutComponent';
 import OPSComponent from './Components/Blog/OPS/OPSComponent';
@@ -31,6 +32,7 @@ class App extends Component {
           <Switch>
             <Route exact path='/' component={HomeComponent}></Route>
             <Route exact path='/data-ops' component={OPSComponent}></Route>
+            <Route exact path='/data-podcast' component={PodcastComponent}></Route>
             <Route exact path='/data-science' component={DataScienceComponent}></Route>
             <Route exact path='/data-visualization' component={VisualizationComponent}></Route>
             <Route exact path='/industrialized-projects' component={IndustrializedComponent}></Route>
