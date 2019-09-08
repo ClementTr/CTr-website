@@ -617,6 +617,19 @@
       ]
     },
     {
+      "country": "Sweden",
+      "city": "Stockholm",
+      "coordinates": [59.334591, 18.063240],
+      "description": ["Stockholm weekend & Half Marathon"],
+      "journey": [
+        {
+          "year": 2019,
+          "purpose": "visit",
+          "photos": ["stockholm.jpg", "stockholm1.jpg", "stockholm2.jpg", "stockholm3.jpg"]
+        }
+      ]
+    },
+    {
       "country": "France",
       "city": "Arcachon",
       "coordinates": [44.6539428, -1.1755714],
