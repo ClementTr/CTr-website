@@ -630,6 +630,32 @@
       ]
     },
     {
+      "country": "Portugal",
+      "city": "Aveiro",
+      "coordinates": [40.6405, -8.653779],
+      "description": ["Aveiro with Friends"],
+      "journey": [
+        {
+          "year": 2019,
+          "purpose": "visit",
+          "photos": ["aveiro.jpg"]
+        }
+      ]
+    },
+    {
+      "country": "Portugal",
+      "city": "Porto",
+      "coordinates": [41.1494512, -8.6107884],
+      "description": ["Porto with Friends"],
+      "journey": [
+        {
+          "year": 2019,
+          "purpose": "visit",
+          "photos": ["porto.jpg", "porto1.jpg"]
+        }
+      ]
+    },
+    {
       "country": "France",
       "city": "Arcachon",
       "coordinates": [44.6539428, -1.1755714],
