@@ -14,7 +14,7 @@ import ContactComponent from './Components/ContactComponent';
 import HomeComponent from './Components/Home/HomeComponent';
 import HeaderComponent from './Components/HeaderComponent';
 import FooterComponent from './Components/FooterComponent';
-import MapComponent from './Components/Map/WorldComponent';
+import JourneyComponent from './Components/Map/JourneyComponent';
 import React, { Component } from 'react';
 import {
   BrowserRouter as Router,
@@ -36,7 +36,7 @@ class App extends Component {
             <Route exact path='/data-science' component={DataScienceComponent}></Route>
             <Route exact path='/data-visualization' component={VisualizationComponent}></Route>
             <Route exact path='/industrialized-projects' component={IndustrializedComponent}></Route>
-            <Route exact path='/ctr-map' component={MapComponent}></Route>
+            <Route exact path='/ctr-map' component={JourneyComponent}></Route>
 
             <Route exact path='/about' component={AboutComponent}></Route>
             <Route exact path='/contact' component={ContactComponent}></Route>

@@ -656,6 +656,123 @@
       ]
     },
     {
+      "country": "Belgium",
+      "city": "Bruxelles",
+      "coordinates": [50.850340, 4.351710],
+      "description": ["Bruxelles for my 25th birthday with Nam"],
+      "journey": [
+        {
+          "year": 2019,
+          "purpose": "visit",
+          "photos": ["bruxelles.jpg"]
+        }
+      ]
+    },
+    {
+      "country": "France",
+      "city": "Saint-Malo",
+      "coordinates": [48.6454528, -2.015418],
+      "description": ["Saint-Malot 1st Covid expedition with Nam and Roger"],
+      "journey": [
+        {
+          "year": 2020,
+          "purpose": "visit",
+          "photos": ["saint_malo.jpg", "saint_malo2.jpg", "saint_malo3.jpg"]
+        }
+      ]
+    },
+    {
+      "country": "Portugal",
+      "city": "Lisboa",
+      "coordinates": [38.7077507, -9.1365919],
+      "description": ["Lisboa first visit with Rémi"],
+      "journey": [
+        {
+          "year": 2020,
+          "purpose": "visit",
+          "photos": ["lisbone.jpg", "lisbone2.jpg", "lisbone3.jpg"]
+        }
+      ]
+    },
+    {
+      "country": "Portugal",
+      "city": "Braga",
+      "coordinates": [41.5510583, -8.4280045],
+      "description": ["Porto/Braga lockdown"],
+      "journey": [
+        {
+          "year": 2021,
+          "purpose": "visit",
+          "photos": ["braga.jpg", "braga2.jpg", "braga3.jpg"]
+        }
+      ]
+    },
+    {
+      "country": "Portugal",
+      "city": "Nazaré",
+      "coordinates": [39.6029108, -9.0701572],
+      "description": ["On our way to South Coast"],
+      "journey": [
+        {
+          "year": 2021,
+          "purpose": "visit",
+          "photos": ["nazare.jpg"]
+        }
+      ]
+    },
+    {
+      "country": "Portugal",
+      "city": "Olhão / Tavira",
+      "coordinates": [37.0646248, -7.8112039],
+      "description": ["Lockdown - Portugal South Coast"],
+      "journey": [
+        {
+          "year": 2021,
+          "purpose": "visit",
+          "photos": ["olhao.jpg", "olhao2.jpg", "olhao3.jpg"]
+        }
+      ]
+    },
+    {
+      "country": "Portugal",
+      "city": "Lagos / Portimao / Albufeira",
+      "coordinates": [37.1531301, -8.7418965],
+      "description": ["Lockdown - Portugal South Coast"],
+      "journey": [
+        {
+          "year": 2021,
+          "purpose": "visit",
+          "photos": ["lagos.jpg", "lagos2.jpg", "lagos3.jpg"]
+        }
+      ]
+    },
+    {
+      "country": "Spain",
+      "city": "Sevilla",
+      "coordinates": [37.3886303, -5.9953403],
+      "description": ["Sevilla vacations with Nam - Lockdown is lifting"],
+      "journey": [
+        {
+          "year": 2021,
+          "purpose": "visit",
+          "photos": ["sevilla.jpg", "sevilla2.jpg", "sevilla3.jpg", "sevilla4.jpg"]
+        }
+      ]
+    },
+    {
+      "country": "Romania",
+      "city": "Bucarest",
+      "coordinates": [44.4361414, 26.1027202],
+      "description": ["Bucarest trip with guys - Fail over fail Euro 2020 or 2021 we still dont' know"],
+      "journey": [
+        {
+          "year": 2021,
+          "purpose": "visit",
+          "photos": ["bucarest.jpg", "bucarest2.jpg", "bucarest3.jpg"]
+        }
+      ]
+    },
+    {
       "country": "France",
       "city": "Arcachon",
       "coordinates": [44.6539428, -1.1755714],
