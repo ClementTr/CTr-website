@@ -18,21 +18,23 @@ function FormationComponent (){
                    </div>
                    <p className="intro"><strong>Mathematical</strong> profile, <strong><span className="color">engineer</span></strong> graduated in <strong>IT</strong></p>
                    <ul className="about-list">
+                       {/*
                        <li>
                            <span className="fa fa-dot-circle-o"></span>
                            <strong>High School Degree</strong> - <em>science option obtained with honours</em>
                        </li>
+                       */}
                        <li>
                            <span className="fa fa-dot-circle-o"></span>
-                           <strong>BME Polytechnic University</strong> - <em>Budapest: international semester in computer science</em>
+                           <strong>BME Polytechnic University</strong> - <em>Bachelor of Engineering in Advanced Data Analysis</em>
                        </li>
                        <li>
                            <span className="fa fa-dot-circle-o"></span>
-                           <strong>ESME-Sudria</strong> - <em>Paris: engineering degree</em>
+                           <strong>ESME-Sudria</strong> - <em>Master's Degree in Computer Science</em>
                        </li>
                        <li>
                            <span className="fa fa-dot-circle-o"></span>
-                           <strong>Télécom-ParisTech</strong> - <em>Paris: Big Data expertise</em>
+                           <strong>Télécom-ParisTech</strong> - <em>Master's Degree in Data Engineering & Machine Learning</em>
                        </li>
                    </ul>
                    <a href="/Resume_Tailleur.pdf" target="_blank" className="btn btn-primary btn-sm">GET MY RESUME</a>
