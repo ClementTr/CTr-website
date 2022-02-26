@@ -80,7 +80,7 @@ class Map extends React.Component {
       let map = this.map = L.map(ReactDOM.findDOMNode(this), {
           'zoomControl': false,
           'center': [0, 0],
-          'zoom': 1.5,
+          'zoom': 1,
           'layers': [
             L.tileLayer(
               'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png',{

@@ -773,6 +773,110 @@
       ]
     },
     {
+      "country": "Mexico",
+      "city": "Puerto Morelos - QG / Cancun / Playa del Carmen / Isla Mujeres",
+      "coordinates": [20.848659,-86.876238],
+      "description": ["Central Americ trip with friends - 2022 New Year - QG"],
+      "journey": [
+        {
+          "year": 2022,
+          "purpose": "visit",
+          "photos": ["mexico/yucatan_pm.jpeg", "mexico/yucatan_pm1.jpeg", "mexico/yucatan_pm2.jpeg", "mexico/yucatan_pm3.jpeg"]
+        }
+      ]
+    },
+    {
+      "country": "Mexico",
+      "city": "Tulum",
+      "coordinates": [20.2152358,-87.4295353],
+      "description": ["Central Americ trip with friends - 2022 New Year - QG"],
+      "journey": [
+        {
+          "year": 2022,
+          "purpose": "visit",
+          "photos": ["mexico/yucatan_tulum.jpg", "mexico/yucatan_tulum1.jpg", "mexico/yucatan_tulum2.jpg", "mexico/yucatan_tulum3.png", "mexico/yucatan_tulum4.jpg"]
+        }
+      ]
+    },
+    {
+      "country": "Mexico",
+      "city": "Valladolid",
+      "coordinates": [20.6902505,-88.2016999],
+      "description": ["Central Americ trip with friends - 2022 New Year - QG"],
+      "journey": [
+        {
+          "year": 2022,
+          "purpose": "visit",
+          "photos": ["mexico/yucatan_valladolid.jpeg", "mexico/yucatan_valladolid1.jpeg", "mexico/yucatan_valladolid2.jpeg", "mexico/yucatan_valladolid3.png", "mexico/yucatan_valladolid4.jpeg", "mexico/yucatan_valladolid5.gif", "mexico/yucatan_valladolid6.jpeg"]
+        }
+      ]
+    },
+    {
+      "country": "Costa Rica",
+      "city": "San Jose / Volcan Poas",
+      "coordinates": [9.9325427,-84.0795782],
+      "description": ["Central Americ trip with Rémi"],
+      "journey": [
+        {
+          "year": 2022,
+          "purpose": "visit",
+          "photos": ["costa_rica/san_jose_poas1.jpeg", "costa_rica/san_jose_poas2.jpeg"]
+        }
+      ]
+    },
+    {
+      "country": "Costa Rica",
+      "city": "Arenal / Monteverde",
+      "coordinates": [10.4620845,-84.7034096],
+      "description": ["Central Americ trip with Rémi"],
+      "journey": [
+        {
+          "year": 2022,
+          "purpose": "visit",
+          "photos": ["costa_rica/arenal_monteverde1.jpeg", "costa_rica/arenal_monteverde2.jpeg", "costa_rica/arenal_monteverde3.gif", "costa_rica/arenal_monteverde4.jpeg", "costa_rica/arenal_monteverde5.jpeg", "costa_rica/arenal_monteverde6.jpeg", "costa_rica/arenal_monteverde7.jpeg", "costa_rica/arenal_monteverde8.jpeg"]
+        }
+      ]
+    },
+    {
+      "country": "Costa Rica",
+      "city": "Tamarindo",
+      "coordinates": [10.302834,-85.8385625],
+      "description": ["Central Americ trip with Rémi"],
+      "journey": [
+        {
+          "year": 2022,
+          "purpose": "visit",
+          "photos": ["costa_rica/tamarindo1.jpeg", "costa_rica/tamarindo2.jpeg"]
+        }
+      ]
+    },
+    {
+      "country": "Costa Rica",
+      "city": "Samara",
+      "coordinates": [9.8834197,-85.5288998],
+      "description": ["Central Americ trip with Rémi"],
+      "journey": [
+        {
+          "year": 2022,
+          "purpose": "visit",
+          "photos": ["costa_rica/samara1.jpeg", "costa_rica/samara2.jpeg", "costa_rica/samara3.jpeg", "costa_rica/samara4.jpeg"]
+        }
+      ]
+    },
+    {
+      "country": "Costa Rica",
+      "city": "Puntarenas",
+      "coordinates": [9.974704807295351,-84.84396963708673],
+      "description": ["Central Americ trip with Rémi"],
+      "journey": [
+        {
+          "year": 2022,
+          "purpose": "visit",
+          "photos": ["costa_rica/puntarenas.jpeg"]
+        }
+      ]
+    },
+    {
       "country": "France",
       "city": "Arcachon",
       "coordinates": [44.6539428, -1.1755714],
