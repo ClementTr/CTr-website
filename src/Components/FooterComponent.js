@@ -5,19 +5,13 @@ function FooterComponent (){
    <div id="footer-section" className="site-footer">
      <div className="container">
        <div className="row">
-         <div className="col-md-5">
-          <h3>Last Video - USA Road Trip</h3>
+         <div className="col-md-4">
+          <h3>USA Road Trip</h3>
           <iframe src="https://drive.google.com/file/d/1xKkC9pKg6U2zowYQ_i4hvBV_QemG6S9J/preview"></iframe>
          </div>
-         <div className="col-md-3">
-          <h3>Essentials</h3>
-          <ul className="list-unstyled">
-            <li><a href="https://www.arsenal.com/" target="_blank"><span className="fa fa-futbol-o"></span> Arsenal</a></li>
-            <li><a href="https://www.youtube.com/watch?v=JWeJpp0wYMk" target="_blank"><span className="fa fa-music"></span> Orange - Napkey</a></li>
-            <li><a href="https://www.youtube.com/watch?v=0jxVnlRdelU" target="_blank"><span className="fa fa-film"></span> 12 Angry Men</a></li>
-            <li><a href="https://www.ynharari.com/book/sapiens/" target="_blank"><span className="fa fa-book"></span> Sapiens</a></li>
-          </ul>
-
+         <div className="col-md-4">
+          <h3>Mexico X Costa Rica</h3>
+          <iframe src="https://drive.google.com/file/d/18eV_qqU79wOFA4Bhz5p8L8-TQfIPJbx7/preview"></iframe>
          </div>
          <div className="col-md-2">
           <h3>Links</h3>

@@ -79,7 +79,7 @@ class Map extends React.Component {
       /* START VARIABLES */
       let map = this.map = L.map(ReactDOM.findDOMNode(this), {
           'zoomControl': false,
-          'center': [0, 0],
+          'center': [0, -1],
           'zoom': 1,
           'layers': [
             L.tileLayer(
@@ -118,7 +118,7 @@ class Map extends React.Component {
         };
         info.addTo(map);
 
-        let legend = L.control({position: 'bottomright'});
+        let legend = L.control({position: 'bottomleft'});
         legend.onAdd = function (map) {
             let div = L.DomUtil.create('div', 'info legend'),
                 grades = ["Visit", "Work", "Studies"],
