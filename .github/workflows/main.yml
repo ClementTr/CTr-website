@@ -25,7 +25,10 @@ jobs:
         with:
           node-version: 18.9.1
           cache: 'npm'
+      - run: npm ci
       - run: npm run-script build
+        env:
+          CI: ""
 
   deploy:
     needs: build
