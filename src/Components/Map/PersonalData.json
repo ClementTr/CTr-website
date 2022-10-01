@@ -877,6 +877,19 @@
       ]
     },
     {
+      "country": "Denmark",
+      "city": "Copenhague",
+      "coordinates": [55.676098, 12.568337],
+      "description": ["Half Marathon at Copenhagen"],
+      "journey": [
+        {
+          "year": 2022,
+          "purpose": "visit",
+          "photos": ["denmark/copenhagen1.png", "denmark/copenhagen2.png"]
+        }
+      ]
+    },
+    {
       "country": "France",
       "city": "Arcachon",
       "coordinates": [44.6539428, -1.1755714],
