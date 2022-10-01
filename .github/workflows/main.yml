@@ -1,0 +1,35 @@
+# This is a basic workflow to help you get started with Actions
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "master" branch
+  push:
+    branches: [ "master" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
+env:
+  CI: true
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+jobs:
+  build:
+    name: Run build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: Adzz/jest_test_action@v1.0.0
+        with:
+          package-manager: npm
+          command: build
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    #needs: build_and_push
+
+    steps:
+      - name: Deploy on S3
+        run: aws s3 sync build/ s3://clementtailleur.com
