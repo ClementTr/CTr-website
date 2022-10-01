@@ -11,7 +11,7 @@
     "react-leaflet": "^2.2.1",
     "react-load-script": "0.0.6",
     "react-router-dom": "^5.1.1",
-    "react-scripts": "2.1.8"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
