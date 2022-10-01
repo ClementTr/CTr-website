@@ -20,11 +20,13 @@ jobs:
     name: Run build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: Adzz/jest_test_action@v1.0.0
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          package-manager: npm
-          command: run-script build
+          node-version: 18.9.1
+          cache: 'npm'
+      - run: npm run-script build
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
