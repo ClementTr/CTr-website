@@ -31,10 +31,11 @@ jobs:
           CI: ""
 
   deploy:
+    name: Deploy on S3
     needs: build
     runs-on: ubuntu-latest
     #needs: build_and_push
 
     steps:
-      - name: Deploy on S3
-        run: aws s3 sync build/ s3://clementtailleur.com
+        - run: echo "$(ls)"
+        - run: aws s3 sync build/ s3://clementtailleur.com
