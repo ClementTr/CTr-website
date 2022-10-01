@@ -38,4 +38,4 @@ jobs:
 
     steps:
         - run: echo "$(ls)"
-        - run: aws s3 sync build/ s3://clementtailleur.com
+        - run: aws s3 sync build/ s3://clementtailleur.com --region us-east-1
