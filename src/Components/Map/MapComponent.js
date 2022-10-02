@@ -268,7 +268,7 @@ class Map extends React.Component {
                 if(cpt === 0){
                   str_description += "\
                   <div class='carousel-item active'>\
-                    <img src='/img/map/" + description.year + "/" + description.photo + "' style='width: 100%' alt='Slide 0'>\
+                    <img src='https://s3.us-east-1.amazonaws.com/clementtailleur.com/img/map/" + description.year + "/" + description.photo + "' style='width: 100%' alt='Slide 0'>\
                     <div class='carousel-caption d-none d-md-block'>\
                       <h5>" + description.year + "</h5>\
                       <p>...</p>\
@@ -278,7 +278,7 @@ class Map extends React.Component {
                 }else{
                   str_description += "\
                   <div class='carousel-item'>\
-                    <img src='/img/map/" + description.year + "/" +  description.photo + "' style='width: 100%' alt='Slide " + cpt + "'>\
+                    <img src='https://s3.us-east-1.amazonaws.com/clementtailleur.com/img/map/" + description.year + "/" +  description.photo + "' style='width: 100%' alt='Slide " + cpt + "'>\
                     <div class='carousel-caption d-none d-md-block'>\
                       <h5>" + description.year + "</h5>\
                       <p>...</p>\
@@ -312,7 +312,7 @@ class Map extends React.Component {
             console.log(carousel_description)
             description.innerHTML += "\
             <center>\
-              <img style='width: 100%' src='/img/map/" + carousel_description[0].year + "/" + carousel_description[0].photo + "' >\
+              <img style='width: 100%' src='https://s3.us-east-1.amazonaws.com/clementtailleur.com/img/map/" + carousel_description[0].year + "/" + carousel_description[0].photo + "' >\
             </center>\
             "
           }
