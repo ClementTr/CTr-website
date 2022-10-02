@@ -73,7 +73,7 @@
 
     <title>Clément Tailleur</title>
   </head>
-  <body>
+  <body onload="afterPageLoad()">
     <div class="se-pre-con"></div><!-- Loader -->
     <div id="root"></div>
   </body>
@@ -81,6 +81,7 @@
   <!-- Custom Scripts -->
   <script src="/js/timeline.js"></script>
   <script>
+
   function nav_resizer(){
     if(window.innerWidth < 993){
       document.getElementById("pc").style.display = "none"
@@ -101,8 +102,11 @@
     }
   }
 
-  nav_resizer()
-  window.onresize = function(event) {
+  // Attaching the event listener function to window's resize event
+  window.addEventListener("resize", nav_resizer);
+
+  // Calling the function for the first time after page loaded
+  function afterPageLoad(){
     nav_resizer()
   }
 
