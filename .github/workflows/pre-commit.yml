@@ -20,6 +20,5 @@ jobs:
         uses: actions/setup-python@v3
       -
         uses: pre-commit/action@v3.0.0
-      - 
-        name: deploy
-        run: aws s3 sync /public/img/map/ s3://clementtailleur.com/img/map/
+        with:
+          extra_args: aws s3 sync /public/img/map/ s3://clementtailleur.com/img/map/
