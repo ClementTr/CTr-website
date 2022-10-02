@@ -890,6 +890,19 @@
       ]
     },
     {
+      "country": "Sweden",
+      "city": "Malmö",
+      "coordinates": [55.604981, 13.003822],
+      "description": ["Visit Malmö after Copenhagen Half Marathon"],
+      "journey": [
+        {
+          "year": 2022,
+          "purpose": "visit",
+          "photos": ["denmark/copenhagen1.png", "denmark/copenhagen2.png"]
+        }
+      ]
+    },
+    {
       "country": "France",
       "city": "Arcachon",
       "coordinates": [44.6539428, -1.1755714],
