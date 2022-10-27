@@ -903,6 +903,71 @@
       ]
     },
     {
+      "country": "Tanzania",
+      "city": "Tarangire",
+      "coordinates": [-3.950674, 35.866125],
+      "description": ["Tarangire Park with (almost) bog 5 !! Hakuna Matata"],
+      "journey": [
+        {
+          "year": 2022,
+          "purpose": "visit",
+          "photos": ["tanzania/tarangire1.png", "tanzania/tarangire2.png", "tanzania/tarangire3.png", "tanzania/tarangire4.png", "tanzania/tarangire5.png"]
+        }
+      ]
+    },
+    {
+      "country": "Tanzania",
+      "city": "Kilimanjaro - Arusha",
+      "coordinates": [-3.424331636, 37.071333048],
+      "description": ["Arusha - Kilimanjaro savannah with Maasai"],
+      "journey": [
+        {
+          "year": 2022,
+          "purpose": "visit",
+          "photos": ["tanzania/arusha1.png", "tanzania/arusha2.png", "tanzania/arusha3.png"]
+        }
+      ]
+    },
+    {
+      "country": "Tanzania",
+      "city": "Zanzibar - Nungwi",
+      "coordinates": [-5.725856, 39.298569],
+      "description": ["Jambo North of main Zanzibar main island - Unguja. Nungwi was a perfect spot for chilling on the beach"],
+      "journey": [
+        {
+          "year": 2022,
+          "purpose": "visit",
+          "photos": ["tanzania/nungwi1.png", "tanzania/nungwi2.png", "tanzania/nungwi3.png"]
+        }
+      ]
+    },
+    {
+      "country": "Tanzania",
+      "city": "Zanzibar - Stone Town & Prison Island",
+      "coordinates": [-6.1589660308, 39.1926058962],
+      "description": ["Visit of Stone Town historical center including spice market. Then Prison Island with fabulous turtles"],
+      "journey": [
+        {
+          "year": 2022,
+          "purpose": "visit",
+          "photos": ["tanzania/stonetown1.png", "tanzania/stonetown2.png", "tanzania/stonetown3.png", "tanzania/stonetown4.png"]
+        }
+      ]
+    },
+    {
+      "country": "Tanzania",
+      "city": "Zanzibar - Paje & Jambiani",
+      "coordinates": [-6.315592, 39.545223],
+      "description": ["Jambo South of Zanzibar main island - Unguja. Here, paradise wild beaches"],
+      "journey": [
+        {
+          "year": 2022,
+          "purpose": "visit",
+          "photos": ["tanzania/paje1.png", "tanzania/paje2.png", "tanzania/paje3.png"]
+        }
+      ]
+    },
+    {
       "country": "France",
       "city": "Arcachon",
       "coordinates": [44.6539428, -1.1755714],
