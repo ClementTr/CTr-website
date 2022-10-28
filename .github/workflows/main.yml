@@ -75,4 +75,3 @@ jobs:
       # Clear Cloudfront cache to update website
       - name: Clear cache
         run: aws cloudfront create-invalidation --distribution-id E2294DXPG9HTGF --paths "/*"
-        working-directory: react-github-actions-build
