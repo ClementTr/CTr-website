@@ -12,29 +12,32 @@ function FormationComponent (){
                <div className="about-text">
                    <div className="section-title">
                        <h4>Formation</h4>
-                       <h2>Some words <strong>about my studies</strong></h2>
+                       {/*<h2>Some words <strong>about my studies</strong></h2>*/}
                        <hr/>
                        <div className="clearfix"></div>
                    </div>
-                   <p className="intro"><strong>Mathematical</strong> profile, <strong><span className="color">engineer</span></strong> graduated in <strong>IT</strong></p>
+                   <p className="intro"><strong>Engineer</strong> graduated in Computer Science - <strong><span className="color">Data Specialist</span></strong></p>
                    <ul className="about-list">
-                       {/*
                        <li>
                            <span className="fa fa-dot-circle-o"></span>
-                           <strong>High School Degree</strong> - <em>science option obtained with honours</em>
-                       </li>
-                       */}
-                       <li>
-                           <span className="fa fa-dot-circle-o"></span>
-                           <strong>BME Polytechnic University</strong> - <em>Bachelor of Engineering in Advanced Data Analysis</em>
+                           <strong>BME Polytechnic University</strong> - 
+                           <p>
+                           <em>Bachelor of Engineering in Advanced Data Analysis</em>
+                           </p>
                        </li>
                        <li>
                            <span className="fa fa-dot-circle-o"></span>
-                           <strong>ESME-Sudria</strong> - <em>Master's Degree in Computer Science</em>
+                           <strong>ESME-Sudria</strong> - 
+                           <p>
+                           <em>Master's Degree in Computer Science</em>
+                           </p>
                        </li>
                        <li>
                            <span className="fa fa-dot-circle-o"></span>
-                           <strong>Télécom-ParisTech</strong> - <em>Master's Degree in Data Engineering & Machine Learning</em>
+                           <strong>Télécom-ParisTech</strong> - 
+                           <p>
+                           <em>Master's Degree in Data Engineering & Machine Learning</em>
+                           </p>
                        </li>
                    </ul>
                    <a href="/Resume_Tailleur.pdf" target="_blank" className="btn btn-primary btn-sm">GET MY RESUME</a>

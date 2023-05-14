@@ -16,8 +16,8 @@ function HeaderComponent (){
                 Categories
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <Link to="/data-ops" className="dropdown-item">Data OPS</Link>
-                <Link to="/data-science" className="dropdown-item">Data Science</Link>
+                {/*<Link to="/data-ops" className="dropdown-item">Data OPS</Link>*/}
+                {/*<Link to="/data-science" className="dropdown-item">Data Science</Link>*/}
                 {/*<Link to="/data-visualization" className="dropdown-item">Data Visualization</Link>*/}
                 <Link to="/data-podcast" className="dropdown-item">Data Podcast</Link>
                 <Link to="/industrialized-projects" className="dropdown-item">Industrialized Projects</Link>
@@ -60,8 +60,8 @@ function HeaderComponent (){
                       <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                         <ul className="list col-b">
                           <li>
-                            <Link to="/data-ops" className="dropdown-item">Data OPS</Link>
-                            <Link to="/data-science" className="dropdown-item">Data Science</Link>
+                            {/*<Link to="/data-ops" className="dropdown-item">Data OPS</Link>*/}
+                            {/*<Link to="/data-science" className="dropdown-item">Data Science</Link>*/}
                             {/*<Link to="/data-visualization" className="dropdown-item">Data Visualization</Link>*/}
                             <Link to="/data-podcast" className="dropdown-item">Data Podcast</Link>
                             <Link to="/industrialized-projects" className="dropdown-item">Industrialized Projects</Link>

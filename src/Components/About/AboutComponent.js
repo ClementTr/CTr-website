@@ -5,8 +5,8 @@ import CareerComponent from './CareerComponent';
 function AboutComponent (){
  return (
    <div>
-     <FormationComponent/>
-     <CareerComponent/>
+      <FormationComponent/>
+      <CareerComponent/>
    </div>
  )
 }

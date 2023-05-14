@@ -32,7 +32,7 @@ function ArticleLinkComponent (){
            </a>
          </div>
 
-         <div className="col-md-6 col-lg-4">
+         {/*<div className="col-md-6 col-lg-4">
            <a href="/data-ops/aws-mongodb" className="a-block d-flex align-items-center height-md" style={style_article_02}>
              <div className="text">
                <h3>AWS MongoDB Cluster</h3>
@@ -43,7 +43,7 @@ function ArticleLinkComponent (){
                </div>
              </div>
            </a>
-         </div>
+          </div>*/}
 
          <div className="col-md-6 col-lg-4">
            <a href="/industrialized-projects/worldcup2018" className="a-block d-flex align-items-center height-md" style={style_article_03}>

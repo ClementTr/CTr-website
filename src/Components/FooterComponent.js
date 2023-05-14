@@ -9,11 +9,11 @@ function FooterComponent (){
           <h3>USA Road Trip</h3>
           <iframe src="https://drive.google.com/file/d/1xKkC9pKg6U2zowYQ_i4hvBV_QemG6S9J/preview"></iframe>
          </div>
-         <div className="col-md-4">
+         <div className="col-md-6">
           <h3>Mexico X Costa Rica</h3>
           <iframe src="https://drive.google.com/file/d/18eV_qqU79wOFA4Bhz5p8L8-TQfIPJbx7/preview"></iframe>
          </div>
-         <div className="col-md-2">
+         {/*<div className="col-md-2">
           <h3>Links</h3>
           <ul className="list-unstyled">
             <li><a href="https://betit.ovh/" target="_blank"><img width="17px" src="/img/main/betit-logo.png"/> BetIt</a></li>
@@ -21,7 +21,7 @@ function FooterComponent (){
             <li><a href="/data-science/nlp">NLP</a></li>
             <li><a href="/data-ops/aws-mongodb">AWS Mongo</a></li>
           </ul>
-         </div>
+         </div>*/}
          <div className="col-md-2">
           <h3>Social</h3>
           <ul className="list-unstyled footer-social">
