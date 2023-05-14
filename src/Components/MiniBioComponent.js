@@ -9,14 +9,7 @@ function MiniBioComponent (){
          <img src="/img/main/01.jpg" alt="Placeholder" className="img-fluid bio-profile"/>
          <div className="bio-body">
            <h2 className="bio-title">Clément Tailleur</h2>
-           <h6 className="bio-title">clement.tailleur@gmail.com</h6>
-           <h6 className="bio-title">(+33) 6.43.63.32.29</h6>
            <p className="bio-text">
-            Data OPS Engineer - Arsenal Fan<br/>
-            Studied in Paris & Budapest<br/>
-            Worked in Nice & New York<br/>
-            Ran the Paris Marathon<br/>
-            Entrepreneur & Data Poadcaster
            </p>
            <div id="world-getter" className="font-world">
              GET MY WORLD <i className="fa fa-arrow-right" aria-hidden="true"></i> <Link to="/ctr-map"><img className="bio-worldmap" src="/img/worldwide.svg" width="30"/></Link>
