@@ -969,7 +969,20 @@
     },
     {
       "country": "Brazil",
-      "city": "Bahia",
+      "city": "Rio de Janeiro",
+      "coordinates": [-22.9068467, -43.1728965],
+      "description": ["Rio de Janeiro"],
+      "journey": [
+        {
+          "year": 2023,
+          "purpose": "visit",
+          "photos": ["brazil/rio1.jpeg", "brazil/rio2.jpeg", "brazil/rio3.jpeg", "brazil/rio4.jpeg", "brazil/rio5.jpeg", "brazil/rio6.jpeg"]
+        }
+      ]
+    },
+    {
+      "country": "Brazil",
+      "city": "Salvador de Bahia",
       "coordinates": [-12.977749, -38.501630],
       "description": ["Salvador de Bahia"],
       "journey": [
@@ -982,7 +995,7 @@
     },
     {
       "country": "Brazil",
-      "city": "Bahia",
+      "city": "Boipeba",
       "coordinates": [-13.587402,-38.9391014],
       "description": ["Boipeba"],
       "journey": [
@@ -990,19 +1003,6 @@
           "year": 2023,
           "purpose": "visit",
           "photos": ["brazil/boipeba1.jpeg", "brazil/boipeba2.jpeg"]
-        }
-      ]
-    },
-    {
-      "country": "Brazil",
-      "city": "Rio de Janeiro",
-      "coordinates": [-22.9068467, -43.1728965],
-      "description": ["Rio de Janeiro"],
-      "journey": [
-        {
-          "year": 2023,
-          "purpose": "visit",
-          "photos": ["brazil/rio1.jpeg", "brazil/rio2.jpeg", "brazil/rio3.jpeg", "brazil/rio4.jpeg", "brazil/rio5.jpeg", "brazil/rio6.jpeg"]
         }
       ]
     },
