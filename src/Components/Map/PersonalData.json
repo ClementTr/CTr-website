@@ -968,6 +968,32 @@
       ]
     },
     {
+      "country": "Brazil_comment",
+      "city": "Bahia",
+      "coordinates": [-12.977749, -38.501630],
+      "description": ["Salvador de Bahia & Boipeba"],
+      "journey": [
+        {
+          "year": 2023,
+          "purpose": "visit",
+          "photos": ["sweden/malmo1.png", "sweden/malmo2.png","sweden/malmo3.png", "sweden/malmo4.png"]
+        }
+      ]
+    },
+    {
+      "country": "Brazil_comment",
+      "city": "Rio de Janeiro",
+      "coordinates": [-22.9068467, -43.1728965],
+      "description": ["Rio de Janeiro"],
+      "journey": [
+        {
+          "year": 2023,
+          "purpose": "visit",
+          "photos": ["sweden/malmo1.png", "sweden/malmo2.png","sweden/malmo3.png", "sweden/malmo4.png"]
+        }
+      ]
+    },
+    {
       "country": "France",
       "city": "Arcachon",
       "coordinates": [44.6539428, -1.1755714],
