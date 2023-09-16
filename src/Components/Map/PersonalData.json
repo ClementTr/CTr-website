@@ -968,20 +968,33 @@
       ]
     },
     {
-      "country": "Brazil_comment",
+      "country": "Brazil",
       "city": "Bahia",
       "coordinates": [-12.977749, -38.501630],
-      "description": ["Salvador de Bahia & Boipeba"],
+      "description": ["Salvador de Bahia"],
       "journey": [
         {
           "year": 2023,
           "purpose": "visit",
-          "photos": ["sweden/malmo1.png", "sweden/malmo2.png","sweden/malmo3.png", "sweden/malmo4.png"]
+          "photos": ["brazil/salvador1.jpeg", "brazil/salvador2.jpeg"]
         }
       ]
     },
     {
-      "country": "Brazil_comment",
+      "country": "Brazil",
+      "city": "Bahia",
+      "coordinates": [-13.587402,-38.9391014],
+      "description": ["Boipeba"],
+      "journey": [
+        {
+          "year": 2023,
+          "purpose": "visit",
+          "photos": ["brazil/boipeba1.jpeg", "brazil/boipeba2.jpeg"]
+        }
+      ]
+    },
+    {
+      "country": "Brazil",
       "city": "Rio de Janeiro",
       "coordinates": [-22.9068467, -43.1728965],
       "description": ["Rio de Janeiro"],
@@ -989,7 +1002,46 @@
         {
           "year": 2023,
           "purpose": "visit",
-          "photos": ["sweden/malmo1.png", "sweden/malmo2.png","sweden/malmo3.png", "sweden/malmo4.png"]
+          "photos": ["brazil/rio1.jpeg", "brazil/rio2.jpeg", "brazil/rio3.jpeg", "brazil/rio4.jpeg", "brazil/rio5.jpeg", "brazil/rio6.jpeg"]
+        }
+      ]
+    },
+    {
+      "country": "Lebanon",
+      "city": "Beirut",
+      "coordinates": [33.888630, 35.495480],
+      "description": ["Beirut - Batroun - Palais de Beiteddine - Mariage M&M"],
+      "journey": [
+        {
+          "year": 2023,
+          "purpose": "visit",
+          "photos": ["lebanon/lebanon1.jpeg", "lebanon/lebanon2.jpeg", "lebanon/lebanon3.jpeg", "lebanon/lebanon4.jpeg", "lebanon/lebanon5.jpeg", "lebanon/lebanon6.jpeg"]
+        }
+      ]
+    },
+    {
+      "country": "Cyprus",
+      "city": "Paphos",
+      "coordinates": [34.772013, 32.429737],
+      "description": ["Paphos"],
+      "journey": [
+        {
+          "year": 2023,
+          "purpose": "visit",
+          "photos": ["cyprus/paphos.jpeg"]
+        }
+      ]
+    },
+    {
+      "country": "Cyprus",
+      "city": "Varosha/Maras",
+      "coordinates": [35.1237389, 33.9284014],
+      "description": ["Varosha / Maras"],
+      "journey": [
+        {
+          "year": 2023,
+          "purpose": "visit",
+          "photos": ["cyprus/varosha1.jpeg", "cyprus/varosha2.jpeg", "cyprus/varosha3.jpeg"]
         }
       ]
     },
