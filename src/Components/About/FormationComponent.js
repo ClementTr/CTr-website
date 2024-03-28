@@ -40,7 +40,6 @@ function FormationComponent (){
                            </p>
                        </li>
                    </ul>
-                   <a href="/Resume_Tailleur.pdf" target="_blank" className="btn btn-primary btn-sm">GET MY RESUME</a>
                </div>
              </div>
         </div>
