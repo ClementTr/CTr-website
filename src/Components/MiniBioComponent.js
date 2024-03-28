@@ -14,7 +14,6 @@ function MiniBioComponent (){
            <div id="world-getter" className="font-world">
              GET MY WORLD <i className="fa fa-arrow-right" aria-hidden="true"></i> <Link to="/ctr-map"><img className="bio-worldmap" src="/img/worldwide.svg" width="30"/></Link>
            </div>
-           <p><a href="/Resume_Tailleur.pdf" target="_blank"  className="btn btn-primary btn-sm">GET MY RESUME</a></p>
            <p className="social">
             <a href="https://github.com/ClementTr" target="_blank" className="p-2"><span className="fa fa-github"></span></a>&nbsp;&nbsp;
             <a href="https://www.linkedin.com/in/cl%C3%A9ment-tailleur/" target="_blank" className="p-2"><span className="fa fa-linkedin"></span></a>&nbsp;&nbsp;
