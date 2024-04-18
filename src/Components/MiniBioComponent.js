@@ -10,9 +10,11 @@ function MiniBioComponent (){
          <div className="bio-body">
            <h2 className="bio-title">Clément Tailleur</h2>
            <p className="bio-text">
+              Head of Data with a knack for running (this part is not true despite the Marathon medal above 🥲) and a passion for Arsenal FC. I've spent 8 years fueling French startups, with a year in NYC. 
+              Love exploring America's mid-sized cities through documentaries!
            </p>
-           <div id="world-getter" className="font-world">
-             GET MY WORLD <i className="fa fa-arrow-right" aria-hidden="true"></i> <Link to="/ctr-map"><img className="bio-worldmap" src="/img/worldwide.svg" width="30"/></Link>
+           <div id="world-getter">
+            <Link to="/ctr-map"><img className="bio-worldmap" src="/img/worldwide.svg" width="30"/></Link>
            </div>
            <p className="social">
             <a href="https://github.com/ClementTr" target="_blank" className="p-2"><span className="fa fa-github"></span></a>&nbsp;&nbsp;

@@ -1,8 +1,5 @@
-import MoreArticleLinkComponent from './MoreArticleLinkComponent'
-import ArticleLinkComponent from './ArticleLinkComponent'
 import CarouselComponent from './CarouselComponent';
 import MiniBioComponent from './../MiniBioComponent';
-import Link from 'react-router-dom'
 import React from 'react';
 
 function HomeComponent (){
@@ -20,8 +17,6 @@ function HomeComponent (){
          </div>
         </div>
       </div>
-      <ArticleLinkComponent/>
-      <MoreArticleLinkComponent/>
     </div>
  )
 }
