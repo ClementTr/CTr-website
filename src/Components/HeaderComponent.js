@@ -11,24 +11,9 @@ function HeaderComponent (){
             <li className="nav-item">
               <Link to="/" className="nav-link">Home</Link>
             </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Categories
-              </a>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                {/*<Link to="/data-ops" className="dropdown-item">Data OPS</Link>*/}
-                {/*<Link to="/data-science" className="dropdown-item">Data Science</Link>*/}
-                {/*<Link to="/data-visualization" className="dropdown-item">Data Visualization</Link>*/}
-                <Link to="/data-podcast" className="dropdown-item">Data Podcast</Link>
-                <Link to="/industrialized-projects" className="dropdown-item">Industrialized Projects</Link>
-              </div>
-            </li>
             <li className="nav-item">
               <Link to="/about" className="nav-link">About</Link>
             </li>
-            {/*<li className="nav-item">
-              <Link to="/contact" className="nav-link">Contact</Link>
-            </li>*/}
             <li className="nav-item-pic">
               <Link to="/ctr-map" className="nav-link"><img src="/img/worldwide.svg" width="30"/></Link>
             </li>
@@ -51,32 +36,8 @@ function HeaderComponent (){
                   </li>
 
                   <li>
-                    <div>
-                      <div id="headingTwo">
-                          <a data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Categories
-                          </a>
-                      </div>
-                      <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                        <ul className="list col-b">
-                          <li>
-                            {/*<Link to="/data-ops" className="dropdown-item">Data OPS</Link>*/}
-                            {/*<Link to="/data-science" className="dropdown-item">Data Science</Link>*/}
-                            {/*<Link to="/data-visualization" className="dropdown-item">Data Visualization</Link>*/}
-                            <Link to="/data-podcast" className="dropdown-item">Data Podcast</Link>
-                            <Link to="/industrialized-projects" className="dropdown-item">Industrialized Projects</Link>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </li>
-
-                  <li>
                     <Link to="/about" className="nav-link">About</Link>
                   </li>
-                  {/*<li>
-                    <Link to="/contact" className="nav-link">Contact</Link>
-                  </li>*/}
                   <li>
                     <Link to="/ctr-map" className="nav-link"><img src="/img/worldwide.svg" width="30"/></Link>
                   </li>

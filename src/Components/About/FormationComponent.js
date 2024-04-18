@@ -12,11 +12,10 @@ function FormationComponent (){
                <div className="about-text">
                    <div className="section-title">
                        <h4>Formation</h4>
-                       {/*<h2>Some words <strong>about my studies</strong></h2>*/}
                        <hr/>
                        <div className="clearfix"></div>
                    </div>
-                   <p className="intro"><strong>Engineer</strong> graduated in Computer Science - <strong><span className="color">Data Specialist</span></strong></p>
+                   <p className="intro"><strong>Engineer</strong> graduated in Computer Science - <strong><span className="color">Head of Data - Data Engineer</span></strong></p>
                    <ul className="about-list">
                        <li>
                            <span className="fa fa-dot-circle-o"></span>
