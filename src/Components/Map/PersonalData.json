@@ -1046,6 +1046,255 @@
       ]
     },
     {
+      "country": "Tanzania",
+      "city": "Zanzibar - Mikumi",
+      "coordinates": [-7.413322, 37.055714],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2023,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+    {
+      "country": "Tanzania",
+      "city": "Zanzibar - Uroa/Matemwe",
+      "coordinates": [-6.100, 39.417],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2023,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+    {
+      "country": "United States",
+      "city": "New York - Long Island",
+      "coordinates": [40.733997064, -73.935996256],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2024,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+    {
+      "country": "Netherlands",
+      "city": "Netherlands - Amsterdam",
+      "coordinates": [52.377956, 4.897070],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2024,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+    {
+      "country": "Belgium",
+      "city": "Belgium - Liège",
+      "coordinates": [50.632557, 5.579666],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2024,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+    {
+      "country": "Germany",
+      "city": "Germany - Cologne",
+      "coordinates": [50.935173, 6.953101],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2024,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+    {
+      "country": "Germany",
+      "city": "Germany - Dortmund",
+      "coordinates": [51.514244, 7.468429],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2024,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+    {
+      "country": "Germany",
+      "city": "Germany - Aachen/Aix-la-Chapelle",
+      "coordinates": [50.775555, 6.083611],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2024,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+    {
+      "country": "Norway",
+      "city": "Norway - Bergen",
+      "coordinates": [60.397076, 5.324383],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2024,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+    {
+      "country": "Norway",
+      "city": "Norway - Stavanger",
+      "coordinates": [58.969975, 5.733107],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2024,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+    {
+      "country": "Norway",
+      "city": "Norway - Oslo",
+      "coordinates": [59.911491, 10.757933],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2024,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+
+    {
+      "country": "Canada",
+      "city": "Montréal",
+      "coordinates": [45.508888, -73.561668],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2024,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+    {
+      "country": "Canada",
+      "city": "Toronto",
+      "coordinates": [43.651070, -79.347015],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2024,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+    {
+      "country": "Canada",
+      "city": "Québec City",
+      "coordinates": [46.829853, -71.254028],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2024,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+    {
+      "country": "Canada",
+      "city": "Tadoussac",
+      "coordinates": [48.145977, -69.71283],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2024,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+    {
+      "country": "Canada",
+      "city": "Calgary",
+      "coordinates": [51.0499, -114.066],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2024,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+    {
+      "country": "Canada",
+      "city": "Jasper",
+      "coordinates": [52.8734, -118.0856],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2024,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+    {
+      "country": "Canada",
+      "city": "Vancouver",
+      "coordinates": [49.2462, -123.1162],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2024,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+    {
+      "country": "United States",
+      "city": "Seattle",
+      "coordinates": [47.608, -123.1162],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2024,
+          "purpose": "visit",
+          "photos": [""]
+        }
+      ]
+    },
+
+    {
       "country": "France",
       "city": "Arcachon",
       "coordinates": [44.6539428, -1.1755714],
