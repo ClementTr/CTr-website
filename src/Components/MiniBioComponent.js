@@ -10,7 +10,7 @@ function MiniBioComponent (){
          <div className="bio-body">
            <h2 className="bio-title">Clément Tailleur</h2>
            <p className="bio-text">
-              Head of Data with a knack for running (this part is not true despite the Marathon medal above 🥲) and a passion for Arsenal FC. I've spent 8 years fueling French startups, with a year in NYC. 
+              Head of Data with a knack for running (this part is not true despite the Marathon medal above 🥲) and a passion for Arsenal FC. I've spent 10 years fueling French startups, with a year in NYC. 
               Love exploring America's mid-sized cities through documentaries!
            </p>
            <div id="world-getter">
