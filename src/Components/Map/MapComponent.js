@@ -163,6 +163,7 @@ class Map extends React.Component {
         }
 
         function clickMap(e) {
+          console.log(e)
           let country = e.target.feature.properties.name
           if(all_distinct_countries.includes(country)){
             if(country === last_clicked_country && zoom === true){
@@ -171,7 +172,12 @@ class Map extends React.Component {
               removeMarkers()
               zoom = false
             }else{
-              map.fitBounds(e.target.getBounds());
+              if (country === 'Canada') {
+                // Utilisation de setView avec les mêmes coordonnées et niveau de zoom pour les deux pays
+                map.setView([55, -100], 3); // Coordonnées centrales de la zone USA/Canada avec un zoom de niveau 4
+              } else {
+                map.fitBounds(e.target.getBounds()); // Pour les autres pays, on conserve fitBounds
+              }
               removeDescription()
               removeMarkers()
               createMarkers(country)
