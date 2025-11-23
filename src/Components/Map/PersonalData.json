@@ -1303,7 +1303,7 @@
         {
           "year": 2025,
           "purpose": "visit",
-          "photos": ["bled.png", "bled2.png", "ljubljana.png", "piran.png", "piran2.png"]
+          "photos": ["slovenia/bled.png", "slovenia/bled2.png", "slovenia/ljubljana.png", "slovenia/piran.png", "slovenia/piran2.png"]
         }
       ]
     },

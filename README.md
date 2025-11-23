@@ -66,3 +66,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+
+### Synchro
+1. Toute la partie git
+2. aws s3 sync build/ s3://clementtailleur.com
+3. aws s3 sync public/img/map/ s3://clementtailleur.com/img/map/  
+4. aws cloudfront create-invalidation --distribution-id E2294DXPG9HTGF --paths "/*"
