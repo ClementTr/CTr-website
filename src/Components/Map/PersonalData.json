@@ -1294,10 +1294,23 @@
         }
       ]
     },
+    {
+      "country": "Slovenia",
+      "city": "Ljubljana / Bled / Piran",
+      "coordinates": [46.056946, 14.505751],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2025,
+          "purpose": "visit",
+          "photos": ["bled.png", "bled2.png", "ljubljana.png", "piran.png", "piran2.png"]
+        }
+      ]
+    },
 
     {
       "country": "France",
-      "city": "Arcachon",
+      "city": "Bordeaux / Bassin d'Arcachon",
       "coordinates": [44.6539428, -1.1755714],
       "description": [""],
       "journey": [
