@@ -1307,6 +1307,19 @@
         }
       ]
     },
+    {
+      "country": "Sri Lanka",
+      "city": "Colombo / Negombo / Sigiriya / Dambulla / Kandy / Ella Yala / Tangalle / Hiriketiya / Mirissa / Weligama / Unawatuna / Galle",
+      "coordinates": [7.8774222, 80.7003428],
+      "description": [""],
+      "journey": [
+        {
+          "year": 2026,
+          "purpose": "visit",
+          "photos": ["sri-lanka/sri-lanka1.png", "sri-lanka/sri-lanka2.png", "sri-lanka/sri-lanka3.png", "sri-lanka/sri-lanka4.png", "sri-lanka/sri-lanka5.png", "sri-lanka/sri-lanka6.png", "sri-lanka/sri-lanka7.png", "sri-lanka/sri-lanka8.png", "sri-lanka/sri-lanka9.png", "sri-lanka/sri-lanka10.png"]
+        }
+      ]
+    },
 
     {
       "country": "France",
