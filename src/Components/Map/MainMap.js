@@ -7,12 +7,15 @@ import {
 } from './journeyModel';
 import { mapColors } from './mapColors';
 import { DEFAULT_VIEW, TILE_ATTRIBUTION, TILE_SUBDOMAINS, TILE_URL, WORLD_BOUNDS } from './leafletConfig';
+import { LanguageContext } from '../../i18n/LanguageContext';
 import React from 'react';
 import L from 'leaflet';
 
 const ALL = journeyStats.allCountries;
 
 export default class MainMap extends React.Component {
+  static contextType = LanguageContext;
+
   constructor (props) {
     super(props);
     this.mapRef = React.createRef();
@@ -169,7 +172,11 @@ export default class MainMap extends React.Component {
 
   render () {
     return (
-      <section id="section-map" className="map-page-inner map-main-section" aria-label="Carte des voyages">
+      <section
+        id="section-map"
+        className="map-page-inner map-main-section"
+        aria-label={this.context.t('map.mainAria')}
+      >
         <div ref={this.mapRef} className="map" />
         <div
           ref={this.descriptionRef}

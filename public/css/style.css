@@ -624,12 +624,75 @@ ul.about-list li span{
   backdrop-filter: saturate(140%) blur(4px);
 }
 
+.header-simple .header-inner {
+  position: relative;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.site-lang {
+  position: absolute;
+  right: 16px;
+  top: 0;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.site-lang-btn {
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 5px 9px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background: #fff;
+  color: #524c4c;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.site-lang-btn:hover {
+  border-color: #0b98f1;
+  color: #0b98f1;
+}
+
+.site-lang-btn--active {
+  background: #0b98f1;
+  border-color: #0b98f1;
+  color: #fff;
+}
+
+.site-lang-btn--active:hover {
+  color: #fff;
+  border-color: #0870b8;
+  background: #0870b8;
+}
+
 .site-nav {
   text-align: center;
-  padding: 0 16px 16px;
+  padding: 0 72px 16px;
   font-size: 13px;
   letter-spacing: 0.14em;
   font-weight: 600;
+}
+
+@media (max-width: 400px) {
+  .site-nav {
+    padding-left: 56px;
+    padding-right: 56px;
+  }
+  .site-lang {
+    right: 8px;
+  }
+  .site-lang-btn {
+    padding: 4px 7px;
+    font-size: 10px;
+  }
 }
 
 .site-nav-link {

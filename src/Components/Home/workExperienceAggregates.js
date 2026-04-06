@@ -210,6 +210,10 @@ function buildCvImpactTableRows () {
         m.roiPercent != null && typeof m.roiPercent === 'number' ? m.roiPercent : null;
       const roiPrimary = roiPercent != null ? `+${roiPercent}%` : null;
       const desc = m.description && m.description !== 'Unknown' ? String(m.description).trim() : '';
+      const descFr =
+        m.descriptionFr && String(m.descriptionFr).trim() !== ''
+          ? String(m.descriptionFr).trim()
+          : '';
       const timeSaved = formatTimeSavedDisplay(m);
 
       return {
@@ -225,6 +229,7 @@ function buildCvImpactTableRows () {
             ? m.timeSavedHoursPerWeek
             : null,
         description: desc || null,
+        descriptionFr: descFr || null,
         timeSaved,
       };
     });

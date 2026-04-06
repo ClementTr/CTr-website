@@ -3,6 +3,7 @@ import mapData from './MapData.js';
 import { buildTravelYearIndex } from './travelYearData';
 import { mapColors } from './mapColors';
 import { DEFAULT_VIEW, TILE_ATTRIBUTION, TILE_SUBDOMAINS, TILE_URL, WORLD_BOUNDS } from './leafletConfig';
+import { LanguageContext } from '../../i18n/LanguageContext';
 import React from 'react';
 import L from 'leaflet';
 
@@ -23,6 +24,8 @@ function getDefaultYearIndex () {
 const defaultYearIndex = getDefaultYearIndex();
 
 export default class YearMap extends React.Component {
+  static contextType = LanguageContext;
+
   constructor (props) {
     super(props);
     this.mapEl = React.createRef();
@@ -72,12 +75,15 @@ export default class YearMap extends React.Component {
     map.setView(DEFAULT_VIEW.center, DEFAULT_VIEW.zoom);
 
     const legend = L.control({ position: 'bottomleft' });
-    legend.onAdd = function () {
+    legend.onAdd = () => {
       const div = L.DomUtil.create('div', 'info legend');
-      div.innerHTML = '<i style="background:' + HIGHLIGHT + '"></i> Visited this year';
+      div.innerHTML =
+        '<i style="background:' + HIGHLIGHT + '"></i> ' + this.context.t('map.legendVisitedYear');
       return div;
     };
     legend.addTo(map);
+    this.legendControl = legend;
+    this._lastLegendLocale = this.context.locale;
 
     this.geojson = L.geoJson(mapData, {
       style: (feature) => this.styleFeature(feature),
@@ -106,6 +112,14 @@ export default class YearMap extends React.Component {
   }
 
   componentDidUpdate (prevProps, prevState) {
+    if (this.legendControl && this.context.locale !== this._lastLegendLocale) {
+      this._lastLegendLocale = this.context.locale;
+      const div = this.legendControl.getContainer && this.legendControl.getContainer();
+      if (div) {
+        div.innerHTML =
+          '<i style="background:' + HIGHLIGHT + '"></i> ' + this.context.t('map.legendVisitedYear');
+      }
+    }
     if (prevState.yearIndex !== this.state.yearIndex && this.geojson) {
       this.geojson.eachLayer((layer) => {
         layer.setStyle(this.styleFeature(layer.feature));
@@ -144,32 +158,37 @@ export default class YearMap extends React.Component {
     const atStart = this.state.yearIndex <= 0;
     const atEnd = this.state.yearIndex >= years.length - 1;
 
+    const sortLoc = this.context.locale === 'fr' ? 'fr' : 'en';
     const countriesThisYear = Array.from(yearToCountries[year] || []).sort((a, b) =>
-      a.localeCompare(b, 'en', { sensitivity: 'base' }),
+      a.localeCompare(b, sortLoc, { sensitivity: 'base' }),
     );
 
-    const countryWord = count === 1 ? 'country' : 'countries';
+    const { t } = this.context;
+    const subtitle =
+      count === 1 ? t('map.yearSubtitleOne') : t('map.yearSubtitleMany', { count });
 
     return (
       <div className="map-page-inner section-chrono-map">
         <div className="chrono-map-above-map">
           <div className="chrono-map-year-column">
-            <h3 className="chrono-map-title">By year</h3>
-            <p className="chrono-map-subtitle">
-              Countries visited in the selected year: {count} {countryWord}.
-            </p>
-            <div className="chrono-map-toolbar chrono-map-toolbar--aside" role="group" aria-label="Year">
+            <h3 className="chrono-map-title">{t('map.byYear')}</h3>
+            <p className="chrono-map-subtitle">{subtitle}</p>
+            <div
+              className="chrono-map-toolbar chrono-map-toolbar--aside"
+              role="group"
+              aria-label={t('map.yearGroupAria')}
+            >
               <button
                 type="button"
                 className="chrono-map-btn"
                 onClick={this.goPrev}
                 disabled={atStart}
-                aria-label="Previous year"
+                aria-label={t('map.prevYear')}
               >
                 &lt;
               </button>
               <label className="chrono-map-year-label" htmlFor="chrono-year-select">
-                <span className="sr-only">Year</span>
+                <span className="sr-only">{t('map.yearSr')}</span>
                 <select
                   id="chrono-year-select"
                   className="chrono-map-select"
@@ -186,20 +205,20 @@ export default class YearMap extends React.Component {
                 className="chrono-map-btn"
                 onClick={this.goNext}
                 disabled={atEnd}
-                aria-label="Next year"
+                aria-label={t('map.nextYear')}
               >
                 &gt;
               </button>
             </div>
           </div>
           <div className="chrono-countries-table-wrap">
-            <h4 className="chrono-countries-table-title">Countries visited in {year}</h4>
+            <h4 className="chrono-countries-table-title">{t('map.countriesInYear', { year })}</h4>
             <div className="table-responsive">
               <table className="table table-sm table-bordered chrono-countries-table">
                 <thead className="thead-light">
                   <tr>
-                    <th scope="col" className="chrono-countries-col-num">#</th>
-                    <th scope="col">Country</th>
+                    <th scope="col" className="chrono-countries-col-num">{t('map.tableNum')}</th>
+                    <th scope="col">{t('map.tableCountry')}</th>
                   </tr>
                 </thead>
                 <tbody>

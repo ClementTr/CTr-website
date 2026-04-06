@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLanguage } from '../../i18n/LanguageContext';
 import HomeCvMetricsTable from './HomeCvMetricsTable';
 import HomePieChart from './HomePieChart';
 import HomeSectorTreemap from './HomeSectorTreemap';
@@ -11,6 +12,8 @@ import {
 } from './workExperienceAggregates';
 
 export default function HomeDataCharts () {
+  const { t } = useLanguage();
+
   const businessLogos = [
     { src: '/img/logo/qare.png', alt: 'Qare' },
     { src: '/img/logo/tudigo.png', alt: 'Tudigo' },
@@ -37,45 +40,39 @@ export default function HomeDataCharts () {
     : null;
 
   return (
-    <section
-      className="home-viz home-viz--data"
-      aria-label="Head of Data — stack mix from experience"
-    >
+    <section className="home-viz home-viz--data" aria-label={t('dataCharts.sectionAria')}>
       <div className="home-section">
-        <h2 className="home-block-title">Head of Data in scale-up environments</h2>
+        <h2 className="home-block-title">{t('dataCharts.title')}</h2>
         <p className="home-block-desc">
-          I&apos;ve had the opportunity to work across the{' '}
-          <strong>entire data lifecycle</strong>, from <strong>deep technical infrastructure</strong>{' '}
-          to <strong>core business challenges</strong>. As an engineer, I thrive on solving complex
-          problems, but what truly drives me is being able to{' '}
-          <strong>measure their actual impact</strong>.
+          {t('dataCharts.desc1')}
+          <strong>{t('dataCharts.descStrong1')}</strong>
+          {t('dataCharts.desc2')}
+          <strong>{t('dataCharts.descStrong2a')}</strong>
+          {t('dataCharts.desc3')}
+          <strong>{t('dataCharts.descStrong2b')}</strong>
+          {t('dataCharts.desc4')}
+          <strong>{t('dataCharts.descStrong3')}</strong>
+          {t('dataCharts.desc5')}
         </p>
         <div className="home-pie-charts">
           {workPlatformSegments.length > 0 ? (
             <HomePieChart
-              title="Data platform engineering | back-end"
+              title={t('dataCharts.piePlatform')}
               segments={workPlatformSegments}
             />
           ) : (
-            <p className="home-pie-block home-pie-block--empty">
-              No cloud / platform components in the dataset yet.
-            </p>
+            <p className="home-pie-block home-pie-block--empty">{t('dataCharts.emptyPlatform')}</p>
           )}
           {workBiSegments.length > 0 ? (
-            <HomePieChart
-              title="BI & Analytics | front-ends"
-              segments={workBiSegments}
-            />
+            <HomePieChart title={t('dataCharts.pieBi')} segments={workBiSegments} />
           ) : (
-            <p className="home-pie-block home-pie-block--empty">
-              No BI tools in the dataset yet.
-            </p>
+            <p className="home-pie-block home-pie-block--empty">{t('dataCharts.emptyBi')}</p>
           )}
         </div>
         {workCvImpactTableRows.length > 0 ? (
           <div className="home-treemap-slot home-business-experience">
             <h3 className="home-pie-block__title home-business-experience__title">
-              Business Impact
+              {t('dataCharts.businessImpact')}
             </h3>
             <div
               className={
@@ -84,26 +81,28 @@ export default function HomeDataCharts () {
             >
               <div className="home-business-experience__summary">
                 <div className="home-macro-card">
-                  <div className="home-macro-card__label">Average time saved / week</div>
+                  <div className="home-macro-card__label">{t('dataCharts.macroTime')}</div>
                   <div className="home-macro-card__value home-macro-card__value--time">
                     {timeSavedAvg != null ? `${Math.round(timeSavedAvg)}h/week` : '—'}
                   </div>
                 </div>
                 <div className="home-macro-card">
-                  <div className="home-macro-card__label">Average ROI</div>
+                  <div className="home-macro-card__label">{t('dataCharts.macroRoi')}</div>
                   <div className="home-macro-card__value home-macro-card__value--roi">
                     {roiAvg != null ? `+${Math.round(roiAvg)}%` : '—'}
                   </div>
                 </div>
                 <div className="home-macro-card home-macro-card--management">
-                  <div className="home-macro-card__label">Managed people</div>
+                  <div className="home-macro-card__label">{t('dataCharts.managedPeople')}</div>
                   <div className="home-macro-card__value home-macro-card__value--management">
                     {workManagementOverview.managedTotal || '—'}
                   </div>
                   <div className="home-macro-card__meta">
                     {workManagementOverview.departureRatePct != null
-                      ? `${workManagementOverview.departureRatePct}% departures`
-                      : 'No departures data'}
+                      ? t('dataCharts.departures', {
+                          pct: workManagementOverview.departureRatePct,
+                        })
+                      : t('dataCharts.noDeparturesData')}
                   </div>
                   {workManagementOverview.departureRatePct != null ? (
                     <div className="home-macro-card__bar" aria-hidden="true">
@@ -122,10 +121,10 @@ export default function HomeDataCharts () {
         {workSectorTreemapItems.length > 0 ? (
           <div className="home-treemap-slot home-business-experience home-business-experience--treemap">
             <h3 className="home-pie-block__title home-business-experience__title">
-              Business experiences
+              {t('dataCharts.businessExperiences')}
             </h3>
             <div className="home-business-experience__treemap-stack">
-              <div className="home-business-experience__logos" aria-label="Business logos">
+              <div className="home-business-experience__logos" aria-label={t('dataCharts.logosAria')}>
                 <div className="home-business-experience__logos-mask">
                   <div className="home-business-experience__logos-track">
                     {businessLogos.concat(businessLogos).map((logo, idx) => (
@@ -142,26 +141,32 @@ export default function HomeDataCharts () {
                 </div>
                 <aside className="home-business-experience__narrative">
                   <p className="home-business-experience__narrative-intro">
-                    I&apos;ve been lucky to work across very different industries. That variety is a big
-                    part of why I love this job.
+                    {t('dataCharts.narIntro')}
                   </p>
                   <ul>
                     <li>
-                      🎨 At Contentsquare, I learned from <strong>Product</strong> and
-                      <strong> Design</strong> experts.
+                      🎨 {t('dataCharts.narCs')}
+                      <strong>{t('dataCharts.narCsStrong1')}</strong>
+                      {t('dataCharts.narCsMid')}
+                      <strong>{t('dataCharts.narCsStrong2')}</strong>
+                      {t('dataCharts.narCsEnd')}
                     </li>
                     <li>
-                      📈 At Qare, I deepened my <strong>Sales</strong> and <strong>Operations</strong> understanding.
+                      📈 {t('dataCharts.narQare')}
+                      <strong>{t('dataCharts.narQareStrong1')}</strong>
+                      {t('dataCharts.narQareMid')}
+                      <strong>{t('dataCharts.narQareStrong2')}</strong>
+                      {t('dataCharts.narQareEnd')}
                     </li>
                     <li>
-                      📣 At Tudigo, I sharpened <strong>Marketing</strong> and learned to{' '}
-                      <strong>make tough, pivotal decisions for the company</strong>, including advocating for those decisions in committees when the stakes are high.
+                      📣 {t('dataCharts.narTudigo1')}
+                      <strong>{t('dataCharts.narTudigoStrong1')}</strong>
+                      {t('dataCharts.narTudigo2')}
+                      <strong>{t('dataCharts.narTudigoStrong2')}</strong>
+                      {t('dataCharts.narTudigo3')}
                     </li>
                   </ul>
-                  <p className="home-business-experience__narrative-outro">
-                    Above all, the people around me, experts, peers, and leaders have been what made
-                    the difference. Working with humans, not just data, has been the real unlock.
-                  </p>
+                  <p className="home-business-experience__narrative-outro">{t('dataCharts.narOutro')}</p>
                 </aside>
               </div>
             </div>

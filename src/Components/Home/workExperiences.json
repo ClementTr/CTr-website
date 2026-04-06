@@ -9,8 +9,9 @@
       "Each experience may include cvMetrics: { revenuePerYear, timeSavedHoursPerWeek } — numbers for future charts; null when unknown."
     ],
     "cvMetricsSchema": {
-      "description": "Unknown",
-        "roiPercent": "Estimated return on investment as a percentage (e.g. revenue uplift, cost reduction, or efficiency gain attributed to your work). Use null if not quantified.",
+      "description": "Short impact note in English for the CV table UI.",
+      "descriptionFr": "Optional French translation of description; shown when the site language is FR.",
+      "roiPercent": "Estimated return on investment as a percentage (e.g. revenue uplift, cost reduction, or efficiency gain attributed to your work). Use null if not quantified.",
       "timeSavedHoursPerWeek": "Estimated hours per week saved for the organisation (automation, self-serve BI, etc.). Use null if not quantified."
     },
     "managementSchema": {
@@ -199,6 +200,7 @@
       },
       "cvMetrics": {
         "description": "Average yearly ROI of data teams and tools = ~70% revenue uplift (mainly conversions) and 450 hours saved per year",
+        "descriptionFr": "ROI annuel moyen des équipes data et des outils ≈ 70% de (surtout conversions) et 450 heures économisées par an",
         "roiPercent":70,
         "timeSavedHoursPerWeek": 450
       },
@@ -238,6 +240,7 @@
       },
       "cvMetrics": {
         "description": "Mainly based on sales targeting optimization and 35 hours saved per week",
+        "descriptionFr": "Principalement sur l’optimisation du ciblage commercial et 35 heures économisées par semaine sur la partie purement data",
         "roiPercent": 30,
         "timeSavedHoursPerWeek": 35
       }
@@ -274,6 +277,7 @@
       },
       "cvMetrics": {
         "description": "Based on ML algorithm helping to reduce churn",
+        "descriptionFr": "Basé sur un algorithme ML contribuant à réduire le churn",
         "roiPercent": 20,
         "timeSavedHoursPerWeek": 105
       }
@@ -409,6 +413,7 @@
       },
       "cvMetrics": {
         "description": "Based on 70 hours saved per week - ROI calculation unknown",
+        "descriptionFr": "Basé sur 70 heures économisées par semaine — calcul du ROI non disponible",
         "roiPercent": null,
         "timeSavedHoursPerWeek": 70
       }
@@ -515,6 +520,7 @@
       },
       "cvMetrics": {
         "description": "Split-optimizing the pipeline: 20% through sales targeting and CRO, and 40% by enabling data-backed strategic pivots. Self BI and analytics tools adoption helped to reduce 105 hours per week.",
+        "descriptionFr": "Optimisation du pipeline : 20% via ciblage commercial et CRO, 40% en permettant des pivots stratégiques guidés par la donnée. L’adoption de la BI et de la self-BI a contribué à gagner 105 heures par semaine.",
         "roiPercent": 60,
         "timeSavedHoursPerWeek": 105
       },

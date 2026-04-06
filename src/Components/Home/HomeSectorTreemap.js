@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { createPortal } from 'react-dom';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 const TIP_OFFSET = 12;
 
@@ -76,6 +77,7 @@ function layoutTreemap (items, x, y, w, h, splitHorizontal) {
  * @param {{ items: { key: string, label: string, value: number, color: string, companies?: string[] }[] }} props
  */
 export default function HomeSectorTreemap ({ items, hideTitle = false }) {
+  const { t } = useLanguage();
   const [tip, setTip] = useState(
     /** @type {{ item: object, x: number, y: number } | null} */ (null),
   );
@@ -121,7 +123,7 @@ export default function HomeSectorTreemap ({ items, hideTitle = false }) {
       >
         <div className="home-sector-treemap__tooltip-title">{tip.item.label}</div>
         <div className="home-sector-treemap__tooltip-meta">
-          {formatYearsFromMonths(tip.item.value)} yr total
+          {formatYearsFromMonths(tip.item.value)} {t('treemap.yrTotalPhrase')}
         </div>
         <ul className="home-sector-treemap__tooltip-list">
           {tip.item.companies.map((name) => (
@@ -138,7 +140,7 @@ export default function HomeSectorTreemap ({ items, hideTitle = false }) {
       className={`home-pie-block home-sector-treemap${hideTitle ? ' home-sector-treemap--embedded' : ''}`}
     >
       {!hideTitle ? (
-        <h3 className="home-pie-block__title">Business experiences</h3>
+        <h3 className="home-pie-block__title">{t('treemap.title')}</h3>
       ) : null}
       <div className="home-sector-treemap__frame">
         <svg
@@ -146,7 +148,7 @@ export default function HomeSectorTreemap ({ items, hideTitle = false }) {
           viewBox="0 0 100 100"
           preserveAspectRatio="xMidYMid meet"
           role="img"
-          aria-label="Treemap of missions by company activity type"
+          aria-label={t('treemap.aria')}
         >
           {rects.map((r) => {
             const cx = r.x + r.w / 2;
@@ -175,7 +177,7 @@ export default function HomeSectorTreemap ({ items, hideTitle = false }) {
                   onMouseLeave={hideTip}
                 >
                   <title>
-                    {`${r.label} — ${yearsDisplay} yr`}
+                    {`${r.label} — ${yearsDisplay} ${t('treemap.yrSuffix')}`}
                   </title>
                 </rect>
                 {showText ? (
@@ -187,7 +189,7 @@ export default function HomeSectorTreemap ({ items, hideTitle = false }) {
                     className="home-sector-treemap__text"
                   >
                     <tspan x={cx} y={cy - fontNum * 0.35} fontSize={fontNum} fontWeight="700">
-                      {yearsDisplay} yr
+                      {yearsDisplay} {t('treemap.yrSuffix')}
                     </tspan>
                     <tspan
                       x={cx}
@@ -210,7 +212,7 @@ export default function HomeSectorTreemap ({ items, hideTitle = false }) {
                     fontWeight="700"
                     pointerEvents="none"
                   >
-                    {yearsDisplay} yr
+                    {yearsDisplay} {t('treemap.yrSuffix')}
                   </text>
                 )}
               </g>
