@@ -1,4 +1,5 @@
 import PersonalData from './PersonalData.json';
+import MapStatsChart from './MapStatsChart';
 import React from 'react';
 
 function distinct(value, index, self) {
@@ -43,19 +44,20 @@ const studies_countries = getPurposeCountries(PersonalData, 'studies')
 const work_countries = getPurposeCountries(PersonalData, 'work')
 
 function JourneyComponent (){
+  const nVisited = all_distinct_countries.length;
+  const nVacations = visited_countries.length;
+  const nStudies = studies_countries.length;
+  const nWork = work_countries.length;
+
   return (
     <div>
-     <div className="container">
-       <div className="row">
-          <div className="col-md-9">
-            Visited countries: {all_distinct_countries.length}
-          </div>
-          <div className="col-md-3">
-            Vacations countries: {visited_countries.length}<br></br>
-            Studies countries: {studies_countries.length}<br></br>
-            Work countries: {work_countries.length}
-          </div>
-       </div>
+     <div className="container map-journey-stats-wrap">
+       <MapStatsChart
+         visited={nVisited}
+         vacations={nVacations}
+         studies={nStudies}
+         work={nWork}
+       />
       </div>
   </div>
   )

@@ -1,4 +1,3 @@
-import {Link} from 'react-router-dom';
 import React from 'react';
 
 function MiniBioComponent (){
@@ -13,9 +12,6 @@ function MiniBioComponent (){
               Head of Data with a knack for running (this part is not true despite the Marathon medal above 🥲) and a passion for Arsenal FC. I've spent 10 years fueling French startups, with a year in NYC. 
               Love exploring America's mid-sized cities through documentaries!
            </p>
-           <div id="world-getter">
-            <Link to="/ctr-map"><img className="bio-worldmap" src="/img/worldwide.svg" width="30"/></Link>
-           </div>
            <p className="social">
             <a href="https://github.com/ClementTr" target="_blank" className="p-2"><span className="fa fa-github"></span></a>&nbsp;&nbsp;
             <a href="https://www.linkedin.com/in/cl%C3%A9ment-tailleur/" target="_blank" className="p-2"><span className="fa fa-linkedin"></span></a>&nbsp;&nbsp;
