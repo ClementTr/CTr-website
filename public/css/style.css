@@ -62,6 +62,20 @@ body {
   margin: 0 0 16px;
 }
 
+.chrono-map-year-column {
+  flex: 0 1 280px;
+  min-width: 200px;
+}
+
+.chrono-map-above-map .chrono-map-title,
+.chrono-map-above-map .chrono-map-subtitle {
+  text-align: left;
+}
+
+.chrono-map-above-map .chrono-map-subtitle {
+  margin-bottom: 14px;
+}
+
 .chrono-map-toolbar {
   display: flex;
   align-items: center;
@@ -69,6 +83,44 @@ body {
   gap: 12px;
   margin-bottom: 16px;
   flex-wrap: wrap;
+}
+
+.chrono-map-above-map {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px 32px;
+  margin-bottom: 16px;
+}
+
+.chrono-map-above-map .chrono-countries-table-wrap {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  flex: 1 1 280px;
+  max-width: 520px;
+  min-width: 0;
+}
+
+.chrono-map-above-map .chrono-map-toolbar {
+  margin-bottom: 0;
+  justify-content: flex-start;
+}
+
+.chrono-map-toolbar--aside {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 576px) {
+  .chrono-map-above-map {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .chrono-map-above-map .chrono-map-toolbar {
+    justify-content: center;
+  }
 }
 
 .chrono-map-btn {
@@ -120,7 +172,6 @@ body {
 }
 
 .chrono-countries-table-wrap {
-  margin-top: 24px;
   max-width: 520px;
   margin-left: auto;
   margin-right: auto;
@@ -132,6 +183,10 @@ body {
   color: #343a40;
   margin: 0 0 12px;
   text-align: center;
+}
+
+.chrono-map-above-map .chrono-countries-table-title {
+  text-align: left;
 }
 
 .chrono-countries-table {

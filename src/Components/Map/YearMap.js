@@ -152,65 +152,69 @@ export default class YearMap extends React.Component {
 
     return (
       <div className="map-page-inner section-chrono-map">
-        <h3 className="chrono-map-title">By year</h3>
-        <p className="chrono-map-subtitle">
-          Countries visited in the selected year: {count} {countryWord}.
-        </p>
-        <div className="chrono-map-toolbar">
-          <button
-            type="button"
-            className="chrono-map-btn"
-            onClick={this.goPrev}
-            disabled={atStart}
-            aria-label="Previous year"
-          >
-            &lt;
-          </button>
-          <label className="chrono-map-year-label" htmlFor="chrono-year-select">
-            <span className="sr-only">Year</span>
-            <select
-              id="chrono-year-select"
-              className="chrono-map-select"
-              value={year}
-              onChange={this.onSelectYear}
-            >
-              {years.map((y) => (
-                <option key={y} value={y}>{y}</option>
-              ))}
-            </select>
-          </label>
-          <button
-            type="button"
-            className="chrono-map-btn"
-            onClick={this.goNext}
-            disabled={atEnd}
-            aria-label="Next year"
-          >
-            &gt;
-          </button>
-        </div>
-        <div ref={this.mapEl} className="map map-chrono" />
-        <div className="chrono-countries-table-wrap">
-          <h4 className="chrono-countries-table-title">Countries visited in {year}</h4>
-          <div className="table-responsive">
-            <table className="table table-sm table-bordered chrono-countries-table">
-              <thead className="thead-light">
-                <tr>
-                  <th scope="col" className="chrono-countries-col-num">#</th>
-                  <th scope="col">Country</th>
-                </tr>
-              </thead>
-              <tbody>
-                {countriesThisYear.map((country, i) => (
-                  <tr key={country}>
-                    <td className="chrono-countries-col-num">{i + 1}</td>
-                    <td>{country}</td>
+        <div className="chrono-map-above-map">
+          <div className="chrono-map-year-column">
+            <h3 className="chrono-map-title">By year</h3>
+            <p className="chrono-map-subtitle">
+              Countries visited in the selected year: {count} {countryWord}.
+            </p>
+            <div className="chrono-map-toolbar chrono-map-toolbar--aside" role="group" aria-label="Year">
+              <button
+                type="button"
+                className="chrono-map-btn"
+                onClick={this.goPrev}
+                disabled={atStart}
+                aria-label="Previous year"
+              >
+                &lt;
+              </button>
+              <label className="chrono-map-year-label" htmlFor="chrono-year-select">
+                <span className="sr-only">Year</span>
+                <select
+                  id="chrono-year-select"
+                  className="chrono-map-select"
+                  value={year}
+                  onChange={this.onSelectYear}
+                >
+                  {years.map((y) => (
+                    <option key={y} value={y}>{y}</option>
+                  ))}
+                </select>
+              </label>
+              <button
+                type="button"
+                className="chrono-map-btn"
+                onClick={this.goNext}
+                disabled={atEnd}
+                aria-label="Next year"
+              >
+                &gt;
+              </button>
+            </div>
+          </div>
+          <div className="chrono-countries-table-wrap">
+            <h4 className="chrono-countries-table-title">Countries visited in {year}</h4>
+            <div className="table-responsive">
+              <table className="table table-sm table-bordered chrono-countries-table">
+                <thead className="thead-light">
+                  <tr>
+                    <th scope="col" className="chrono-countries-col-num">#</th>
+                    <th scope="col">Country</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {countriesThisYear.map((country, i) => (
+                    <tr key={country}>
+                      <td className="chrono-countries-col-num">{i + 1}</td>
+                      <td>{country}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
+        <div ref={this.mapEl} className="map map-chrono" />
       </div>
     );
   }
