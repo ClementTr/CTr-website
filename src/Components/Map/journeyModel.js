@@ -26,16 +26,28 @@ export function getPurposeCountries (data, purpose) {
   return list.map((o) => o.country).filter(distinct);
 }
 
+/** Pays où au moins un segment de voyage a `half-marathon: true`. */
+export function getHalfMarathonCountries (data) {
+  const out = [];
+  data.travels.forEach((travel) => {
+    const hasHalf = travel.journey.some((j) => j['half-marathon'] === true);
+    if (hasHalf) out.push(travel.country);
+  });
+  return out.filter(distinct);
+}
+
 export const journeyStats = {
   allCountries: getPurposeCountries(PersonalData),
   visit: getPurposeCountries(PersonalData, 'visit'),
   studies: getPurposeCountries(PersonalData, 'studies'),
   work: getPurposeCountries(PersonalData, 'work'),
+  halfMarathon: getHalfMarathonCountries(PersonalData),
 };
 
 export function countryFillColor (countryName) {
   if (journeyStats.work.includes(countryName)) return mapColors.work;
   if (journeyStats.studies.includes(countryName)) return mapColors.studies;
+  if (journeyStats.halfMarathon.includes(countryName)) return mapColors.halfMarathon;
   if (journeyStats.visit.includes(countryName)) return mapColors.visit;
   return mapColors.empty;
 }

@@ -8,6 +8,8 @@ export const mapColors = {
   work: '#F43F5E',
   /** Études */
   studies: '#14B8A6',
+  /** Semi-marathon (au moins un journey avec half-marathon: true) */
+  halfMarathon: '#F59E0B',
   /** Pays sans donnée */
   empty: '#EEF2F7',
   /** Accent “total pays visités” (bloc large) */

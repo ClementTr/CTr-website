@@ -32,6 +32,9 @@ body {
 .journey-page .map-page-inner .map {
   width: 100%;
   box-sizing: border-box;
+  background: #d5e9ec;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 #section-map.map-main-section {
@@ -150,7 +153,7 @@ body {
   margin-top: 0;
   margin-left: auto;
   margin-right: auto;
-  max-width: 720px;
+  max-width: 960px;
   width: 100%;
 }
 
@@ -162,6 +165,17 @@ body {
 .map-stats-grid--three {
   grid-template-columns: repeat(3, 1fr);
   margin-top: 14px;
+}
+
+.map-stats-grid--four {
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 14px;
+}
+
+@media (max-width: 992px) {
+  .map-stats-grid--four {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .map-stats-block {
@@ -197,6 +211,9 @@ body {
 
 @media (max-width: 576px) {
   .map-stats-grid--three {
+    grid-template-columns: 1fr;
+  }
+  .map-stats-grid--four {
     grid-template-columns: 1fr;
   }
 }
@@ -459,6 +476,7 @@ ul.about-list li span{
   letter-spacing: 1px;
 }
 
+/* Fond proche du bleu-océan Voyager : évite les « bandes » grises Leaflet (#ddd) quand le monde ne remplit pas l’écran (dézoom large). */
 .leaflet-container {
     height: 550px;
     width: 100%;
@@ -467,6 +485,7 @@ ul.about-list li span{
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
+    background: #d5e9ec !important;
 }
 
 .category {

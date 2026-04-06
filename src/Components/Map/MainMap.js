@@ -6,7 +6,7 @@ import {
   countryFillColor,
 } from './journeyModel';
 import { mapColors } from './mapColors';
-import { DEFAULT_VIEW, TILE_ATTRIBUTION, TILE_URL, WORLD_BOUNDS } from './leafletConfig';
+import { DEFAULT_VIEW, TILE_ATTRIBUTION, TILE_SUBDOMAINS, TILE_URL, WORLD_BOUNDS } from './leafletConfig';
 import React from 'react';
 import L from 'leaflet';
 
@@ -36,6 +36,7 @@ export default class MainMap extends React.Component {
       layers: [
         L.tileLayer(TILE_URL, {
           attribution: TILE_ATTRIBUTION,
+          subdomains: TILE_SUBDOMAINS,
           maxZoom: 6,
           minZoom: 2,
         }),
@@ -83,8 +84,8 @@ export default class MainMap extends React.Component {
     const legend = L.control({ position: 'bottomleft' });
     legend.onAdd = function () {
       const div = L.DomUtil.create('div', 'info legend');
-      const grades = ['Visit', 'Work', 'Studies'];
-      const colors = [mapColors.visit, mapColors.work, mapColors.studies];
+      const grades = ['Work', 'Studies', 'Half marathon', 'Visit'];
+      const colors = [mapColors.work, mapColors.studies, mapColors.halfMarathon, mapColors.visit];
       for (let i = 0; i < grades.length; i++) {
         div.innerHTML += '<i style="background:' + colors[i] + '"></i> ' + grades[i];
         if (i !== grades.length - 1) div.innerHTML += '<br><br>';

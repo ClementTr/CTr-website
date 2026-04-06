@@ -2,7 +2,7 @@ import PersonalData from './PersonalData.json';
 import mapData from './MapData.js';
 import { buildTravelYearIndex } from './travelYearData';
 import { mapColors } from './mapColors';
-import { DEFAULT_VIEW, TILE_ATTRIBUTION, TILE_URL, WORLD_BOUNDS } from './leafletConfig';
+import { DEFAULT_VIEW, TILE_ATTRIBUTION, TILE_SUBDOMAINS, TILE_URL, WORLD_BOUNDS } from './leafletConfig';
 import React from 'react';
 import L from 'leaflet';
 
@@ -57,6 +57,7 @@ export default class YearMap extends React.Component {
       layers: [
         L.tileLayer(TILE_URL, {
           attribution: TILE_ATTRIBUTION,
+          subdomains: TILE_SUBDOMAINS,
           maxZoom: 6,
           minZoom: 2,
         }),

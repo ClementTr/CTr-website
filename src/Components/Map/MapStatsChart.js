@@ -1,11 +1,12 @@
 import { mapColors } from './mapColors';
 import React from 'react';
 
-function MapStatsChart ({ visited, vacations, studies, work }) {
+function MapStatsChart ({ visited, vacations, studies, work, halfMarathon = 0 }) {
   const breakdown = [
     { label: 'Vacations countries', value: vacations, color: mapColors.visit },
     { label: 'Studies countries', value: studies, color: mapColors.studies },
     { label: 'Work countries', value: work, color: mapColors.work },
+    { label: 'Half marathon countries', value: halfMarathon, color: mapColors.halfMarathon },
   ];
 
   return (
@@ -17,7 +18,7 @@ function MapStatsChart ({ visited, vacations, studies, work }) {
         <span className="map-stats-block-value">{visited}</span>
         <span className="map-stats-block-label">Visited countries</span>
       </div>
-      <div className="map-stats-grid map-stats-grid--three">
+      <div className="map-stats-grid map-stats-grid--four">
         {breakdown.map((item) => (
           <div
             key={item.label}

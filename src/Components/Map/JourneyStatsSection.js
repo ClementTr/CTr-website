@@ -10,6 +10,7 @@ export default function JourneyStatsSection () {
         vacations={journeyStats.visit.length}
         studies={journeyStats.studies.length}
         work={journeyStats.work.length}
+        halfMarathon={journeyStats.halfMarathon.length}
       />
     </div>
   );

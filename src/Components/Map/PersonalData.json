@@ -625,7 +625,8 @@
         {
           "year": 2019,
           "purpose": "visit",
-          "photos": ["stockholm.jpg", "stockholm1.jpg", "stockholm2.jpg", "stockholm3.jpg"]
+          "photos": ["stockholm.jpg", "stockholm1.jpg", "stockholm2.jpg", "stockholm3.jpg"],
+          "half-marathon": true
         }
       ]
     },
@@ -885,7 +886,8 @@
         {
           "year": 2022,
           "purpose": "visit",
-          "photos": ["denmark/copenhagen1.png", "denmark/copenhagen2.png"]
+          "photos": ["denmark/copenhagen1.png", "denmark/copenhagen2.png"],
+          "half-marathon": true
         }
       ]
     },
@@ -1198,7 +1200,8 @@
         {
           "year": 2024,
           "purpose": "visit",
-          "photos": [""]
+          "photos": [""],
+          "half-marathon": true
         }
       ]
     },
@@ -1303,7 +1306,8 @@
         {
           "year": 2025,
           "purpose": "visit",
-          "photos": ["slovenia/bled.png", "slovenia/bled2.png", "slovenia/ljubljana.png", "slovenia/piran.png", "slovenia/piran2.png"]
+          "photos": ["slovenia/bled.png", "slovenia/bled2.png", "slovenia/ljubljana.png", "slovenia/piran.png", "slovenia/piran2.png"],
+          "half-marathon": true
         }
       ]
     },
@@ -1343,7 +1347,8 @@
         {
           "year": "-",
           "purpose": "work",
-          "photos": ["paris.jpg"]
+          "photos": ["paris.jpg"],
+          "half-marathon": true
         }
         
       ]
