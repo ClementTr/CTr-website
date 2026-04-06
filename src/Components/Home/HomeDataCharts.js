@@ -16,16 +16,13 @@ export default function HomeDataCharts () {
     { src: '/img/logo/tudigo.png', alt: 'Tudigo' },
     { src: '/img/logo/content-square.png', alt: 'Contentsquare' },
     { src: '/img/logo/mooncard.png', alt: 'Mooncard' },
-    
     { src: '/img/logo/octo.png', alt: 'Octo' },
     { src: '/img/logo/synchrone.png', alt: 'Synchrone' },
-
     { src: '/img/logo/jolimoi.png', alt: 'Jolimoi' },
     { src: '/img/logo/lunii.png', alt: 'Lunii' },
     { src: '/img/logo/united-heroes.png', alt: 'United Heroes' },
     { src: '/img/logo/rivaj.png', alt: 'Rivaj' },
     { src: '/img/logo/horse-republic.webp', alt: 'Horse Republic' },
-    
     { src: '/img/logo/nelson.png', alt: 'Nelson' },
     { src: '/img/logo/stats.png', alt: 'Stats' },
   ];
