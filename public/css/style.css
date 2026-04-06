@@ -13,19 +13,20 @@ body {
   text-decoration: none !important;
 }
 
-/* Page Journey / carte : pleine largeur, léger padding latéral */
+/* Page Journey / carte : mêmes contraintes que la Home (.home-section) */
 .journey-page {
   width: 100%;
+  overflow-x: hidden;
   box-sizing: border-box;
 }
 
 .journey-page .map-page-inner {
   width: 100%;
-  max-width: 100%;
+  max-width: 1120px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 0;
+  padding-right: 0;
   box-sizing: border-box;
 }
 
@@ -607,15 +608,20 @@ ul.about-list li span{
 
 
 .header{
-  margin-bottom: 70px;
+  margin-bottom: 49px;
   padding-top: 20px;
 }
 
 .header-simple {
-  margin-bottom: 48px;
+  margin-bottom: 34px;
   padding-top: 24px;
   padding-bottom: 0;
   border-bottom: 1px solid #e8e8e8;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: saturate(140%) blur(4px);
 }
 
 .site-nav {
@@ -655,7 +661,7 @@ ul.about-list li span{
 }
 
 .header hr{
-  margin-top: 40px;
+  margin-top: 28px;
 }
 
 .articles{
