@@ -13,8 +13,133 @@ body {
   text-decoration: none !important;
 }
 
-#section-map{
+/* Page Journey / carte : pleine largeur, léger padding latéral */
+.journey-page {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.journey-page .map-page-inner {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5px;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+
+.journey-page .map-page-inner .map {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#section-map.map-main-section {
   margin-top: -20px;
+  position: relative;
+}
+
+.section-chrono-map {
+  margin-top: 48px;
+  padding-bottom: 32px;
+}
+
+.chrono-map-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #343a40;
+  margin: 0 0 8px;
+  text-align: center;
+}
+
+.chrono-map-subtitle {
+  font-size: 14px;
+  color: #6c757d;
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+.chrono-map-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.chrono-map-btn {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1;
+  min-width: 44px;
+  padding: 10px 14px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background: #fff;
+  color: #343a40;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.chrono-map-btn:hover:not(:disabled) {
+  background: #f8f9fa;
+  border-color: #0b98f1;
+  color: #0b98f1;
+}
+
+.chrono-map-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.chrono-map-select {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 32px 8px 12px;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  background: #fff;
+  color: #343a40;
+  min-width: 100px;
+  cursor: pointer;
+}
+
+.chrono-map-year-label {
+  margin: 0;
+}
+
+.map-chrono {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.chrono-countries-table-wrap {
+  margin-top: 24px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.chrono-countries-table-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #343a40;
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+.chrono-countries-table {
+  margin-bottom: 0;
+  background: #fff;
+}
+
+.chrono-countries-table .chrono-countries-col-num {
+  width: 3rem;
+  text-align: center;
+  color: #6c757d;
 }
 
 .map-journey-stats-wrap {
@@ -23,7 +148,10 @@ body {
 
 .map-stats-chart {
   margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 720px;
+  width: 100%;
 }
 
 .map-stats-grid {
@@ -333,10 +461,11 @@ ul.about-list li span{
 
 .leaflet-container {
     height: 550px;
-    width: 80%;
-		margin-top: 30px;
-		margin-left: auto;
-  	margin-right: auto;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 30px;
 }
 

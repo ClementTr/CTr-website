@@ -1,4 +1,4 @@
-import MapComponent from './MapComponent'
+import MainMap from './MainMap'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Slider from 'rc-slider';
@@ -38,7 +38,7 @@ function WorldComponent (){
  return (
     <div>
       {/*<CustomizedSlider/>*/}
-      <MapComponent/>
+      <MainMap/>
     </div>
  )
 }

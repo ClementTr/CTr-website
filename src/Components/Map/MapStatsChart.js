@@ -1,17 +1,18 @@
+import { mapColors } from './mapColors';
 import React from 'react';
 
 function MapStatsChart ({ visited, vacations, studies, work }) {
   const breakdown = [
-    { label: 'Vacations countries', value: vacations, color: '#517FA3' },
-    { label: 'Studies countries', value: studies, color: '#669E8F' },
-    { label: 'Work countries', value: work, color: '#E0848C' },
+    { label: 'Vacations countries', value: vacations, color: mapColors.visit },
+    { label: 'Studies countries', value: studies, color: mapColors.studies },
+    { label: 'Work countries', value: work, color: mapColors.work },
   ];
 
   return (
     <div className="map-stats-chart" aria-label="Country counts by category">
       <div
         className="map-stats-block map-stats-block--wide"
-        style={{ borderTopColor: '#084677' }}
+        style={{ borderTopColor: mapColors.total }}
       >
         <span className="map-stats-block-value">{visited}</span>
         <span className="map-stats-block-label">Visited countries</span>
